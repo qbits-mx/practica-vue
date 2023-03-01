@@ -12,6 +12,7 @@ import RegeneraClaveConfirma from '@/views/RegeneraClaveConfirma'
 import RegisterConfirmView from '@/views/RegisterConfirmView'
 import RegisterPage from '@/views/RegisterPage'
 import RegisterSuccess from '@/views/RegisterSuccess'
+import RegisterView from '@/views/RegisterView'
 import UpdatePassView from '@/views/UpdatePassView'
 
 const routes = [
