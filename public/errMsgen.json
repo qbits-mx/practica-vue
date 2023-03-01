@@ -1,0 +1,92 @@
+[
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 2,
+        "msg": "INGLES La clave posee @3 simbolos pero se requiere al menos de @2"
+    },
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 3,
+        "msg": "INGLES La clave posee @3 numeros pero se requiere al menos de @2"
+    },
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 4,
+        "msg": "INGLES La clave posee @3 mayúsculas pero se requiere al menos de @2"
+    },
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 5,
+        "msg": "INGLES La clave posee @3 minúsculas pero se requiere al menos de @2"
+    },
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 6,
+        "msg": "INGLES La clave posee @3 caracteres pero se requiere al menos de @2"
+    },
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 7,
+        "msg": "INGLES Fué detectado un caracter inválido (@2) en la clave. Sólo se valen números, letras y estos símbolos:  _!@#$%&*/-=+"
+    },
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 8,
+        "msg": "INGLES La clave posee @2 repeticiones del caracter '@3' pero el máximo permitido de repeticiones de un caracter es @4"
+    },
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 9,
+        "msg": "INGLES La clave dada contiene una palabra prohibida: '@2'"
+    },
+    {
+        "exceptionTypeNumber": 3456,
+        "errorNumber": 0,
+        "msg": "INGLES La fecha proporcionada es incorrecta"
+    },
+    {
+        "exceptionTypeNumber": 1001,
+        "errorNumber": 0,
+        "msg": "INGLES Su clave o su usuario (o ambos) no corresponden a un usuario válido"
+    },
+    {
+        "exceptionTypeNumber": 1004,
+        "errorNumber": 0,
+        "msg": "INGLES El usuario ha sdo bloqueado por exceder el máximo número (7) de intentos fallidos al sistema"
+    },
+    {
+        "exceptionTypeNumber": 1015,
+        "errorNumber": 0,
+        "msg": "INGLES Tiempo de espera para eliminar el bloqueo @1 minutos @2 segundos"
+    },
+    {
+        "exceptionTypeNumber": 1017,
+        "errorNumber": 2,
+        "msg": "INGLES Otro (@1) error:  @2"
+    },
+    {
+        "exceptionTypeNumber": 4013,
+        "errorNumber": 0,
+        "msg": "INGLES - Error desconocido adicional\n"
+    },
+    {
+        "exceptionTypeNumber": 1022,
+        "errorNumber": 0,
+        "msg": "INGLES El nick '@1' ya existe en el sistema"
+    },
+    {
+        "exceptionTypeNumber": 1010,
+        "errorNumber": 0,
+        "msg": "INGLES El token proporcionado ya no es válido y ha expirado"
+    },
+    {
+        "exceptionTypeNumber": 1011,
+        "errorNumber": 0,
+        "msg": "INGLES El token proporcionado no existe"
+    },
+    {
+        "exceptionTypeNumber": 1016,
+        "errorNumber": 0,
+        "msg": "INGLES La clave proporcionada es inválida"
+    }
+]
