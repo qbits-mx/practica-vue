@@ -3,23 +3,24 @@ import store from '@/store'
 import axios from 'axios';
 
 import Forbidden from '@/views/ForbiddenView'
-import Forbidden from '@/views/ForgotPassView'
-import Forbidden from '@/views/HomeView'
+import ForgotPassView from '@/views/ForgotPassView'
+import Home from '@/views/HomeView'
 import LoginPage from '@/views/LoginPage'
 import PageNotFound from '@/views/PageNotFound'
 import RegeneraClave from '@/views/RegeneraClave'
 import RegeneraClaveConfirma from '@/views/RegeneraClaveConfirma'
-import RegisterPage from '@/views/RegisterConfirmView'
+import RegisterConfirmView from '@/views/RegisterConfirmView'
 import RegisterPage from '@/views/RegisterPage'
-import RegisterPage from '@/views/RegisterSuccess'
-import RegisterPage from '@/views/UpdatePassView'
+import RegisterSuccess from '@/views/RegisterSuccess'
+import RegisterView from '@/views/RegisterView'
+import UpdatePassView from '@/views/UpdatePassView'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: Home,
-    meta: { allowedRoles: ['admin','regular'] }  
+    meta: { allowedRoles: ['admin','regular'] }
   },
   {
     path: '/ui/regenera-clave',
@@ -74,19 +75,19 @@ const routes = [
   {
     path: '/ui/reg',
     name: 'imageprofile',
-    component: RegisterPage,     
+    component: RegisterPage,
   },
-  { path: '/:pathMatch(.*)*', 
-    name: 'NotFound', 
-    component: PageNotFound 
+  { path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: PageNotFound
   },
 ]
 
 
-const router = createRouter({ 
-  history: createWebHistory(), 
+const router = createRouter({
+  history: createWebHistory(),
   scrollBehavior: () => ({ y: 0 }),
-  routes 
+  routes
 })
 
 function parseJwt(token) {
@@ -103,12 +104,11 @@ function checaJwt() {
   var jwt = store.state.userData.jwt;
   if (jwt && jwt !== undefined && jwt.length > 0) {
       const jwtPayload = parseJwt(jwt);
-      //jwtPayload.exp=1625505833-28*60;      
-      let now = new Date();               
+      //jwtPayload.exp=1625505833-28*60;
+      let now = new Date();
       let limite = new Date (jwtPayload.creation);
       limite.setMinutes(limite.getMinutes() + 30);
-                                    
-      if (now> limite) {               
+      if (now> limite) {
           store.commit('setUserData', {
               userData: {
                 idUser: 0,
@@ -129,14 +129,12 @@ function checaJwt() {
 }
 
 router.beforeEach((to, from, next) => {
-  
+
   axios.defaults.headers.common = {"X-CSRFToken": store.state.userData.jwt};
   axios.defaults.headers.common = {"jwt": store.state.userData.jwt};
   checaJwt();
   //TODO: VALIDAR  EL JWT porque no tiene el valor de expire
   if (to.matched.some(record => record.meta.allowedRoles )) { // *** El recurso SI requiere autenticación ya que pide ciertos roles
-    
-     
     // NO estás autenticado actualmente:
     if (store.state.userData.jwt===''|| store.state.userData.jwt == undefined) {      
       store.commit('setDestination', to.fullPath);
