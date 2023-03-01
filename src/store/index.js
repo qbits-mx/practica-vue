@@ -1,10 +1,5 @@
 import { createStore } from 'vuex'
-
-// https://www.npmjs.com/package/vuex-persistedstate
 import createPersistedState from "vuex-persistedstate"
-
-
-
 
 const store = createStore({
   state: {
