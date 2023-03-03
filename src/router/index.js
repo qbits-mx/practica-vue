@@ -2,10 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import store from '@/store'
 import axios from 'axios';
 
-import Forbidden from '@/views/ForbiddenView'
-import PageNotFound from '@/views/PageNotFound'
-import Home from '@/views/HomeView'
-import LoginPage from '@/views/LoginPage'
+import ForbiddenView from '@/views/ForbiddenView'
+import PageNotFoundView from '@/views/PageNotFoundView'
+import HomeView from '@/views/HomeView'
+import LoginView from '@/views/LoginView'
 import ForgotPassView from '@/views/ForgotPassView'
 import RegisterView from '@/views/RegisterView'
 
@@ -13,18 +13,18 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home,
+    component: HomeView,
     meta: { allowedRoles: ['admin','regular'] }
   },
   {
     path: '/ui/login',
     name: 'login',
-    component: LoginPage
+    component: LoginView
   },
   {
     path: '/ui/forbidden',
     name: 'forbidden',
-    component: Forbidden
+    component: ForbiddenView
   },
   {
     path: '/ui/forgotpass',
@@ -38,7 +38,7 @@ const routes = [
   },  
   { path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: PageNotFound
+    component: PageNotFoundView
   },
 ]
 
