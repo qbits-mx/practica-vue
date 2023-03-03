@@ -3,17 +3,11 @@ import store from '@/store'
 import axios from 'axios';
 
 import Forbidden from '@/views/ForbiddenView'
-import ForgotPassView from '@/views/ForgotPassView'
+import PageNotFound from '@/views/PageNotFound'
 import Home from '@/views/HomeView'
 import LoginPage from '@/views/LoginPage'
-import PageNotFound from '@/views/PageNotFound'
-import RegeneraClave from '@/views/RegeneraClave'
-import RegeneraClaveConfirma from '@/views/RegeneraClaveConfirma'
-import RegisterConfirmView from '@/views/RegisterConfirmView'
-import RegisterPage from '@/views/RegisterPage'
-import RegisterSuccess from '@/views/RegisterSuccess'
+import ForgotPassView from '@/views/ForgotPassView'
 import RegisterView from '@/views/RegisterView'
-import UpdatePassView from '@/views/UpdatePassView'
 
 const routes = [
   {
@@ -21,16 +15,6 @@ const routes = [
     name: 'home',
     component: Home,
     meta: { allowedRoles: ['admin','regular'] }
-  },
-  {
-    path: '/ui/regenera-clave',
-    name: 'regenera-clave',
-    component: RegeneraClave
-  },
-  {
-    path: '/ui/regenera-clave-confirma',
-    name: 'regenera-clave-confirma',
-    component: RegeneraClaveConfirma
   },
   {
     path: '/ui/login',
@@ -46,43 +30,17 @@ const routes = [
     path: '/ui/forgotpass',
     name: 'forgotpass',
     component: ForgotPassView
-  },
-  {
-    path: '/ui/register',
-    name: 'register',
-    component: RegisterPage
   },  
   {
     path: '/ui/register-page',
     name: 'register-page',
     component: RegisterView
   },  
-  {
-    path: '/ui/registerconfirm',
-    name: 'registerconfirm',
-    component: RegisterConfirmView
-  },
-  {
-    path: '/ui/updatepass',
-    name: 'updatepass',
-    component: UpdatePassView
-  },
-  {
-    path: '/ui/registersuccess',
-    name: 'registersuccess',
-    component: RegisterSuccess
-  },
-  {
-    path: '/ui/reg',
-    name: 'imageprofile',
-    component: RegisterPage,
-  },
   { path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: PageNotFound
   },
 ]
-
 
 const router = createRouter({
   history: createWebHistory(),
@@ -129,7 +87,6 @@ function checaJwt() {
 }
 
 router.beforeEach((to, from, next) => {
-
   axios.defaults.headers.common = {"X-CSRFToken": store.state.userData.jwt};
   axios.defaults.headers.common = {"jwt": store.state.userData.jwt};
   checaJwt();
