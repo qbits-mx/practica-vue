@@ -6,26 +6,4 @@
       </v-col>
     </v-row>
   </v-container>
-
-  <!-- NAVIGATION DRAWER-->
 </template>
-<script>
-import store from "@/store";
-
-export default {
-  name: "App",
-  data() {
-    return {
-      userId: store.state.userData.idUser,
-    };
-  },
-  mounted() {
-  },
-  methods: {
-    showDialog: function (idImage) {
-      this.dialog = true;
-      this.idImage = idImage;
-    },
-  },
-};
-</script>
