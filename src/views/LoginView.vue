@@ -1,7 +1,10 @@
 <template>
     <div>
         <h1>Login View XYZ</h1>
-        <h2 @click="carga">Gustavo</h2>
+        <h2 @mouseover="cambia">Gustavo</h2>
+        <button class="btn btn-danger" @click="carga" >Hola</button>
+        
+        <h2>{{ mensaje3 }}</h2>
 
         <table class="table">
             <thead>
@@ -23,6 +26,30 @@
             </tr>
             </tbody>
         </table>
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
     </div>
 </template>
 
@@ -45,8 +72,11 @@ export default {
                 console.log(response.data)
                   this.mensaje4 = response.data; 
               })
+        },
+        cambia: function() {
+            this.mensaje3 = 'hola mundo'
         }
-    }
+    } // aqui concluyen los métodos
 }
 </script>
 
