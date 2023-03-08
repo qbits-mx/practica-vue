@@ -1,33 +1,30 @@
 <template>
     <div>
+
+
+
+
+
+
+
+
+
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      
+
         <h1>Login View XYZ</h1>
         <h2 @mouseover="cambia">Gustavo</h2>
         <button class="btn btn-danger" @click="carga" >Hola</button>
         
-        <h2>{{ mensaje3 }}</h2>
-
-        <table class="table">
-            <thead>
-                <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">Otra</th>
-                </tr>
-            </thead>
-            <tbody>
-            <tr v-for="experimento in mensaje4" v-bind:key="experimento.id">
-                <td>{{ experimento.id }}</td>
-                <td>{{ experimento.nombre }}</td>
-                <td>{{ experimento.color }}</td>
-                <td>{{ experimento.precio }}</td>
-                <td>{{ experimento.agotado }}</td>
-            </tr>
-            </tbody>
-        </table>
+        <h2>{{ mensaje3 }}</h2> 
 
 
+    </div>
+    <div class="col">
+      
 
 <!-- Carousel wrapper -->
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade ancho" data-bs-ride="carousel">
@@ -77,13 +74,50 @@
 <!-- Carousel wrapper -->
 
 
+    </div>
+    <div class="col">
+      
+
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">Otra</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr v-for="experimento in mensaje4" v-bind:key="experimento.id">
+                <td>{{ experimento.id }}</td>
+                <td>{{ experimento.nombre }}</td>
+                <td>{{ experimento.color }}</td>
+                <td>{{ experimento.precio }}</td>
+                <td>{{ experimento.agotado }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+  </div>
+</div>
+
+
+
 
 
     </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
+//const inicio= 'https://linuxhint.com/wp-content/uploads/2018/03/'
+// localhost
+// 127.0.0.1
+// 10.0.2.15
+const inicio='http://10.0.2.15/'
 
 export default {
     data: function () {
@@ -92,9 +126,10 @@ export default {
             mensaje2: 'Hola mundo 2',
             mensaje3: 'Hola mundo 3',
             mensaje4: 'Hola mundo 4',
-            img1: 'https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg',
-            img2: 'https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg',
-            img3: 'https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg',
+            
+            img1: inicio + 'Skyline-1.jpg',
+            img2: inicio + 'Earth-Horizon-1.jpg',
+            img3: inicio + 'roads-untraveled.jpg',
         }
     },
     methods: {
