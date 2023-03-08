@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Login View XYZ</h1>
-        <h2 @mouseover="cambia">Juan Carlos</h2>
+        <h2 @mouseover="cambia">Gustavo</h2>
         <button class="btn btn-danger" @click="carga" >Hola</button>
         
         <h2>{{ mensaje3 }}</h2>
@@ -28,27 +28,56 @@
         </table>
 
 
-<div id="carouselExampleAutoplaying" class="carousel slide ancho" data-bs-ride="carousel">
-  <div class="carousel-inner">
+
+<!-- Carousel wrapper -->
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade ancho" data-bs-ride="carousel">
+  <!-- Slides -->
+  <div class="carousel-inner mb-5">
     <div class="carousel-item active">
-      <img src="https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg" class="d-block w-100" alt="...">
+      <img :src=img1 class="d-block w-100 alto" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg" class="d-block w-100" alt="...">
+      <img :src=img2 class="d-block w-100 alto" alt="..." />
     </div>
     <div class="carousel-item">
-      <img src="https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg" class="d-block w-100" alt="...">
+      <img :src=img3 class="d-block w-100 alto" alt="..." />
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+  <!-- Slides -->
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+  <!-- Controls -->
+
+  <!-- Thumbnails -->
+  <div class="carousel-indicators" style="margin-bottom: -20px;">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1" style="width: 100px;">
+      <img class="d-block w-100 img-fluid" :src=img1 />
+    </button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2" style="width: 100px;">
+      <img class="d-block w-100 img-fluid" :src=img2  />
+    </button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      aria-label="Slide 3" style="width: 100px;">
+      <img class="d-block w-100 img-fluid" :src=img3 />
+    </button>
+  </div>
 </div>
+<!-- Carousel wrapper -->
+
+
+
 
     </div>
 </template>
@@ -63,6 +92,9 @@ export default {
             mensaje2: 'Hola mundo 2',
             mensaje3: 'Hola mundo 3',
             mensaje4: 'Hola mundo 4',
+            img1: 'https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg',
+            img2: 'https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg',
+            img3: 'https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg',
         }
     },
     methods: {
@@ -87,7 +119,10 @@ h2 {
 body {
   background-color: yellow;
 }
-.ancho{
-  width: 400px;
+.ancho {
+    width: 400px;
+}
+.alto {
+    height: 200px;
 }
 </style>
