@@ -1,24 +1,24 @@
 <template>
-    <div>
-        <div class="muebles">
-    <h1 style="color: #f9ca24">Login View</h1>
+  <div>
+    <div class="muebles">
+      <h1 style="color: #f9ca24">Login View</h1>
 
-    <div class="glitch-wrapper">
-      <div
-        @click="carga"
-        data-glitch="Kixzeit"
-        class="glitch"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseWidthExample"
-        aria-expanded="false"
-        aria-controls="collapseWidthExample"
-      >
-        Kixzeit
+      <div class="glitch-wrapper">
+        <div
+          @click="carga"
+          data-glitch="Kixzeit"
+          class="glitch"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseWidthExample"
+          aria-expanded="false"
+          aria-controls="collapseWidthExample"
+        >
+          Kixzeit
+        </div>
       </div>
-    </div>
 
-    <!--<table border="2" style="width: 70%">
+      <!--<table border="2" style="width: 70%">
       <tr
         v-for="parte in mensaje4"
         v-bind:key="parte.id"
@@ -34,80 +34,120 @@
       </tr>
     </table>-->
 
-    <table class="table table-dark table-striped" border="2" style="width: 70%">
-      <tr
-        v-for="parte in mensaje4"
-        v-bind:key="parte.id"
-        style="background-color: #f9ca24; color: black; font-weight: bold"
-        class="collapse collapse-horizontal"
-        id="collapseWidthExample"
+      <table
+        class="table table-dark table-striped"
+        border="2"
+        style="width: 70%"
       >
-        <td>{{ parte.id }}</td>
-        <td>{{ parte.nombre }}</td>
-        <td>{{ parte.color }}</td>
-        <td>{{ parte.precio }}</td>
-        <td>{{ parte.agotado }}</td>
-      </tr>
-    </table>
+        <tr
+          v-for="parte in mensaje4"
+          v-bind:key="parte.id"
+          style="background-color: #f9ca24; color: black; font-weight: bold"
+          class="collapse collapse-horizontal"
+          id="collapseWidthExample"
+        >
+          <td>{{ parte.id }}</td>
+          <td>{{ parte.nombre }}</td>
+          <td>{{ parte.color }}</td>
+          <td>{{ parte.precio }}</td>
+          <td>{{ parte.agotado }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <div class="carousel-inner M-3">
+        <div class="carousel-item active">
+          <img
+            src="https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg"
+            class="d-block w-50 m-auto m-2 rounded-3"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg"
+            class="d-block w-50 m-auto m-2 rounded-3"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg"
+            class="d-block w-50 m-auto m-2 rounded-3"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
-
-  <div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-
-  <div class="carousel-inner M-3">
-    <div class="carousel-item active">
-      <img src="https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg" class="d-block w-50   m-auto m-2" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg" class="d-block w-50 m-auto m-2" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg" class="d-block w-50 m-auto m-2" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-    </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
-    data: function () {
-        return {
-            mensaje: 'Hola mundo',
-            mensaje2: 'Hola mundo 2',
-            mensaje3: 'Hola mundo 3',
-            mensaje4: 'Hola mundo 4',
-        }
+  data: function () {
+    return {
+      mensaje: "Hola mundo",
+      mensaje2: "Hola mundo 2",
+      mensaje3: "Hola mundo 3",
+      mensaje4: "Hola mundo 4",
+    };
+  },
+  methods: {
+    carga: function () {
+      axios.get("http://localhost:8080/pro/muebles", {}).then((response) => {
+        console.log(response.data);
+        this.mensaje4 = response.data;
+      });
     },
-    methods: {
-        carga: function() {
-            axios.get('http://localhost:8080/pro/muebles', {
-              }).then(response => {
-                console.log(response.data)
-                  this.mensaje4 = response.data; 
-              })
-        },
-        cambia: function() {
-            this.mensaje3 = 'hola mundo'
-        }
-    } // aqui concluyen los métodos
-}
+    cambia: function () {
+      this.mensaje3 = "hola mundo";
+    },
+  }, // aqui concluyen los métodos
+};
 </script>
 
 <style>
