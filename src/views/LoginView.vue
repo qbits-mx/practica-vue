@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Login View XYZ</h1>
-        <h2 @mouseover="cambia">Gustavo</h2>
+        <h2 @mouseover="cambia">Juan Carlos</h2>
         <button class="btn btn-danger" @click="carga" >Hola</button>
         
         <h2>{{ mensaje3 }}</h2>
@@ -27,28 +27,28 @@
             </tbody>
         </table>
 
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+<div id="carouselExampleAutoplaying" class="carousel slide ancho" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg" alt="First slide">
+      <img src="https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg" alt="Second slide">
+      <img src="https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg" alt="Third slide">
+      <img src="https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
-
 
     </div>
 </template>
@@ -86,5 +86,8 @@ h2 {
 }
 body {
   background-color: yellow;
+}
+.ancho{
+  width: 400px;
 }
 </style>
