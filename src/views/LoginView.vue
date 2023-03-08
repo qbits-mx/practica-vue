@@ -84,6 +84,7 @@
 
 <script>
 import axios from 'axios';
+const inicio = 'http://localhost'
 
 export default {
     data: function () {
@@ -92,9 +93,9 @@ export default {
             mensaje2: 'Hola mundo 2',
             mensaje3: 'Hola mundo 3',
             mensaje4: 'Hola mundo 4',
-            img1: 'https://linuxhint.com/wp-content/uploads/2018/03/Skyline-1.jpg',
-            img2: 'https://linuxhint.com/wp-content/uploads/2018/03/Earth-Horizon-1.jpg',
-            img3: 'https://linuxhint.com/wp-content/uploads/2018/03/roads-untraveled.jpg',
+            img1: inicio + 'Skyline-1.jpg',
+            img2: inicio + 'Earth-Horizon-1.jpg',
+            img3: inicio + 'roads-untraveled.jpg',
         }
     },
     methods: {
