@@ -1,8 +1,17 @@
 # my-first-project
 
+## Install node16, npm & vue:
+```
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm install npm@latest -g
+sudo npm install -g @vue/cli
+```
+After this, clone this repo and cd practica-vue.
+
 ## Project setup
 ```
-npm install
+npm install --save
 ```
 
 ### Compiles and hot-reloads for development
