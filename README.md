@@ -1,6 +1,8 @@
 # my-first-project
 
-## Install node16, npm & vue:
+In order to run this project you need to install vueJs, clone this repo, install dependencies and run it.
+
+## Install node16, npm & vue
 ```
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
