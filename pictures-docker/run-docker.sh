@@ -1,0 +1,1 @@
+docker run -it -p80:80 --name=images -v /home/ubuntu/development/code/practica-vue/pictures-docker:/usr/share/nginx/html nginx
