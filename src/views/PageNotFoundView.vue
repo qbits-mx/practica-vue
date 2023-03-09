@@ -13,7 +13,7 @@
 
 <style>
 body {
-    background-color:#2c3e50;
+    background-color:#ffffff;
 }
 .fondo {
     color: #fff;
@@ -150,10 +150,7 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-body {
-  background-color: #416475;
-  margin-bottom: 50px;
-}
+
 html, button, input, select, textarea {
     font-family: 'Montserrat', Helvetica, sans-serif;
     color: #92a4ad;
