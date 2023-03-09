@@ -106,7 +106,7 @@
                 </div>
                 <p class="fs-3 text-start">{{ price }}</p>
                 <p class="text-start">
-                  en <span class="verde">12 x ${{ abono }} sin intereses</span>
+                  en <span class="verde">{{ meses }} x ${{ abono }} sin intereses</span>
                 </p>
                 <p class="text-start">IVA incluido</p>
                 <p class="blue">Ver los medios de pago</p>
@@ -226,6 +226,7 @@ export default {
       reseñas:"(38)",
       nombre: "Microsoft Xbox Series X 1TB Halo Infinite color gris",
       price: " $27500",
+      meses:"12",
       abono: " $2,291",
       caracteristicas: [
         "Incluye control",
