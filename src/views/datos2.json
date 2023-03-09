@@ -1,0 +1,38 @@
+{
+    "nombre": "Pantalla JVC SI32H LCD HD 32 110V/240V",
+    "totalStars": "   (1500)",
+    "vendidas": "202",
+    "precio": "2,916",
+    "mensualidad": "976",
+    "minutos": "525",
+    "direccion": "Cuernavaca Morelos",
+    "numVentas": "+5mil",
+    "totalProd": "34",
+    "unidades": "2",
+    "tienda": "Pysea",
+    "totalVentas": "+1000",
+    "meses":"3",
+    "especDia": "Domingo",
+    "caruselActivo": "carousel-item active",
+    "caruselInactivo": "carousel-item",
+    "dimg": [
+        "D-1.jpg", 
+        "D-2.jpg", 
+        "D-3.jpg", 
+        "D-4.jpg", 
+        "D-5.jpg", 
+        "D-5.jpg",
+        "D-5.jpg"
+    ],
+    "cabecera": {
+        "desc": "Edad",
+        "longdesc": "Sebastian"
+    },
+    "caracteristicas": [
+        "Su resolucion XY", 
+        "Manejalo con la voz", 
+        "conecta tus dispositivos", 
+        "Dimensiones", 
+        "Entretenimiento"
+    ]
+}

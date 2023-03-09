@@ -3,7 +3,7 @@
       <header>
         <nav class="navbar navbar-expand-lg  amarella d-flex justify-content-around">
           <div class="d-flex">
-            <a class="navbar-brand" href="#"><img :src=img1 alt="hola" class="logo1"></a>
+            <a class="navbar-brand" href="#"><img :src=inicio2+img1 alt="hola" class="logo1"></a>
             <form class="d-flex align-items-center">
               <input class="form-control me-2 logo1 largo1" type="search" placeholder="" aria-label="Search">
               <button class="btn btn-outline-success logo1 mx-2" type="submit">Buscar</button>
@@ -11,10 +11,10 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active mx-2" aria-current="page" href="#"><img :src=img2 alt="hola" class="logo1 img-fluid"></a>
+                  <a class="nav-link active mx-2" aria-current="page" href="#"><img :src=inicio2+img2 alt="hola" class="logo1 img-fluid"></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><img :src=img3 alt="hola" class="logo1 img-fluid"></a>
+                  <a class="nav-link" href="#"><img :src=inicio2+img3 alt="hola" class="logo1 img-fluid"></a>
                 </li>
               </ul>
             </div>
@@ -22,11 +22,11 @@
         </nav>
         <nav class="navbar navbar-expand-lg amarella d-flex justify-content-around p-0">
           <div class="d-flex p-0">
-            <a class="navbar-brand d-flex align-items-center" href="#"><img :src=img4 alt="hola"></a>
+            <a class="navbar-brand d-flex align-items-center" href="#"><img :src=inicio2+img4 alt="hola"></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav d-flex align-items-center justify-content-around">
                 <li class="nav-item">
-                  <a class="nav-link mx-3 p-0" aria-current="page" href="#">Categorias</a>
+                  <a class="nav-link mx-3 p-0" aria-current="page" href="#">{{ contenido.longdesc }}</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-3 p-0" aria-current="page" href="#">Ofertas</a>
@@ -71,13 +71,13 @@
         </div>
         <div class="container ">
           <div class="row ">
-            <div class="col d-flex align-items-center">
+            <div class="col d-md-flex align-items-center">
               <!-- Carousel wrapper -->
               <div id="carouselMDExample" class="carousel slide carousel-fade" data-bs-interval="false">
                 <!-- Slides -->
                 <div class="carousel-inner mb-5 shadow-1-strong rounded-3">
                   <div :class=selecciona(index) v-for="(elemento,index) in dimg" v-bind:key="index">
-                    <img :src=elemento class="d-block w-100" alt="..." />
+                    <img :src=inicio2+elemento class="d-block w-100" alt="..." />
                   </div>
                 </div>
                 <!-- Slides -->
@@ -100,7 +100,7 @@
                   <span v-for="(miniatura,index) in dimg" v-bind:key="index" class="ajusta">
                     <button type="button" data-bs-target="#carouselMDExample" :data-bs-slide-to=index class="active"
                     aria-current="true" aria-label="Slide 1" style="width: auto;">
-                    <img :src=dimg[index] class="d-block w-100 shadow-1-strong rounded img-fluid"/>
+                    <img :src=inicio2+dimg[index] class="d-block w-100 shadow-1-strong rounded img-fluid"/>
                     </button>
                   </span>
                 </div>
@@ -182,56 +182,37 @@
 
 <script>
 import axios from 'axios';
+import info from './datos2.json';
 const  inicio =  'http://127.0.0.1/';
 
 export default {
     data: function () {
         return {
-            nombre: 'Pantalla JVC SI32H LCD HD 32" 110V/240V',
-            totalStars: '   (1500)',
-            vendidas: '202',
-            precio: '2,916',
-            mensualidad: '976',
-            minutos: '525',
-            direccion: 'Jiutepec Morelos',
-            numVentas: '+5mil',
-            totalProd: '34',
-            unidades: '2',
-            tienda: 'Golingo',
-            caracteristicas: ["Su resolucion hd", 
-                              "Manejalo con la voz", 
-                              "conecta tus dispositivos", 
-                              "Dimensiones", 
-                              "Entretenimiento"],
-            totalVentas: '+1000',
-            meses: '3',
-            especDia: 'Domingo',
-            caruselActivo: "carousel-item active",
-            caruselInactivo: "carousel-item",
+            inicio2: inicio,
+            caracteristicas: info.caracteristicas,
+            contenido: info.cabecera,
+            nombre: info.nombre,
+            totalStars: info.totalStars,
+            vendidas: info.vendidas,
+            precio: info.precio,
+            mensualidad: info.mensualidad,
+            minutos: info.minutos,
+            direccion: info.direccion,
+            numVentas: info.numVentas,
+            totalProd: info.totalProd,
+            unidades: info.unidades,
+            tienda: info.tienda,
+            totalVentas: info.totalVentas,
+            meses: info.meses,
+            especDia: info.especDia,
+            caruselActivo: info.caruselActivo,
+            caruselInactivo: info.caruselInactivo,
+            dimg: info.dimg,
 
-            img: [inicio + 'merca04.png', inicio + 'merca02.png', inicio + 'merca03.png', inicio + '05.png'],
-            dimg: [inicio + 'D-1.jpg', 
-                    inicio + 'D-2.jpg', 
-                    inicio + 'D-3.jpg', 
-                    inicio + 'D-4.jpg', 
-                    inicio + 'D-5.jpg', 
-                    inicio + 'D-5.jpg',
-                    inicio + 'D-5.jpg',
-                    inicio + 'D-5.jpg',
-                    inicio + 'D-5.jpg',
-                    inicio + 'D-5.jpg',
-                    inicio + 'D-5.jpg'
-                  ],
-            
-            /*img1: inicio + 'merca04.png',
-            img2: inicio + 'merca02.png',
-            img3: inicio + 'merca03.png',
-            img4: inicio + '05.png',
-            dimg1: inicio + 'D-1.jpg',
-            dimg2: inicio + 'D-2.jpg',
-            dimg3: inicio + 'D-3.jpg',
-            dimg4: inicio + 'D-4.jpg',
-            dimg5: inicio + 'D-5.jpg'*/
+            img1: "merca04.png",
+            img2: "merca02.png",
+            img3: "merca03.png",
+            img4: "05.png",
         }
     },
     methods: {
@@ -246,20 +227,15 @@ export default {
             this.mensaje3 = 'hola mundo'
         },
 
-        selecciona: function(indice) {
-          if(indice == 0){
-            return this.caruselActivo;
-          }else{
-            return this.caruselInactivo;
-          }
+        selecciona: function(index) {
+          return (index==0)?this.caruselActivo:this.caruselInactivo
         }
-
     } // aqui concluyen los métodos
 }
 </script>
 
 <style scoped>
-@import '~mdb-ui-kit/css/mdb.min.css';
+
 
 .precios {
   font-size: 2.5rem;
