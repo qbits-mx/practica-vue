@@ -12,9 +12,6 @@
 </template>
 
 <style>
-body {
-    background-color:#2c3e50;
-}
 .fondo {
     color: #fff;
     height: 100%;
@@ -149,10 +146,6 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-body {
-  background-color: #416475;
-  margin-bottom: 50px;
 }
 html, button, input, select, textarea {
     font-family: 'Montserrat', Helvetica, sans-serif;
