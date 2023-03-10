@@ -1,46 +1,27 @@
 <template>
- 
-
-  <div>
-
-    <ul class="menu">
-  <li>
-    <a href="#0">
-      <span>Mercado Libre </span>
-      <span>
-        <i class="fas fa-address-card" aria-hidden="true"></i>
-      </span>
-    </a>
-  </li>
-  <li>
-    <a href="#0">
-      <span>🔍 Busqueda</span>
-      <span>
-        <i class="fas fa-tasks" aria-hidden="true"></i>    
-      </span>
-    </a>
-  </li>
-  <li>
-    <a href="#0">
-      <span>Clients</span>
-      <span>
-        <i class="fas fa-users" aria-hidden="true"></i>      
-      </span>
-    </a>
-  </li>
-  <li>
-    <a href="#0">
-      <span>Contact</span>
-      <span>
-        <i class="fas fa-envelope-open-text" aria-hidden="true"></i>    
-      </span>
-    </a>
-  </li>
-</ul>
-
-
-
-<div class="container text-center">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">{{go}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">{{ feat }}</a>
+      <a class="nav-item nav-link" href="#">{{ princ }}</a>
+      <a class="nav-item nav-link " href="#">{{ dic }}</a>
+      <a class="nav-item nav-link " href="#">{{ mer }}</a>
+      <a class="nav-item nav-link " href="#">{{ mod }}</a>
+      <a class="nav-item nav-link " href="#">{{ Ven }}</a>
+      <a class="nav-item nav-link " href="#">{{ help }}</a>
+    </div>
+  </div>
+</nav>
+  
+    <body>
+      <div class="display-10 mt-3 body1 mx-auto">
+        <p class="texts">Volver al listado: <span class="linksurl">| Electrónica, Audio y Video > Audio > Asistentes Virtuales </span></p>
+      </div>
+      <div class="container text-center">
 <div class="row">
   <div class="col">
 <!-- Carousel wrapper -->
@@ -48,13 +29,13 @@
 <!-- Slides -->
 <div class="carousel-inner mb-5">
   <div class="carousel-item active">
-    <img :src=img1 class="d-block w-100 alto" alt="..." />
+    <img :src=inicio2+img1 class="d-block w-100 alto" alt="..." />
   </div>
   <div class="carousel-item">
-    <img :src=img2 class="d-block w-100 alto" alt="..." />
+    <img :src=inicio2+img2 class="d-block w-100 alto" alt="..." />
   </div>
   <div class="carousel-item">
-    <img :src=img3 class="d-block w-100 alto" alt="..." />
+    <img :src=inicio2+img3 class="d-block w-100 alto" alt="..." />
   </div>
 </div>
 <!-- Slides -->
@@ -76,177 +57,127 @@
 <div class="carousel-indicators" style="margin-bottom: -20px;">
   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
     aria-current="true" aria-label="Slide 1" style="width: 100px;">
-    <img class="d-block w-100 img-fluid" :src=img1 />
+    <img class="d-block w-100 img-fluid" :src=inicio2+img1 />
   </button>
   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
     aria-label="Slide 2" style="width: 100px;">
-    <img class="d-block w-100 img-fluid" :src=img2  />
+    <img class="d-block w-100 img-fluid" :src=inicio2+img2  />
   </button>
   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
     aria-label="Slide 3" style="width: 100px;">
-    <img class="d-block w-100 img-fluid" :src=img3 />
+    <img class="d-block w-100 img-fluid" :src=inicio2+img3 />
   </button>
 </div>
 </div>
 <!-- Carousel wrapper -->     
 
-
-
-
   </div>
-  <div class="col">
-
-      <h1>{{ Echo }} </h1>
-      <h2 @mouseover="cambia">$ 530</h2>
-      <button class="btn btn-danger" @click="carga" >Informacion acerca de</button>
-      
-      <h2>{{ mensaje3 }}</h2>
-      <h1> Lo que tienes que saber de este producto</h1>
-      <ol>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-        <li> ✯Con reconocimiento de voz. </li>
-  
-        <li> ✯Función de control inteligente de dispositivos del hogar.</li>
-    
-        <li> ✯Opción de sistema de audio multi-room.</li> 
-    
-        <li> ✯Conexión wifi y bluetooth.</li>
-    
-        <li> ✯Recibe y realiza llamadas.</li>
-    
-        <li> ✯Funciona en español y en inglés.</li>
-    
-        <li>✯Compatible con: Android 6.0, iOS 11.0, Fire OS 5.3.3. </li>
-    
-        <li> ✯Su asistente virtual te ayudará a realizar diversas tareas como reproducir música, contestar llamadas y conocer el pronóstico del tiempo. </li>
-      </ol>       
-
-
-
-
-  </div>
-  <div class="col">
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-</div>
-<br><br><br><br><br>
-    <h2>{{ sst }}</h2>
-    <br>
-    <br>
-    <button type="button" class="btn btn-success">Comprar ahora</button>
-    <br>
-    <br>
-    <button type="button" class="btn btn-info">mandar al carrito</button>
-    <br>
-    <br>
-    <button type="button" class="btn btn-link">Informacion del vendedor</button>
-    <br>
-    <br>
-    <h2>{{ envi}}</h2>
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <ul v-for="(carac,index) in caracteristicas" v-bind:key="index">
-           <li>{{ carac }}</li>
-    </ul>
-    </div>
-</div>
-</div>
-<br>
-
-</div>
-<br>
-<br>
-
-
-<div class="mensaje">
-    <p>Amazon Echo Dot 4th Gen</p>
-    <p class="oculta">$467</p>
-    <p class="oculta">Negro</p>
-    <p class="oculta">seminuava</p>
-    <p class="oculta">En stock</p>
-</div>
-<div class="mensaje">
-    <p>Bocina alexa 4th Gen</p>
-    <p class="oculta">$267</p>
-    <p class="oculta">Azul</p>
-    <p class="oculta">nueva</p>
-    <p class="oculta">En stock</p>
-</div>
-<div class="mensaje">
-    <p>Amazon Echo Dot 6th Gen</p>
-    <p class="oculta">$1567</p>
-    <p class="oculta">Negro</p>
-    <p class="oculta">seminueva</p>
-    <p class="oculta">En stock</p>
-</div><div class="mensaje">
-    <p>Amazon Echo Dot 4th Gen</p>
-    <p class="oculta">$567</p>
-    <p class="oculta">Gris</p>
-    <p class="oculta">nueva</p>
-    <p class="oculta">En stock</p>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<footer class="page-footer">
-  <small>Made by Gustavo Rangel for ultrasist
-  </small>
-</footer>
-  </div>
-</template>
+          <div class="col texts1">
+            <span class="oscuro">Nuevo | {{ totalVentas }}vendidos</span>
+            <h5 class="my-2">{{ nombre }}</h5>
+            <div>
+              <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
+              <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
+              <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
+              <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
+              <i class="bi bi-star-half mx-1" style="color: cornflowerblue;"></i>
+              <span class="linksurl">{{ estrellas }}</span>
+            </div>
+            <div class="my-2 d-flex align-items-center">
+              <div class="my-auto">
+                <p class="naranja p-1 my-auto">MÁS VENDIDO</p>
+              </div>
+              <span class="linksurl mx-3">{{ vendidas }} en Asistentes Virtuales</span>
+            </div>
+            <div>
+              <h3 class="precios m-0">${{ precio }}</h3>
+              <p class="m-0">en <span class="verde m-0"><span>{{ meses }}</span>  x $ {{ mensualidad }} sin interés</span></p>
+              <p class="my-n1">IVA incluido</p>
+            </div>
+            <div class="my-3">
+              <span class="linksurl">Ver los medios de pago</span>
+            </div>
+            <div class="mt-5">
+              <p>Lo que tienes que saber de este producto</p>
+              <ul v-for="(carac,index) in caracteristicas" v-bind:key="index">
+                <li>{{ carac }}</li>
+              </ul>
+            </div>
+            <div class="my-3">
+              <span class="linksurl">Caracteristicas</span>
+            </div>
+            <div class="mt-5">
+              <span>Opciones de compra</span>
+            </div>
+            <div class="my-3">
+              <p class="linksurl m-0"> productos usados y reacondicionados</p>
+            </div>
+          </div>
+          <div class="col texts1 mt-3 border p-5 rounded">
+            <p class="verde mb-2"><i class="bi bi-truck"></i> 🚚 Llega gratis el <span style="font-weight: 600;">{{ especDia }}</span></p>
+            <p class="mx-4">Comprando dentro de los proximos</p>
+            <p class="mx-4 mt-n3 red1">{{ minutos }} min</p>
+            <span class="linksurl mx-4"><i class="bi bi-geo-alt"></i> Enviar a {{ direccion }}</span>
+            <div class="my-4">
+              <p>Tienda oficial <span class="linksurl">{{ tienda }}</span></p>
+              <p class="mt-n3">{{ numVentas }} ventas</p>
+            </div>
+            <div>
+              <p><strong>Stock disponible</strong></p>
+            </div>
+            <div>
+              <p>Cantidad: <strong>{{ Existencia }} unidades </strong><span class="oscuro">({{ totalProd }} disponibles)</span></p>
+            </div>
+            <div>
+              <button class="btn btn-primary"> Comprar ahorita</button>
+              <br>
+              <button class="btn btn-ligth"> Agregar al carrito</button>
+            </div>
+            <div class="mt-5">
+              <p class="my-4"><span class="linksurl"><i class="bi bi-arrow-90deg-left"></i> Devoluciones gratis.</span> Tienes 30 dias desde que lo recicbes.</p>
+              <p class="my-4"><span class="linksurl"><i class="bi bi-shield-plus"></i> Compra Protegida.</span> Recibe el producto que esperabas o te devolvemos el dinero.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    </template>
 
 <script>
-import axios from 'axios'
-//const inicio= 'https://linuxhint.com/wp-content/uploads/2018/03/'
-// localhost
-// 127.0.0.1
-// 10.0.2.15
-// constantes 
-const inicio='http://10.0.2.15/'
-const envio= '🚚Envíos a todo el pais'
-
-
+import info from './LoginView.json'
+import axios from 'axios';
+const  inicio =  'http://localhost/';
 export default {
   data: function () {
       return {
-          mensaje: 'Hola mundo',
-          mensaje2: 'Hola mundo 2',
-          mensaje3: 'en 12x $58 IVA incluido',
-          mensaje4: 'Lo que tienes que saber de este producto',
-          Echo: 'Echo Dot 3rd Gen con asistente virtual Alexa carbón 110V/240V',
-   
-          img1: inicio + '61aiJcyfhyL._AC_SL1000_.jpg',
-          img2: inicio + '61kCxlxYDfL._AC_SL1000_.jpg',
-          img3: inicio + '61Rr8uxmREL._AC_SY355_.jpg',
-          img4: inicio + 'Earth-Horizon-1.jpg',
-          envi: envio,
-
-          caracteristicas:["Devolución gratis. Tienes 30 días desde que lo recibes.",
-          " Compra ProtegidaSe abrirá en una nueva ventana",
-         "recibe el producto que esperabas o te devolvemos tu dinero.",
-         "Mercado PuntosSe abrirá en una nueva ventana. Sumas 44 puntos"]
-
-
-
+          inicio2: inicio  ,
+          nombre: info.nombre,
+          estrellas: info.estrellas,
+          vendidas: info.vendidas,
+          precio: info.precio,
+          mensualidad: info.mensualidad,
+          minutos: info.minutos,
+          direccion: info.direccion,
+          totalProd: info.totalProd,
+          Existencia: info.Existencia,
+          tienda: info.tienda,
+          totalVentas: info.totalVentas,
+          meses: info.meses,
+          especDia: info.especDia,
+          dimg: info.dimg,
+          img1: info.img1 ,
+          img2: info.img2,
+          img3: info.img3,
+          go: info.go,
+          feat: info.feat,
+          princ: info.princ,
+          caracteristicas: info.caracteristicas,
+          dic: info.dic,
+          mer: info.mer,
+          mod: info.mod,
+          Ven: info.Ven,
+          help: info.help,
+      
 
       }
   },
@@ -257,42 +188,57 @@ export default {
               console.log(response.data)
                 this.mensaje4 = response.data; 
             })
-      }
-  } // aqui concluyen los métodos
+      },
+      cambia: function() {
+          this.mensaje3 = 'hola mundo'
+      },
+  }
 }
 </script>
 
 <style scoped>
-h2 {
-  color:gray;
+
+.red1{
+color: rgb(170, 48, 11);
 }
-body {
-background-color: yellow;
+.verde{
+color: rgb(40, 202, 40);
 }
-.ancho {
-  width: 400px;
+.naranja{
+background-color: orange;
+width: fit-content;
+border-radius: 5px;
+color: white;
+font-weight: 600;
 }
-.alto {
-  height: 500px;
+
+
+.body1{
+width: 65%;
 }
-.box2 .icon{
-color: rgb(2, 1, 124); 
+.texts{
+font-size: .8rem;
+text-align: left;
 }
-.box2 .background-hover{
-background: linear-gradient(to bottom, black, blue);
-top: -170px;
-left: -250px;
+.texts1{
+text-align: left;
+}
+.oscuro{
+font-size: .7rem;
+color: gray;
+}
+.linksurl{
+color: cornflowerblue;
+}
+.ajusta{
+overflow: auto;
 }
 :root {
   --body-bg-color: #1a1c1d;
   --text-color: #aaaebc;
   --hr-color: #26292a;
+  --timing-function: cubic-bezier(0.82, 0.2, 0.42, 1);
   --red: #e74c3c;
-}
-
-* {
-  margin: 0;
-  padding: 0;
 }
 
 ul {
@@ -328,80 +274,63 @@ hr {
 .menu a {
   position: relative;
   display: block;
-  overflow: hidden;
-}
-
-.menu a span {
-  transition: transform 0.2s ease-out;
-}
-
-.menu a span:first-child {
-  display: inline-block;
   padding: 10px;
+  overflow: hidden;
+  transition: color 0s 0.25s var(--timing-function);
 }
 
-.menu a span:last-child {
+.menu a::before,
+.menu a::after {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+}
+
+.menu a::before {
+  content: '';
+  top: 50%;
+  transform: translate(-101%, -50%);
+  height: 50%;
+  z-index: 1;
+  background: var(--text-color);
+  transition: transform 0.5s var(--timing-function);
+}
+
+.menu a::after {
+  content: attr(data-icon);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-100%);
+  height: 100%;
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity 0s 0.25s var(--timing-function);
 }
 
-.menu i {
-  font-size: 30px;
+.menu a:hover {
+  color: transparent;
 }
 
-.menu a:hover span:first-child {
-  transform: translateY(100%);
+.menu a:hover::before {
+  transform: translate(101%, -50%);
 }
 
-.menu a:hover span:last-child,
-.menu[data-animation] a:hover span:last-child {
-  transform: none;
+.menu a:hover::after {
+  opacity: 1;
 }
 
-.menu[data-animation="to-top"] a span:last-child {
-  transform: translateY(100%);
+
+/* ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.menu[data-animation="to-left"] a::before {
+  transform: translate(101%, -50%);
 }
 
-.menu[data-animation="to-top"] a:hover span:first-child {
-  transform: translateY(-100%);
+.menu[data-animation="to-left"] a:hover::before {
+  transform: translate(-101%, -50%);
 }
 
-.menu[data-animation="to-right"] a span:last-child {
-  transform: translateX(-100%);
-}
-
-.menu[data-animation="to-right"] a:hover span:first-child {
-  transform: translateX(100%);
-}
-
-.menu[data-animation="to-left"] a span:last-child {
-  transform: translateX(100%);
-}
-
-.menu[data-animation="to-left"] a:hover span:first-child {
-  transform: translateX(-100%);
-}
-.mensaje {
-  background-color: grey;
-  width: 100%;
-  color: #2c2b2b;
-  text-align: center;
-  font-size: 2.5em;
-  padding: 1%;
-}
-
-.oculta {
-  display: none;
-}
-
-.mensaje:hover .oculta {
-    display: block;
-}
 </style>

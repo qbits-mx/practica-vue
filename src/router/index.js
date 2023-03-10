@@ -3,6 +3,8 @@ import store from '@/store'
 import axios from 'axios';
 
 import ForbiddenView from '@/views/ForbiddenView'
+import EnvioView from '@/views/EnvioView'
+import CarritoView from '@/views/CarritoView'
 import PageNotFoundView from '@/views/PageNotFoundView'
 import HomeView from '@/views/HomeView'
 import LoginView from '@/views/LoginView'
@@ -40,6 +42,16 @@ const routes = [
     name: 'NotFound',
     component: PageNotFoundView
   },
+  {
+    path: '/ui/carrito',
+    name: 'carrito',
+    component: CarritoView
+  }, 
+  {
+    path: '/ui/envio',
+    name: 'envio',
+    component: EnvioView
+  },   
 ]
 
 const router = createRouter({
