@@ -2,6 +2,7 @@
   <div>
     <div>
       <div>
+        <img :src="libre" alt="" class="libre" />
         <!--  aqui inicia un comentario -->
         <div class="container text-center">
           <div class="row">
@@ -92,7 +93,7 @@
               <!-- 2 column starts -->
               <div>
                 <div class="d-flex mt-2 justify-content-between">
-                  <p>Nuevo | {{ vendidos }} vendidos</p>
+                  <p>Nuevo | +{{ vendidos }} vendidos</p>
                   <i class="fa-regular fa-heart blue fs-4"></i>
                 </div>
                 <h4 class="text-start">{{ nombre }}</h4>
@@ -102,11 +103,14 @@
                   <i class="fa-solid fa-star blue"></i>
                   <i class="fa-solid fa-star blue"></i>
                   <i class="fa-solid fa-star blue"></i>
-                  <span class="blue">{{(reseñas)}}</span>
+                  <span class="blue">({{ reseñas }})</span>
                 </div>
-                <p class="fs-3 text-start">{{ price }}</p>
+                <p class="fs-3 text-start">${{ price }}</p>
                 <p class="text-start">
-                  en <span class="verde">{{ meses }} x ${{ abono }} sin intereses</span>
+                  en
+                  <span class="verde"
+                    >{{ meses }} x ${{ abono }} sin intereses</span
+                  >
                 </p>
                 <p class="text-start">IVA incluido</p>
                 <p class="blue">Ver los medios de pago</p>
@@ -116,7 +120,8 @@
                   <ul
                     v-for="(carac, index) in caracteristicas"
                     v-bind:key="index"
-                  class="carac">
+                    class="carac"
+                  >
                     <li class="text-start">{{ carac }}</li>
                   </ul>
 
@@ -137,7 +142,7 @@
                 <div>
                   <p class="mt-1 fs-6 text-start">Opciones de compra:</p>
                   <p class="blue text-start">
-                    {{ productos1 }} productos nuevos desde{{ oferta }}
+                    {{ productos1 }} productos nuevos desde ${{ oferta }}
                   </p>
                   <p class="blue text-start">
                     {{ productos2 }} productos usados y reacondicionados
@@ -155,7 +160,7 @@
                 <div class="ml-3 entrega">
                   <p class="text-start">
                     <i class="fa-solid fa-bolt-lightning verde separa"></i>
-                    <span class="verde">{{full}}</span>
+                    <span class="verde">{{ full }}</span>
                   </p>
                   <p class="text-start">
                     conoce los tiempos y las formas de envio
@@ -169,7 +174,7 @@
                   <p>
                     Vendido por <span class="blue">{{ vendedor }}</span>
                   </p>
-                  <p>{{ventas}}ventas</p>
+                  <p>{{ ventas }}ventas</p>
                   <h3 class="bold">{{ disponibilidad }}</h3>
                 </div>
                 <div class="d-grid gap-2 mb-3">
@@ -182,7 +187,7 @@
                   <p class="text-start">
                     <i class="fa-solid fa-arrow-rotate-left separa"> </i
                     ><span class="blue separa"> Devolucion gratis.</span>Tienes
-                    30 dias desde que lo recibes
+                    {{ garantiaDias+garantiaTiempo }} desde que lo recibes
                   </p>
                   <p class="text-start">
                     <i class="fa-solid fa-shield-halved separa"> </i
@@ -212,6 +217,7 @@
 
 <script>
 import axios from "axios";
+import info from "./LoginView.json";
 const inicio = "http://localhost/";
 
 export default {
@@ -221,32 +227,30 @@ export default {
       img1: inicio + "caja.webp",
       img2: inicio + "xbox1.webp",
       img3: inicio + "xbox2.webp",
+      libre: inicio + "m-libre.png",
       //---------------------------------//
-      vendidos: "+500",
-      reseñas:"(38)",
-      nombre: "Microsoft Xbox Series X 1TB Halo Infinite color gris",
-      price: " $27500",
-      meses:"12",
-      abono: " $2,291",
-      caracteristicas: [
-        "Incluye control",
-        "Resolución de 3840 px x 2160 px.",
-        "Horas de diversión garantizada.",
-        "Cuenta con: 1 cable hdmi, 1 halo infinite controller",
-        "la duracion de las baterias depende del uso del producto",
-      ],
-      productos1: 13,
-      productos2: 5,
-      oferta: " $26,991",
-      entrega:"Envio gratis a todo el pais",
-      full:"FULL",
-      llegada: "calcular cuando llega",
-      vendedor: "TAVO INC",
-      ventas: "+ 100",
-      disponibilidad: "¡Ultima disponible!",
-      garantia:"30 dias",
-      años: 1,
-      puntos: 1440,
+      nuevo: info.nuevo,
+      vendidos: info.vendidos,
+      reseñas: info.reseñas,
+      nombre: info.nombre,
+      price: info.price,
+      meses: info.meses,
+      abono: info.abono,
+      caracteristicas: info.caracteristicas,
+      productos1: info.productos1,
+      productos2: info.productos2,
+      oferta: info.oferta,
+      entrega: info.entrega,
+      full: info.full,
+      llegada: info.llegada,
+      vendedor: info.vendedor,
+      ventas: info.ventas,
+      disponibilidad: info.disponibilidad,
+      garantiaDias: info.garantiaDias,
+      garantiaTiempo: info.garantiaTiempo,
+      años: info.años,
+      puntos: info.puntos,
+      imgs: info.imgs,
     };
   },
   methods: {
@@ -289,7 +293,7 @@ export default {
   margin-right: 5px;
 }
 
-.carac{
+.carac {
   line-height: 15px;
 }
 
@@ -311,5 +315,9 @@ export default {
 .container-3 {
   border: 2px solid #cfcbcb;
   border-radius: 10px;
+}
+
+.libre {
+  width: 100%;
 }
 </style>
