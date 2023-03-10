@@ -88,13 +88,11 @@
 <script>
 import info from './EnvioView.json'
 import FooterComponent from '../components/FooterComponent.vue'
-import CaruselComponent from '@/components/CaruselComponent.vue';
 import axios from 'axios';
 const  inicio =  'http://localhost/';
 export default {
   components:{
-    FooterComponent,
-     CaruselComponent
+    FooterComponent
   },
   data: function () {
       return {

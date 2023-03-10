@@ -26,8 +26,7 @@
 <div class="row">
   <div class="col">
 <!-- Carousel wrapper -->
-<CarouselComponent :imgs=imagenes />
-<CaruselComponent/>
+<CaruselComponent imgs=imgs />
 
 <!-- Carousel wrapper -->     
 
@@ -111,15 +110,15 @@
 
 <script>
 import info from './Login2View.json'
+import FooterComponent from '../components/FooterComponent.vue'
+import CaruselComponent from '../components/CaruselComponent.vue'
 import axios from 'axios';
-import FooterComponent from '@/components/FooterComponent.vue';
-import CaruselComponent from '@/components/CaruselComponent.vue';
 const  inicio =  'http://localhost/';
 export default {
-    components: [
-        FooterComponent,
+    components:{
+      FooterComponent,
         CaruselComponent
-    ],
+    },
     data: function () {
         return {
             inicio2: inicio,
@@ -145,6 +144,7 @@ export default {
             feat: info.feat,
             princ: info.princ,
             caracteristicas: info.caracteristicas,
+            imgs:info.imgs,
             dic: info.dic,
             mer: info.mer,
             mod: info.mod,
@@ -152,6 +152,7 @@ export default {
             help: info.help,
         };
     },
+
     methods: {
         carga: function () {
             axios.get("http://localhost:8080/pro/muebles", {}).then(response => {
@@ -161,9 +162,9 @@ export default {
         },
         cambia: function () {
             this.mensaje3 = "hola mundo";
-        },
+        }
     },
-    components: { FooterComponent, CaruselComponent }
+
 }
 </script>
 
