@@ -1,0 +1,39 @@
+
+
+{
+    
+    "favorito": "Favorito",
+    "tienda": "Tienda oficial Electro Shop",
+    "mensaje": "Hola mundo",
+    "mensaje2": "Hola mundo 2",
+    "mensaje3": "Hola mundo 3",
+    "mensaje4": "Hola mundo 4",
+    "precio": "5,959",
+    "precio2": "$6,999",
+    "precio3": "6999 pesos",
+    "descuento": "14% OFF ",
+    "plazos": "en 12x 604 pesos con 99 centavos",
+    "vendidos": "+5mil vendidos",
+    "tituloProducto": "Nintendo Switch OLED 64GB Standard color rojo neón, azul neón y negro",
+    "mediosPago": "Ver los medios de pago",
+    "ofertaDia": "OFERTA DEL DÍA",
+    "ventas": "+50mil ventas",
+    "opiniones": "(1640)",
+    "stock": "Stock disponible",
+    "calcularLlegada": "Calcular cuándo llega",
+    "disponibles": "(14 disponibles)",
+    "puntos": "Sumas 313 puntos.",
+    "envioGratis": "Envío gratis a todo el país",
+    "caracteristicas":[
+        "Incluye 2 controles.", 
+        "Resolución de 1920 px x 1080 px.",
+        "Memoria RAM de 4GB.",
+        "Tiene pantalla táctil.",
+        "La duración de la batería es de 9h.",
+        "Horas de diversión garantizada.",
+        "Cuenta con: 1 joy-con grip, 1 dock, 1 cable hdmi, 2 correas para joy-con, 1 adaptador de corriente.",
+        "La duración de la batería depende del uso que se le dé al producto."],
+    "img1": "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:good/mg/gm/1p/images/product-images/img_large/00004549688340-3l.jpg",
+    "img2":  "https://images.nintendolife.com/c93689e504dc5/nintendo-switch-oled-model.large.jpg",
+    "img3":  "https://helios-i.mashable.com/imagery/reviews/00lMQYGBGqxsGxKCOlGbqS4/hero-image.fill.size_1248x702.v1633525509.jpg"
+}
