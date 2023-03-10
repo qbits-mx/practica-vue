@@ -1,1 +1,12 @@
-docker run -it -p80:80 --name=images -v /home/ubuntu/development/code/practica-vue/pictures-docker:/usr/share/nginx/html nginx
+RUTA=/home/ubuntu/development/code/practica-vue/pictures-docker
+
+docker stop images
+docker rm images
+
+docker run \
+-d \
+-p80:80 \
+--name=images \
+-v $RUTA:/usr/share/nginx/html \
+nginx
+
