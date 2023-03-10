@@ -1,6 +1,7 @@
 {
     "nombre": "Pantalla JVC SI32H LCD HD 32 110V/240V",
-    "totalStars": 1500,
+    "totalStars": 2.8,
+    "votosTotales": 1500,
     "vendidas": 202,
     "precio": 2.916,
     "mensualidad": 976,
@@ -13,8 +14,6 @@
     "totalVentas": "+1000",
     "meses": 3,
     "especDia": "Domingo",
-    "caruselActivo": "carousel-item active",
-    "caruselInactivo": "carousel-item",
     "dimg": [
         "D-1.jpg", 
         "D-2.jpg", 
@@ -24,10 +23,6 @@
         "D-5.jpg",
         "D-5.jpg"
     ],
-    "cabecera": {
-        "desc": "Edad",
-        "longdesc": "Sebastian"
-    },
     "caracteristicas": [
         "Su resolucion XY", 
         "Manejalo con la voz", 

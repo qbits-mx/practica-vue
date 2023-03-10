@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav d-flex align-items-center justify-content-around">
                 <li class="nav-item">
-                  <a class="nav-link mx-3 p-0" aria-current="page" href="#">{{ contenido.longdesc }}</a>
+                  <a class="nav-link mx-3 p-0" aria-current="page" href="#">Categorías</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-3 p-0" aria-current="page" href="#">Ofertas</a>
@@ -116,7 +116,7 @@
                 <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
                 <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
                 <i class="bi bi-star-half mx-1" style="color: cornflowerblue;"></i>
-                <span class="linksurl">({{ totalStars }})</span>
+                <span class="linksurl">({{ votosTotales }})</span>
               </div>
               <div class="my-2 d-flex align-items-center">
                 <div class="my-auto">
@@ -190,7 +190,6 @@ export default {
         return {
             inicio2: inicio,
             caracteristicas: info.caracteristicas,
-            contenido: info.cabecera,
             nombre: info.nombre,
             totalStars: info.totalStars,
             vendidas: info.vendidas,
@@ -205,9 +204,10 @@ export default {
             totalVentas: info.totalVentas,
             meses: info.meses,
             especDia: info.especDia,
-            caruselActivo: info.caruselActivo,
-            caruselInactivo: info.caruselInactivo,
+            caruselActivo: "carousel-item active",
+            caruselInactivo: "carousel-item",
             dimg: info.dimg,
+            votosTotales: info.votosTotales,
 
             img1: "merca04.png",
             img2: "merca02.png",
