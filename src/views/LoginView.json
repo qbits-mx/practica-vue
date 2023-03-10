@@ -1,0 +1,60 @@
+{
+    "nombre1": "Bat-Frog",
+    "nombre2": "Cutli-God",
+    "nombre3": "Rakkiwan",
+    "producto1": "Art Toy Proteus Edition Juguete De Diseñador",
+    "importa1": "proteus",
+    "importa2": "colección",
+    "importa3": "juguete de autor",
+    "importa4": "intervención artistica",
+    "referencia1": "Juegos y Juguetes",
+    "referencia2": "Muñecos y Colecciones",
+    "referencia3": "Figuras de acción y Juguetes",
+    "precio1": "$ 900.00",
+    "meses1": 3,
+    "promo1": "$300.00",
+    "interes1": "sin intereses",
+    "dia": "30",
+    "periodo": "dias",
+    "disponibles1": "¡Última disponible!",
+    "puntos1": 60,
+    "estado1": "Nuevo",
+    "ordinal": 1,
+    "cabecera": {
+        "desc": "Edad",
+        "longdesc": "Selecciona el rango de tu edad"
+    },
+    "caracteristicas": [
+        "Escultura artesanal",
+        "Realizada a mano",
+        "Pintada a mano",
+        "Pieza única",
+        "Pieza original firmada"
+    ],
+    "caracteristicas1": [
+        "$ 1,200.00",
+        "Envío gratis",
+        "Pintada a mano",
+        "Pieza única",
+        "Pieza original firmada"
+    ],
+    "caracteristicas2": [
+        "$ 2,600.00",
+        "Envío gratis",
+        "Pintada a mano",
+        "Pieza única",
+        "Pieza original firmada"
+    ],
+    "caracteristicas3": [
+        "$ 900.00",
+        "Envìo gratis",
+        "Pintada a mano",
+        "Pieza única",
+        "Pieza original firmada"
+    ],
+    "imags": [
+        "proteus4.jpg",
+        "proteus5.jpg",
+        "proteus6.jpg"
+    ]
+}
