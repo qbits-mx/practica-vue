@@ -165,7 +165,7 @@
        <span class="fa fa-star text-primary"></span>
        <span class="fa fa-star text-primary"></span>
     </p>
-    <p class="card-text">{{ opiniones }}</p>
+    <p class="card-text">( {{ opiniones }} )</p>
 
     <p class="card-text">RECOMENDADO en Consolas de videojuegos</p>
     <p class="card-text">Precio anterior: {{ precio3 }}</p>
@@ -196,9 +196,9 @@
     <p class="card-text"><strong>{{ stock }}</strong></p>
     <div class="input-group mb-3">
       <span class="input-group-text">Cantidad:</span>
-      <input type="number" class="form-control" aria-label="Cantidad" min="1" max="14" value="1">
+      <input type="number" class="form-control" aria-label="Cantidad" min="1" :max=disponibles value="1">
       <span class="input-group-text">unidad</span>
-      <span class="input-group-text">{{ disponibles }}</span>
+      <span class="input-group-text">(Disponibles {{ disponibles }} )</span>
     </div>
     <button type="button" class="btn btn-primary btn-lg btn-block mt-5">Comprar ahorita</button>
     <button type="button" class="btn btn-outline-primary btn-lg btn-block mt-3">Agregar al carrito</button>
@@ -214,7 +214,7 @@
 </div>
 <div class="d-flex align-items-center mb-3">
   <i class="fa-solid fa-trophy fa-lg text-warning me-2"></i>
-  <p class="card-text mb-0"><strong>Mercado Puntos.</strong> Se abrirá en una nueva ventana. {{ puntos }} </p>
+  <p class="card-text mb-0"><strong>Mercado Puntos.</strong> Se abrirá en una nueva ventana. Sumas {{ puntos }} puntos. </p>
 </div>
   </div>
 </div>
@@ -235,7 +235,7 @@
 </template>
 
 <script>
-import info from './datos2.json'
+import info from './LoginView.json'
 import axios from 'axios'
 //const inicio= 'https://linuxhint.com/wp-content/uploads/2018/03/'
 // localhost

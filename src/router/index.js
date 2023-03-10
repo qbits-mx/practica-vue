@@ -3,6 +3,7 @@ import store from '@/store'
 import axios from 'axios';
 
 import ForbiddenView from '@/views/ForbiddenView'
+import EjemploView from '@/views/EjemploView'
 import PageNotFoundView from '@/views/PageNotFoundView'
 import HomeView from '@/views/HomeView'
 import LoginView from '@/views/LoginView'
@@ -20,6 +21,11 @@ const routes = [
     path: '/ui/login',
     name: 'login',
     component: LoginView
+  },
+  {
+    path: '/ui/Ejemplo',
+    name: 'Ejemplo',
+    component: EjemploView
   },
   {
     path: '/ui/forbidden',
