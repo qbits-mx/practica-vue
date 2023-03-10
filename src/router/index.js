@@ -3,6 +3,7 @@ import store from '@/store'
 import axios from 'axios';
 
 import ForbiddenView from '@/views/ForbiddenView'
+import ComprasView from '@/views/ComprasView'
 import PageNotFoundView from '@/views/PageNotFoundView'
 import HomeView from '@/views/HomeView'
 import LoginView from '@/views/LoginView'
@@ -39,6 +40,11 @@ const routes = [
   { path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: PageNotFoundView
+  },
+  { 
+  path: '/ui/compras',
+  name: 'compras',
+  component: ComprasView
   },
 ]
 

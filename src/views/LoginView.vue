@@ -67,7 +67,7 @@
           <p class="texts">También te puede interesar: <span>laptop chuwi - macbook pro 2017 - laptop Gamer - chrome book - laptop precios</span></p>
         </div>
         <div class="display-10 mt-3 body1 mx-auto">
-          <p class="texts">Volver al listado: <span class="linksurl">| Computacion > laptops y accesorios > laptops</span></p>
+          <p class="texts">Volver al listado: <span class="linksurl">| Computación > laptops y accesorios > laptops</span></p>
         </div>
         <div class="container ">
           <div class="row ">
@@ -116,7 +116,7 @@
                 <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
                 <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
                 <i class="bi bi-star-half mx-1" style="color: cornflowerblue;"></i>
-                <span class="linksurl">{{ totalStars }}</span>
+                <span class="linksurl">({{ totalStars }})</span>
               </div>
               <div class="my-2 d-flex align-items-center">
                 <div class="my-auto">
@@ -139,7 +139,7 @@
                 </ul>
               </div>
               <div class="my-3">
-                <span class="linksurl">Ver caracteristicas</span>
+                <span class="linksurl">Ver características</span>
               </div>
               <div class="mt-5">
                 <span>Opciones de compra</span>
@@ -182,7 +182,7 @@
 
 <script>
 import axios from 'axios';
-import info from './datos2.json';
+import info from './LoginView.json';
 const  inicio =  'http://127.0.0.1/';
 
 export default {
