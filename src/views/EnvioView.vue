@@ -102,6 +102,7 @@ export default {
           feat: info.feat,
           princ: info.princ,
           caracteristicas: info.caracteristicas,
+          imgs: info.imgs,
           dic: info.dic,
           mer: info.mer,
           mod: info.mod,

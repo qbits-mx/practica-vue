@@ -1,127 +1,74 @@
 <template>
+<body>
+<NavComponents/>
+<div>
+<ul class="list-group tamaño">
+  <li class="list-group-item">
 
-     <nav class="navbar  navbar-expand-lg hell d-flex justify-content-around">
-  <a class="navbar-brand" href="#">{{go}}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">{{ feat }}</a>
-      <a class="nav-item nav-link" href="#">{{ princ }}</a>
-      <a class="nav-item nav-link " href="#">{{ dic }}</a>
-      <a class="nav-item nav-link " href="#">{{ mer }}</a>
-      <a class="nav-item nav-link " href="#">{{ mod }}</a>
-      <a class="nav-item nav-link " href="#">{{ Ven }}</a>
-      <a class="nav-item nav-link " href="#">{{ help }}</a>
-    </div>
-  </div>
-  
-</nav>
-   <br>
-   <br>
-
-<div class="card bg-light mb-3 yum">
-  <div class="col texts1 mt-2 border p-5 rounded ">
-    <div class="container text-center">
-  <div class="row">
-
-        <div class="container">
-            
-        </div> <nav class="menu">
+    <nav class="menu">
           <div class="teco">
-            <h2><a href="#"> Carrito <span style="font-weight: 600;">({{ carrit }})</span></a>
-            <a href="#">Guardados <span style="font-weight: 600;">({{ guar }})</span></a></h2>
+            <h5><a href="#"> Carrito <span style="font-weight: 200;">({{ carrit }})</span></a>
+            <a href="#">Guardados <span style="font-weight: 600;">({{ guar }})</span></a></h5>
             </div>
             <div class="linea1"></div>
             </nav>
+    <div class="hola">
+    <img :src=inicio2+img1 class="d-block w-100 alto" alt="..." />
 
-    <div class="w-100"></div>
-  </div>
-  <div class="card-body">
-  </div>
 </div>
-  <br>
- <div class="cierto">
+<h2 class="card-text alins"> <span> {{ nombre2 }}</span></h2>
+<h1 class="ley1" ><span> $ {{ costo2 }}</span> </h1>
+<div class="prime">
+    <div class="input-group mb-3">
+  <span class="input-group-text">Cantidad:</span>
+  <input type="number" class="form-control " aria-label="Cantidad " min="1" :max=disu value= disponibles>
+  <a > <span class="input-group-text">Disponibles({{ disu }})</span></a>
+</div>
+</div>
+          <button class="btn btn-link"> Eliminar</button>
+          <button class="btn btn-link"> Mas productos del contacto</button>
+          <button class="btn btn-link"> Comprar ahora</button>
+          <button class="btn btn-link"> Guardar para despues</button>
+  </li>
+  <li class="list-group-item">
 
     <div class="hola">
-        <img :src=inicio2+img2 class="d-block w-100 alto" alt="..." />
-
-    </div>
-    <h2 class="card-text"><span> {{ nombre }}</span></h2>
-    <h1 class="ley" ><span> $ {{ costo1 }}</span> </h1>
-+
-    <div class="prime">
-        <div class="input-group mb-3">
-      <span class="input-group-text">Cantidad:</span>
-      <input type="number" class="form-control" aria-label="Cantidad nuu" min="1" :max= dis value= disponibles>
-      <a > <span class="input-group-text">Disponibles({{ dis }})</span></a>
-
-    </div>
-
-
-    </div>
-
-              <button class="btn btn-link"> Eliminar</button>
-              <button class="btn btn-link"> Mas productos del contacto</button>
-              <button class="btn btn-link"> Comprar ahora</button>
-              <button class="btn btn-link"> Guardar para despues</button>
-              
-            </div>
-            </div>
-            <div class="container text-center">
-  <div class="row">
-    <div class="w-100"></div>
-  </div>
-  
-</div>
-
- <div class="cierto">
-
-    <div class="hola">
-        <img :src=inicio2+img1 class="d-block w-100 alto" alt="..." />
-
-    </div>
-    <h2 class="card-text"> <span> {{ nombre2 }}</span></h2>
-    <h1 class="ley" ><span> $ {{ costo2 }}</span> </h1>
-    <div class="prime">
-        <div class="input-group mb-3">
-      <span class="input-group-text">Cantidad:</span>
-      <input type="number" class="form-control" aria-label="Cantidad" min="1" :max=disu value= disponibles>
-      <a > <span class="input-group-text">Disponibles({{ disu }})</span></a>
-
-    </div>
-
-
-    </div>
-
-              <button class="btn btn-link"> Eliminar</button>
-              <button class="btn btn-link"> Mas productos del contacto</button>
-              <button class="btn btn-link"> Comprar ahora</button>
-              <button class="btn btn-link"> Guardar para despues</button>
-              <div class="linea"></div>
-
-              
-              <div class="prime"><h2 > <span>costo de Envio ${{ envio }}</span>
-                <div class="linea"></div>
-
-                <br>
-                <span class="prime">El costo total es ${{ costoFinal }}</span></h2>
+    <img :src=inicio2+img2 class="d-block w-100 alto" alt="..." />
 
 </div>
-            </div>
-          </div>
+<h2 class="card-text alins"> <span> {{ nombre }}</span></h2>
+<h1 class="ley1" ><span> $ {{ costo1 }}</span> </h1>
+<div class="prime">
+    <div class="input-group mb-3">
+  <span class="input-group-text">Cantidad:</span>
+  <input type="number" class="form-control " aria-label="Cantidad " min="1" :max=dis value= disponibles>
+  <a > <span class="input-group-text">Disponibles({{ dis }})</span></a>
+</div>
+</div>
+          <button class="btn btn-link"> Eliminar</button>
+          <button class="btn btn-link"> Mas productos del contacto</button>
+          <button class="btn btn-link"> Comprar ahora</button>
+          <button class="btn btn-link"> Guardar para despues</button>
 
-          
-  <footer class="page-footer">
-  <small>Copyright © 1999-2023 El presente canal de instrucción o ambiente, es operado por DeRemate.Com de México, S. de R.L. de C.V. identificada bajo la marca comercial "Mercado Libre".
-Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito Juarez, 03940 Ciudad de México, CDMX, Mexico 
-  </small>
-</footer>
+  </li>
+  <li class="list-group-item">
 
+          <br>
+          <div class="nuu"><h2 > <span>costo de Envio ${{ envio }}</span>
+            <br>
+            <br>
+            <span > El costo total es ${{ costoFinal }}</span></h2>
 
+</div>
+       
+  </li>
 
+</ul>
+</div>
 
+ 
+</body>
+<FooterComponent />
 
 
 
@@ -129,7 +76,13 @@ Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito Juarez, 03940
 
 <script>
 import info from './CarritoView.json'
+import FooterComponent from '../components/FooterComponent.vue'
+import NavComponents from '../components/NavComponents.vue'
 export default {
+  components:{
+    FooterComponent,
+    NavComponents
+  },
   data: function () {
       return {
           inicio2:info.inicio,
@@ -177,6 +130,12 @@ export default {
 
 <style scoped>
 
+.tamaño{
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 1080px;
+
+}
 .linea {
   border-top: 1px solid gray;
   height: 1px;
@@ -189,6 +148,20 @@ export default {
   padding: 0;
   width: 800px;
   margin: 10px auto 0 auto;
+}
+.linea2 {
+  border-top: 1px solid gray;
+  height: 1px;
+  padding: 0;
+  width: 1100px;
+  margin: 10px auto 0 auto;
+}
+.linea3 {
+  border-top: 1px solid gray;
+  height: 1px;
+  padding: 0;
+  width: 1100px;
+  margin-left: -850px;
 }
 
       .container{
@@ -225,20 +198,27 @@ export default {
     
 }
 .hola{
-    text-align:left;
-    max-width: 10%;
+    text-align:center;
+    max-width: 20%;
  max-height: 10%;
 
 }
-.one{
-    text-align:right;
-    text-overflow:clip;	
-}
+
 .prime{
-    text-align:right;
+    width: 100px;
+    margin-left: 800px;
+    margin-top: -100px;
 
 }
+.prime1{
+    width: 100px;
+    margin-left: 750px;
+    margin-top: -220px;
+}
 .ley{
+     margin-top: -700px;
+}
+.ley1{
     text-align:right;
     text-justify:auto;	
 }
@@ -246,14 +226,27 @@ export default {
   background-color: #fff159;
 }
 .teco{
-  margin-left: -90px;
+  margin-left: -800px;
 }
 .yum{
   margin-right: 100px;
  margin-left: 100px;
 }
 .nuu{
-margin-left: 10px;
-margin-right: 10;
+margin-left: 750px;
+margin-top: 100PX;
+
 }
+
+
+.alins{
+  margin-left: 100px;
+  margin-top: 180px;
+  text-align:left;
+    width: 100%;
+  
+
+}
+
+
 </style>

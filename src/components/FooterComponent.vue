@@ -1,4 +1,6 @@
 <template>
+ <footer class="page-footer why">
+
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
@@ -12,7 +14,6 @@
 </div>
 
 </nav>
-<footer class="page-footer why">
 <small>Copyright © 1999-2023 El presente canal de instrucción o ambiente, es operado por DeRemate.Com de México, S. de R.L. de C.V. identificada bajo la marca comercial "Mercado Libre".
 Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito Juarez, 03940 Ciudad de México, CDMX, Mexico 
 </small>
@@ -20,3 +21,11 @@ Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito Juarez, 03940
 
 
 </template>
+
+<style>
+.why{
+  background: white;
+  margin-top: 700px;
+}
+
+</style>

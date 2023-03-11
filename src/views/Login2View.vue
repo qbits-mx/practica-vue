@@ -26,7 +26,7 @@
 <div class="row">
   <div class="col">
 <!-- Carousel wrapper -->
-<CaruselComponent imgs=imgs />
+<CaruselComponent :imgs=imgs />
 
 <!-- Carousel wrapper -->     
 
@@ -144,12 +144,16 @@ export default {
             feat: info.feat,
             princ: info.princ,
             caracteristicas: info.caracteristicas,
-            imgs:info.imgs,
             dic: info.dic,
             mer: info.mer,
             mod: info.mod,
             Ven: info.Ven,
             help: info.help,
+            "imgs": [
+            this.inicio2 + this.img1,
+            this.inicio2 + this.img2, 
+            this.inicio2 + this.img3
+          ],
         };
     },
 
