@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav d-flex align-items-center justify-content-around">
                 <li class="nav-item">
-                  <a class="nav-link mx-3 p-0" aria-current="page" href="#">Categoría</a>
+                  <a class="nav-link mx-3 p-0" aria-current="page" href="#">Categorías</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-3 p-0" aria-current="page" href="#">Ofertas</a>
@@ -195,7 +195,6 @@ export default {
     data: function () {
         return {
             inicio2: inicio,
-            votosTotales: info.votosTotales,
             totalStars: info.totalStars,
             caracteristicas: info.caracteristicas,
             nombre: info.nombre,
@@ -212,6 +211,7 @@ export default {
             meses: info.meses,
             especDia: info.especDia,
             dimg: info.dimg,
+            votosTotales: info.votosTotales,
 
             img1: "merca04.png",
             img2: "merca02.png",
