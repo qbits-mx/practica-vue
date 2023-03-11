@@ -52,5 +52,5 @@
             return (index==0)?this.caruselActivo:this.caruselInactivo
         }
     }
-  };
+  }
 </script>
