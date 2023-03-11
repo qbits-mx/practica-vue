@@ -45,7 +45,7 @@
         return {
             caruselActivo: "carousel-item active",
             caruselInactivo: "carousel-item",
-        };
+        }
     },
     methods: {
         selecciona: function(index) {
