@@ -47,9 +47,6 @@
             caruselInactivo: "carousel-item",
         };
     },
-    mounted() {
-        console.log('Montado')
-    },
     methods: {
         selecciona: function(index) {
             return (index==0)?this.caruselActivo:this.caruselInactivo
