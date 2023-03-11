@@ -1,5 +1,4 @@
-{
-    "nombre": "Pantalla JVC SI32H LCD HD 32 110V/240V",
+{   "nombre": "Pantalla JVC SI32H LCD HD 32 110V/240V",
     "totalStars": 2.8,
     "votosTotales": 1500,
     "vendidas": 202,
@@ -14,6 +13,7 @@
     "totalVentas": "+1000",
     "meses": 3,
     "especDia": "Domingo",
+    
     "dimg": [
         "D-1.jpg", 
         "D-2.jpg", 

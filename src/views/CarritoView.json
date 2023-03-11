@@ -10,15 +10,13 @@
           "mod": "Moda",
           "Ven": "Vender",
           "help": "Ayuda",
-          "inicio": "http://localhost/",
-          "dis": 10,
-          "disu": 19,
-          "costo1":294,
-          "costo2": 420,
-          "n":1,
-          "envio":150,
-          "carrit": 2,
-          "guar": 0
+
+
+          "imgs": [
+            "05-01.jpg", 
+            "05-02.jpg", 
+            "05-03.jpg" 
+        ]
 
            
 }
