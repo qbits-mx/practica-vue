@@ -238,7 +238,7 @@ export default {
 
 
 .precios {
-  font-size: 12.5rem;
+  font-size: 2.5rem;
 }
 
 .red1{
