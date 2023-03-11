@@ -37,6 +37,12 @@
   <div class="carousel-item">
     <img :src=inicio2+img3 class="d-block w-100 alto" alt="..." />
   </div>
+  <div class="carousel-item">
+    <img :src=inicio2+img4 class="d-block w-100 alto" alt="..." />
+  </div>
+  <div class="carousel-item">
+    <img :src=inicio2+img5 class="d-block w-100 alto" alt="..." />
+  </div>
 </div>
 <!-- Slides -->
 
@@ -67,13 +73,21 @@
     aria-label="Slide 3" style="width: 100px;">
     <img class="d-block w-100 img-fluid" :src=inicio2+img3 />
   </button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+    aria-label="Slide 3" style="width: 100px;">
+    <img class="d-block w-100 img-fluid" :src=inicio2+img4 />
+  </button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+    aria-label="Slide 3" style="width: 100px;">
+    <img class="d-block w-100 img-fluid" :src=inicio2+img5 />
+  </button>
 </div>
 </div>
 <!-- Carousel wrapper -->     
 
   </div>
           <div class="col texts1">
-            <span class="oscuro">Nuevo | {{ totalVentas }}vendidos</span>
+            <span class="oscuro">Nuevo |  +{{ totalVentas }}vendidos</span>
             <h5 class="my-2">{{ nombre }}</h5>
             <div>
               <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
@@ -81,7 +95,7 @@
               <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
               <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
               <i class="bi bi-star-half mx-1" style="color: cornflowerblue;"></i>
-              <span class="linksurl">{{ estrellas }}</span>
+              <span class="linksurl"> ({{ estrellas }})</span>
             </div>
             <div class="my-2 d-flex align-items-center">
               <div class="my-auto">
@@ -164,10 +178,11 @@ export default {
           totalVentas: info.totalVentas,
           meses: info.meses,
           especDia: info.especDia,
-          dimg: info.dimg,
           img1: info.img1 ,
           img2: info.img2,
           img3: info.img3,
+          img4: info.img4,
+          img5: info.img5,
           go: info.go,
           feat: info.feat,
           princ: info.princ,
