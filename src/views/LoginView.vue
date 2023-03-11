@@ -73,11 +73,11 @@
     aria-label="Slide 3" style="width: 100px;">
     <img class="d-block w-100 img-fluid" :src=inicio2+img3 />
   </button>
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
     aria-label="Slide 3" style="width: 100px;">
     <img class="d-block w-100 img-fluid" :src=inicio2+img4 />
   </button>
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
     aria-label="Slide 3" style="width: 100px;">
     <img class="d-block w-100 img-fluid" :src=inicio2+img5 />
   </button>
