@@ -11,6 +11,7 @@
           "totalVentas": "+200",
           "meses": "4",
           "especDia": "Martes",
+          
           "img1": "61aiJcyfhyL._AC_SL1000_.jpg",
           "img2": "61kCxlxYDfL._AC_SL1000_.jpg", 
           "img3": "61Rr8uxmREL._AC_SY355_.jpg",
@@ -26,9 +27,9 @@
 
 
           "dimg": [
-            "61aiJcyfhyL._AC_SL1000_.jpg", 
-            "61kCxlxYDfL._AC_SL1000_.jpg", 
-            "61Rr8uxmREL._AC_SY355_.jpg" 
+            "01-01.jpg", 
+            "01-02.jpg", 
+            "01-03.jpg" 
         ],
 
            
