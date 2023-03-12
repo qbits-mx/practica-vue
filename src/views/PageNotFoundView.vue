@@ -13,10 +13,10 @@
 
 <style>
 body {
-    background-color:#ffffff;
+    background-color:gainsboro;
 }
 .fondo {
-    color: #fff;
+    color: grey;
     height: 100%;
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');

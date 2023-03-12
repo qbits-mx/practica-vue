@@ -15,6 +15,7 @@
       <a class="nav-item nav-link " href="#">{{ help }}</a>
     </div>
   </div>
+
 </nav>
   
     <body>
@@ -240,7 +241,7 @@ text-align: left;
 }
 .oscuro{
 font-size: .7rem;
-color: gray;
+color: gainsboro;
 }
 .linksurl{
 color: cornflowerblue;
