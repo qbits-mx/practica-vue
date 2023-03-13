@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar d-flex flex-column flex-shrink-0" :style="{ width: sidebarWidth }">
       <div class="m-auto">
-        <SidebarLinks to="/" icon="bi bi-list" class="mb-5">Login</SidebarLinks>
+        <SidebarLinks to="/ui/login" icon="bi bi-list" class="mb-5">Login</SidebarLinks>
         <SidebarLinks to="/ui/compras" icon="bi bi-handbag">Compras</SidebarLinks>
         <SidebarLinks to="#" icon="bi bi-ticket-perforated">Ofertas</SidebarLinks>
         <SidebarLinks to="#" icon="bi bi-shop-window">Mi tienda</SidebarLinks>
