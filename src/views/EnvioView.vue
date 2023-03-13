@@ -90,3 +90,22 @@ export default {
   }
 }
 </script>
+
+
+<style>
+.ll{
+  text-align: left;
+}
+.giga{
+  align-items: left;
+}
+.card{
+  align-items: right;
+}
+.linea {
+  border-top: 1px solid gray;
+  height: 1px;
+  padding: 0;
+  margin: 20px auto 0 auto;
+}
+</style>
