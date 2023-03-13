@@ -1,11 +1,75 @@
-{
-    "dimg1": "D-1.jpg",
-    "totalCompras": 120,
-    "fechaCompra": "4 de Marzo",
-    "statusEnvio": "Entregado",
-    "statusDeEntrega": "7 de marzo",
-    "llegoStatus": "Llegó",
-    "descripcion": "Crema para cuerpo lubriderm reparacion int...",
-    "unidadesTotal": 2,
-    "vendedor": "Maria Guadalupe Andrade Gonzalez"
-}
+[
+    {
+        "id":3,
+        "img": "D-1.jpg",
+        "totalCompras": 120,
+        "fechaCompra": "3 de Marzo",
+        "statusEnvio": "Entregado",
+        "statusDeEntrega": "3 de marzo",
+        "llegoStatus": "Llegó",
+        "descripcion": "Crema para cuerpo lubriderm reparacion int...",
+        "unidadesTotal": 2,
+        "vendedor": "Maria Guadalupe Andrade Gonzalez"
+    },
+    {
+        "id":1,
+        "img": "D-1.jpg",
+        "totalCompras": 120,
+        "fechaCompra": "11 de Marzo",
+        "statusEnvio": "Entregado",
+        "statusDeEntrega": "7 de marzo",
+        "llegoStatus": "Llegó",
+        "descripcion": "Crema para cuerpo lubriderm reparacion int...",
+        "unidadesTotal": 2,
+        "vendedor": "Maria Guadalupe Andrade Gonzalez"
+    },
+    {
+        "id":1,
+        "img": "D-4.jpg",
+        "totalCompras": 120,
+        "fechaCompra": "1 de Marzo",
+        "statusEnvio": "Entregado",
+        "statusDeEntrega": "7 de marzo",
+        "llegoStatus": "Llegó",
+        "descripcion": "Crema para cuerpo lubriderm reparacion int...",
+        "unidadesTotal": 2,
+        "vendedor": "Maria Guadalupe Andrade Gonzalez"
+    },
+    {
+        "id":4,
+        "img": "D-3.jpg",
+        "totalCompras": 120,
+        "fechaCompra": "4 de Marzo",
+        "statusEnvio": "Entregado",
+        "statusDeEntrega": "7 de marzo",
+        "llegoStatus": "Llegó",
+        "descripcion": "Crema para cuerpo lubriderm reparacion int...",
+        "unidadesTotal": 2,
+        "vendedor": "Maria Guadalupe Andrade Gonzalez"
+    },
+    {
+        "id":4,
+        "img": "D-2.jpg",
+        "totalCompras": 120,
+        "fechaCompra": "4 de Marzo",
+        "statusEnvio": "Entregado",
+        "statusDeEntrega": "7 de marzo",
+        "llegoStatus": "Llegó",
+        "descripcion": "Crema para cuerpo lubriderm reparacion int...",
+        "unidadesTotal": 2,
+        "vendedor": "Maria Guadalupe Andrade Gonzalez"
+    },
+    {
+        "id":4,
+        "img": "D-1.jpg",
+        "totalCompras": 120,
+        "fechaCompra": "52 de Marzo",
+        "statusEnvio": "Entregado",
+        "statusDeEntrega": "7 de marzo",
+        "llegoStatus": "Llegó",
+        "descripcion": "Crema para cuerpo lubriderm reparacion int...",
+        "unidadesTotal": 2,
+        "vendedor": "Maria Guadalupe Andrade Gonzalez"
+    }
+    
+]

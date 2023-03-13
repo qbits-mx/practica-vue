@@ -9,6 +9,7 @@ import HomeView from '@/views/HomeView'
 import LoginView from '@/views/LoginView'
 import ForgotPassView from '@/views/ForgotPassView'
 import RegisterView from '@/views/RegisterView'
+import SideBarP from '@/views/SideBarP'
 
 const routes = [
   {
@@ -45,6 +46,11 @@ const routes = [
   path: '/ui/compras',
   name: 'compras',
   component: ComprasView
+  },
+  { 
+    path: '/ui/sidebar',
+    name: 'sideBar',
+    component: SideBarP
   },
 ]
 
