@@ -1,6 +1,6 @@
 <template>
 
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar  navbar-expand-lg hell d-flex justify-content-around">
   <a class="navbar-brand" href="#">{{go}}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,76 +29,111 @@
         <div class="container">
             
             </div> <nav class="menu">
-                <a href="#">Carrito ({{ carrit }})</a>
-                <a href="#">Guardados ( {{ guar }})</a>
-                <!--creacion de las pestañas del menu-->
+                    <h2><a href="#"> Carrito <span style="font-weight: 600;">({{ carrit }})</span></a>
+                    <a href="#">Guardados <span style="font-weight: 600;">({{ guar }})</span></a></h2>
+                    <div class="linea"></div>
             </nav>
-    
-    <br>
-    <div class="linea"></div>
 
-    <!-- Force next columns to break to new line -->
     <div class="w-100"></div>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Light card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
   <br>
-            <p class="verde mb-2"><i class="bi bi-truck"></i> 🚚 Llega gratis el <span style="font-weight: 600;">{{ especDia }}</span></p>
-            <p class="mx-4">Comprando dentro de los proximos</p>
-            <p class="mx-4 mt-n3 red1">{{ minutos }} min</p>
-            <span class="linksurl mx-4"><i class="bi bi-geo-alt"></i> Enviar a {{ direccion }}</span>
-            <div class="my-4">
-              <p>Tienda oficial <span class="linksurl">{{ tienda }}</span></p>
-              <p class="mt-n3">{{ numVentas }} ventas</p>
+ <div class="cierto">
+
+    <div class="hola">
+        <img :src=inicio2+img2 class="d-block w-100 alto" alt="..." />
+
+    </div>
+    <h2 class="card-text"><span> {{ nombre }}</span></h2>
+    <h1 class="ley" ><span> $ {{ costo1 }}</span> </h1>
++
+    <div class="prime">
+        <div class="input-group mb-3">
+      <span class="input-group-text">Cantidad:</span>
+      <input type="number" class="form-control" aria-label="Cantidad" min="1" :max= dis value= disponibles>
+      <a > <span class="input-group-text">Disponibles({{ dis }})</span></a>
+
+    </div>
+
+
+    </div>
+
+              <button class="btn btn-link"> Eliminar</button>
+              <button class="btn btn-link"> Mas productos del contacto</button>
+              <button class="btn btn-link"> Comprar ahora</button>
+              <button class="btn btn-link"> Guardar para despues</button>
+              
             </div>
-            <div>
-              <p><strong>Stock disponible</strong></p>
             </div>
-            <div>
-              <p>Cantidad: <strong>{{ Existencia }} unidades </strong><span class="oscuro">({{ totalProd }} disponibles)</span></p>
-            </div>
-            <div>
-              <button class="btn btn-primary"> Comprar ahorita</button>
-              <br>
-              <button class="btn btn-ligth"> Agregar al carrito</button>
-            </div>
-            <div class="mt-5">
-              <p class="my-4"><span class="linksurl"><i class="bi bi-arrow-90deg-left"></i> Devoluciones gratis.</span> Tienes 30 dias desde que lo recicbes.</p>
-              <p class="my-4"><span class="linksurl"><i class="bi bi-shield-plus"></i> Compra Protegida.</span> Recibe el producto que esperabas o te devolvemos el dinero.</p>
+            <div class="container text-center">
+  <div class="row">
+    <div class="w-100"></div>
+  </div>
+  
+</div>
+
+ <div class="cierto">
+
+    <div class="hola">
+        <img :src=inicio2+img1 class="d-block w-100 alto" alt="..." />
+
+    </div>
+    <h2 class="card-text"> <span> {{ nombre2 }}</span></h2>
+    <h1 class="ley" ><span> $ {{ costo2 }}</span> </h1>
+    <div class="prime">
+        <div class="input-group mb-3">
+      <span class="input-group-text">Cantidad:</span>
+      <input type="number" class="form-control" aria-label="Cantidad" min="1" :max=disu value= disponibles>
+      <a > <span class="input-group-text">Disponibles({{ disu }})</span></a>
+
+    </div>
+
+
+    </div>
+
+              <button class="btn btn-link"> Eliminar</button>
+              <button class="btn btn-link"> Mas productos del contacto</button>
+              <button class="btn btn-link"> Comprar ahora</button>
+              <button class="btn btn-link"> Guardar para despues</button>
+              <div class="linea"></div>
+
+              
+              <div class="prime"><h2 > <span>costo de Envio ${{ envio }}</span>
+                <div class="linea"></div>
+
+                <br>
+                <span class="prime">El costo total es ${{ costoFinal }}</span></h2>
+
+</div>
             </div>
           </div>
-          </div>
+
+          
+  <footer class="page-footer">
+  <small>Copyright © 1999-2023 El presente canal de instrucción o ambiente, es operado por DeRemate.Com de México, S. de R.L. de C.V. identificada bajo la marca comercial "Mercado Libre".
+Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito Juarez, 03940 Ciudad de México, CDMX, Mexico 
+  </small>
+</footer>
+
+
+
+
+
+
+
 </template>
 
 <script>
 import info from './CarritoView.json'
-import axios from 'axios';
-const  inicio =  'http://localhost/';
 export default {
   data: function () {
       return {
-          inicio2: inicio  ,
+          inicio2:info.inicio,
           nombre: info.nombre,
-          estrellas: info.estrellas,
-          vendidas: info.vendidas,
-          precio: info.precio,
-          mensualidad: info.mensualidad,
-          minutos: info.minutos,
-          direccion: info.direccion,
-          totalProd: info.totalProd,
-          Existencia: info.Existencia,
-          tienda: info.tienda,
-          totalVentas: info.totalVentas,
-          meses: info.meses,
-          especDia: info.especDia,
           img1: info.img1 ,
           img2: info.img2,
-          img3: info.img3,
-          img4: info.img4,
-          img5: info.img5,
           go: info.go,
           feat: info.feat,
           princ: info.princ,
@@ -110,27 +145,39 @@ export default {
           help: info.help,
           carrit: info.carrit, 
           guar:info.guar, 
+          dis: info.dis,
+          disu: info.disu,
+          costo1: info.costo1,
+          costo2: info.costo2,
+          n: info.n,
+          envio: info.envio,
+          costoFinal:info.costo1+info.costo2+info.envio,
+          nombre2:info.nombre2
+
+
+
+
+
       
 
       }
   },
-  methods: {
+ /* methods: {
       carga: function() {
-          axios.get('http://localhost:8080/pro/muebles', {
-            }).then(response => {
-              console.log(response.data)
-                this.mensaje4 = response.data; 
-            })
-      },
+    while (n == disponibles){
+         n ++;
+         cost=costo1+costo1 
+         }
+      },   */
   }
-}
+
 </script>
 
 <style scoped>
 
 .linea {
-  border-top: 1px solid black;
-  height: 2px;
+  border-top: 1px solid gray;
+  height: 1px;
   padding: 0;
   margin: 20px auto 0 auto;
 }
@@ -146,7 +193,6 @@ export default {
     float: left;
     line-height: 100px;
     text-align:left;
-    text-overflow:clip;
 }
 .container .menu a {
     display: inline-block;
@@ -163,5 +209,31 @@ export default {
 .container .menu a:hover {
     border-bottom: 2px solid #c7c7c7;
     padding-bottom: 5px;
+}
+ .cierto {
+    text-align:left;
+
+    
+}
+.hola{
+    text-align:left;
+    max-width: 10%;
+ max-height: 10%;
+
+}
+.one{
+    text-align:right;
+    text-overflow:clip;	
+}
+.prime{
+    text-align:right;
+
+}
+.ley{
+    text-align:right;
+    text-justify:auto;	
+}
+.hell{
+  background-color: #fff159;
 }
 </style>

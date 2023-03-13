@@ -18,6 +18,8 @@ body {
 .fondo {
     color: grey;
     height: 100%;
+    margin: 20px 0px 0 -20px;
+  width: 66%;
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
@@ -26,7 +28,7 @@ body {
   font-size: 180px;
   font-family: 'Catamaran', sans-serif;
   font-weight: 800;
-  margin: 20px 15px;
+  margin:15px;
 }
 .error-container > span {
   display: inline-block;
@@ -156,7 +158,7 @@ html, button, input, select, textarea {
 }
 h1 {
   text-align: center;
-  margin: 30px 15px;
+  margin:auto;
 }
 .zoom-area { 
   max-width: 490px;

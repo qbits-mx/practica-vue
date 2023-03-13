@@ -1,44 +1,124 @@
 <template>
-    <div class="exampleone">
- Lorem ipsum dolor sit amet, consectetuer
-</div>
-   <div class="col texts1 mt-3 border p-5 rounded">
-            <p class="verde mb-2"><i class="bi bi-truck"></i> 🚚 Llega gratis el <span style="font-weight: 600;">{{ especDia }}</span></p>
-            <p class="mx-4">Comprando dentro de los proximos</p>
-            <p class="mx-4 mt-n3 red1">{{ minutos }} min</p>
-            <span class="linksurl mx-4"><i class="bi bi-geo-alt"></i> Enviar a {{ direccion }}</span>
-            <div class="my-4">
-              <p>Tienda oficial <span class="linksurl">{{ tienda }}</span></p>
-              <p class="mt-n3">{{ numVentas }} ventas</p>
-            </div>
-            <div>
-              <p><strong>Stock disponible</strong></p>
-            </div>
-            <div>
-              <p>Cantidad: <strong>{{ Existencia }} unidades </strong><span class="oscuro">({{ totalProd }} disponibles)</span></p>
-            </div>
-            <div>
-              <button class="btn btn-primary"> Comprar ahorita</button>
-              <br>
-              <button class="btn btn-ligth"> Agregar al carrito</button>
-            </div>
-            <div class="mt-5">
-              <p class="my-4"><span class="linksurl"><i class="bi bi-arrow-90deg-left"></i> Devoluciones gratis.</span> Tienes 30 dias desde que lo recicbes.</p>
-              <p class="my-4"><span class="linksurl"><i class="bi bi-shield-plus"></i> Compra Protegida.</span> Recibe el producto que esperabas o te devolvemos el dinero.</p>
+  
+  <nav class="navbar navbar-expand-lg  hell d-flex justify-content-around">
+          <div class="d-flex">
+            <a class="navbar-brand" href="#"><img :src=inicio2+img1  class="pic"></a>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <p> Ayuda </p>
+                </li>
+                <li class="nav-item">
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src=inicio2+img1 alt="Card image cap">
+        </nav>
+
+<br>
+<br>
+<div class="ll">
+    <h2> Elije dónde recibir tu compra</h2>
+</div>
+<br>
+<br>
+<body>
+  <div class="margin1">
+
+          <div class="col texts1 mt-2 border p-5 rounded">
+   
+<div class="text-center">
+  <div class="row">
+    <div class="col-5 col-lg-8"><div class="card w-50">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="ll"> <input type="checkbox" id="btn-menu">
+    <h5 class="card-title">Enviar a tu domicilio</h5>
+    <p class="card-text">Av. San Jerónimo, San Jerónimo Lídice, Mexico City, CDMX</p>
+    <p> <snap> ${{ envio }}</snap> </p>
+
+    <div class="linea"></div>
+    <a href="#" class="btn btn-link">Editar o elegir otro punto</a>
+  </div>
+</div></div>
+<div class="card w-50" style="width: 300px">
+  <div class="card-body">
+    <div class="ll"> <input type="checkbox" id="btn-menu">
+    <h5 class="card-title">Retirar en un punto de entrega</h5>
+    <p class="card-text"> Agencia Mercado libre-INTERNET GUS| BECAL 3444 a 10km de tu ubicacion</p>
+    <p> <snap> ${{ envio }}</snap> </p>
+    <small>De lunes a viernes de 111:00 a 19:00</small>
+    <br>
+    <div class="linea"></div>
+    <a href="#" class="btn btn-link">Ver punto en el mapa o elegir otro</a>
   </div>
 </div>
+</div></div>
+    <div class="col-5 col-lg-8 ">        
+       <div class="gal">   
+              <div class="card text">
+    <div class="card-body">
+    <h5 class="card-title">resumen de compra <span> </span></h5>
+    <br>
+    <br>
+    <br>
+    <br>
+  <ul class="list-group card text-white bg-secondary mb-3">
+    <li class="list-group-item"><span> productos ({{ ptotal }}) <br> Envío </span></li>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>   <br>
+    <br>
+    <br>   <br>
+    <br>
+    <br>
+    <li class="list-group-item">Pagas <snap> ${{ total }}</snap></li>
+  </ul>
+  <div class="card-body">
+    <button type="button" class="btn btn-info">Pagar</button>
+  </div>
+  </div>
+  </div>
+</div>  
+</div>  
+</div>
+</div>
+  </div>
+  </div>
+      
+    </body>
+<footer class="page-footer">
+  <small>Copyright © 1999-2023 El presente canal de instrucción o ambiente, es operado por DeRemate.Com de México, S. de R.L. de C.V. identificada bajo la marca comercial "Mercado Libre".
+Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito Juarez, 03940 Ciudad de México, CDMX, Mexico 
+  </small>
+</footer>
+<!------------------------------------------->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">{{go}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">{{ feat }}</a>
+      <a class="nav-item nav-link" href="#">{{ princ }}</a>
+      <a class="nav-item nav-link " href="#">{{ dic }}</a>
+      <a class="nav-item nav-link " href="#">{{ mer }}</a>
+      <a class="nav-item nav-link " href="#">{{ mod }}</a>
+      <a class="nav-item nav-link " href="#">{{ Ven }}</a>
+      <a class="nav-item nav-link " href="#">{{ help }}</a>
+    </div>
+  </div>
+
+</nav>
+
 
 </template>
+
 <script>
-import info from './LoginView.json'
+import info from './EnvioView.json'
 import axios from 'axios';
 const  inicio =  'http://localhost/';
 export default {
@@ -72,6 +152,11 @@ export default {
           mod: info.mod,
           Ven: info.Ven,
           help: info.help,
+          ptotal:info.ptotal,
+          productos:info.productos,
+          envio:info.envio,
+          total: info.productos+info.envio,
+
       
 
       }
@@ -107,5 +192,32 @@ export default {
   height: 1px;
   padding: 0;
   margin: 20px auto 0 auto;
+}
+.gal{
+  width: 95%;
+  justify-content:center;
+  align-items: right;
+  align-content: margin-right;
+  
+    height: 70%;
+    margin:auto;
+    overflow:visible;
+}
+.col-10{
+  align-content: center;
+  width: 90%;
+}
+
+.col-2{
+  width: 10%;
+}
+.hell{
+  background-color: #fff159;
+}
+.margin1{
+margin-left: 0%;
+}
+.pic{
+  height: 40px;
 }
 </style>

@@ -1,20 +1,8 @@
 {         "nombre": "Amazon Echo Dot 5th Gen con asistente virtual Alexa charcoal 110V/240V",
-          "estrellas": "   (1500)",
-          "vendidas": "203",
-          "precio": "1,299",
-          "mensualidad": "533",
-          "minutos": "30",
-          "direccion": "Tizapan, San Angel",
-          "totalProd": "2,757",
-          "Existencia": "1023",
-          "tienda": "Gallus",
-          "totalVentas": "+200",
-          "meses": "4",
-          "especDia": "Martes",
-          "img1": "61aiJcyfhyL._AC_SL1000_.jpg",
-          "img2": "61kCxlxYDfL._AC_SL1000_.jpg", 
-          "img3": "61Rr8uxmREL._AC_SY355_.jpg",
-          "go": " 📍 Codigo postal",
+          "nombre2": " Crema facial pond's ",
+          "img1": "crema.jpg",
+          "img2": "05-02.jpg", 
+          "go": " Mercado LIbre",
           "feat":"Categorias",
           "princ":"Ofertas",
           "dic": "Historial",
@@ -22,27 +10,15 @@
           "mod": "Moda",
           "Ven": "Vender",
           "help": "Ayuda",
-
-
-          "carrit ": 3,
-          "guar": 0,
-
-
-
-
-          "dimg": [
-            "01-01.jpg", 
-            "01-02.jpg", 
-            "01-03.jpg" 
-        ],
+          "inicio": "http://localhost/",
+          "dis": 10,
+          "disu": 19,
+          "costo1":294,
+          "costo2": 420,
+          "n":1,
+          "envio":150,
+          "carrit": 2,
+          "guar": 0
 
            
-    "caracteristicas": ["-Función de control inteligente de dispositivos del hogar.", 
-    "-Con reconocimiento de voz.", 
-    "-Opción de sistema de audio multi-room", 
-    "-Conexión wifi y bluetooth.", 
-    "-Funciona en español y en inglés.",
-    "-Compatible con: Android 6.0, iOS 11.0, Fire OS 5.3.3.",
-    "-Su asistente virtual te ayudará a realizar diversas tareas como reproducir música, contestar llamadas y conocer el pronóstico del tiempo.",
-    "-Recibe y realiza llamadas."]
 }

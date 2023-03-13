@@ -158,6 +158,7 @@
     </body>
     </template>
 
+
 <script>
 import info from './LoginView.json'
 import axios from 'axios';
@@ -246,9 +247,6 @@ color: gainsboro;
 .linksurl{
 color: cornflowerblue;
 }
-.ajusta{
-overflow: auto;
-}
 :root {
   --body-bg-color: #1a1c1d;
   --text-color: #aaaebc;
@@ -276,11 +274,6 @@ body {
 hr {
   border-color: var(--hr-color);
   margin: 20px 0;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
 }
 
 .menu li {
