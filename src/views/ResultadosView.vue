@@ -258,7 +258,7 @@
                 <div class="container-fluid pt-4 pb-5 grid ultimo">
                   
                   <div class="card" style="width: 15rem;">
-                    <img :src=img1 class="card-img-top" alt="...">
+                    <img style="height: 50%;" :src=prod1 class="card-img-top" alt="...">
                     <div class="card-body">
                       <h2 class="card-title"
                         style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
@@ -298,8 +298,8 @@
                   </div>
                   
                   <div class="card" style="width: 15rem;">
-                    <img :src=pro1 class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <img style="height: 40%;"  :src=prod2 class="card-img-top" alt="...">
+                    <div class="card-body pt-5">
                       <h2 class="card-title"
                         style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
                           producto2.nombre }}</h2>
@@ -338,7 +338,7 @@
                   </div>
 
                   <div class="card" style="width: 15rem;">
-                    <img :src=pro1 class="card-img-top" alt="...">
+                    <img style="height: 40%;" :src=prod3 class="card-img-top" alt="...">
                     <div class="card-body">
                       <h2 class="card-title"
                         style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
@@ -379,7 +379,7 @@
                 
                   
                   <div class="card" style="width: 15rem;">
-                    <img :src=pro1 class="card-img-top" alt="...">
+                    <img style="height: 40%;" :src=prod4 class="card-img-top" alt="...">
                     <div class="card-body">
                       <h2 class="card-title"
                         style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
@@ -420,7 +420,7 @@
 
                   
                   <div class="card" style="width: 15rem;">
-                    <img :src=pro1 class="card-img-top" alt="...">
+                    <img style="height: 40%;" :src=prod5 class="card-img-top" alt="...">
                     <div class="card-body">
                       <h2 class="card-title"
                         style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
@@ -460,7 +460,7 @@
                   </div>
 
                   <div class="card" style="width: 15rem;">
-                    <img :src=pro1 class="card-img-top" alt="...">
+                    <img style="height: 40%;" :src=prod6 class="card-img-top" alt="...">
                     <div class="card-body">
                       <h2 class="card-title"
                         style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
@@ -591,7 +591,12 @@ export default {
       producto5: info.producto5,
       producto6: info.producto6,
       imagen: info.imagen,
-
+      prod1: inicio + "prod1.jpg",
+      prod2: inicio + "prod2.jpg",
+      prod3: inicio + "prod3.jpg",
+      prod4: inicio + "prod4.jpg",
+      prod5: inicio + "prod5.jpg",
+      prod6: inicio + "prod6.jpg",
       
 
       caruselActivo: "carousel-item active",
