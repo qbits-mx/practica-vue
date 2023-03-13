@@ -2,96 +2,8 @@
   <div>
     <div>
       <!--  navbar  -->
-      <nav class="navbar bg-body-tertiary navegador">
-        <div class="container-fluid">
-          <a href="#"><img src="../assets/mercado-libre-logo.png" class="d-block logo" height="35" alt=""></a>
-          <form class="d-flex w-50 p-0" role="search">
-            <input class="form-control buscador" type="search" placeholder="Buscar productos, marcas y más..."
-              aria-label="Search">
-            <button class="" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
-          <a href="#"><img src="../assets/disney.png" class="d-block" height="35" alt=""></a>
-        </div>
-      </nav>
-
-      <div class="nav-menu navegador w-100">
-        <ul class="nav-menu-list">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <div class="d-flex pb-4" id="navbarNavDropdown">
-                <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-geo-alt" viewBox="0 0 16 16">
-                    <path
-                      d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
-                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                  </svg></a>
-                <div style="text-align: left; font-size: 14px;">
-                  <span class="nav-menu-cp-send">Enviar a {{ usuario }}</span><br>
-                  <span class="nav-menu-link-cp"> CP {{ cp }}</span>
-                </div>
-                <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      Categorias
-                    </a>
-                    <ul class="dropdown-menu bg-dark despliega">
-                      <li><a class="dropdown-item text-white fonter" href="#">Vehículos</a></li>
-                      <li><a class="dropdown-item text-white fonter" href="#">Supermercado</a></li>
-                      <li><a class="dropdown-item text-white fonter" href="#">Tecnología</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Ofertas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Historial</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Supermercado</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Moda</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Vender</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Ayuda</a>
-                  </li>
-                </ul>
-              </div>
-
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><i
-                      class="fa-regular fa-circle-user"></i> {{ usuario }} </a>
-                  <ul class="dropdown-menu bg-dark despliega">
-                    <li><a class="dropdown-item text-white fonter" href="#">Mi cuenta</a></li>
-                    <li><a class="dropdown-item text-white fonter" href="#">Mis compras</a></li>
-                    <li><a class="dropdown-item text-white fonter" href="#">Mis puntos</a></li>
-                  </ul>
-
-
-
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Mis compras</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> Favoritos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-regular fa-bell"></i></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </ul>
-      </div>
+      <HeaderComponent :usuario=usuario :cp=cp />      
+      <!--  navbar  -->
       <!-- body -->
       <main class="fondo">
         <div class="container d-flex">
@@ -254,285 +166,65 @@
                   </ul>
                 </li>
               </div>
-              <div>
-                <div class="container-fluid pt-4 pb-5 grid ultimo">
-                  
+              <!--CARD-->
+              <div v-for="productos in data" v-bind:key="productos.id">
+                <div>
                   <div class="card" style="width: 15rem;">
                     <img style="height: 50%;" :src=prod1 class="card-img-top" alt="...">
                     <div class="card-body">
                       <h2 class="card-title"
                         style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
-                          producto1.nombre }}</h2>
+                          productos.nombre }}</h2>
                       <p class="card-text"
                         style="color: #666; text-align: left; margin-top: 1rem; font-size: 12px; font-weight: 300; line-height: 1;">
                         {{
-                          producto1.vendedor }}</p>
+                          productos.vendedor }}</p>
 
                       <span class="card-text" style="color: #999; display: flex; text-align: left; font-size: 12px;">${{
-                        producto1.descuento }}</span>
+                        productos.descuento }}</span>
                       <span class="card-text"
                         style="color: #333; display: flex; font-size: 24px; font-weight: 400; line-height: 1;">${{
-                          producto1.precio }}&nbsp; <p
-                          style="color: #00a650; font-size: 14px; font-weight: 400; line-height: 1;"> {{ producto1.desc }}
+                          productos.precio }}&nbsp; <p
+                          style="color: #00a650; font-size: 14px; font-weight: 400; line-height: 1;"> {{ productos.desc
+                          }}
                           % OFF</p></span>
                       <span class="card-text" style="color: #000; display: flex; font-size: 14px;">en &nbsp;<p
-                          style="color: #00a650;">{{ producto1.meses }}x $ {{ producto1.mensu }} {{ producto1.interes }}
+                          style="color: #00a650;">{{ productos.meses }}x $ {{ productos.mensu}} {{ productos.interes
+                          }}
                         </p>
                       </span>
 
                       <div class="d-flex">
-                        <p style="color:#00a650; font-size: 14px; font-weight: 400;">{{producto1.envio}}</p>
-                          &nbsp;
-                          <svg class="icono" viewBox="0 0 41 26"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="nonzero" fill="#00A650"
-                              d="M2.628 0h5.255L5.255 4.643h4.38L2.628 13l1.751-5.571H0L2.628 0zm11.589 9.533h-1.959l1.674-7.515H19.5l-.376 1.69h-3.61l-.25 1.172h3.519l-.376 1.69h-3.53l-.66 2.963zm9.468.136c-2.334 0-3.484-1.105-3.484-2.682 0-.124.034-.383.057-.496l1.002-4.473h1.992l-.99 4.428c-.012.057-.034.18-.034.316.011.62.49 1.217 1.457 1.217 1.048 0 1.583-.654 1.776-1.533l.991-4.428h1.981l-.99 4.462c-.41 1.825-1.412 3.189-3.758 3.189zm10.118-.136h-5.01l1.673-7.515h1.959l-1.287 5.825h3.04l-.375 1.69zm6.678 0h-5.01l1.674-7.515h1.959l-1.287 5.825h3.04l-.376 1.69z">
-                            </path>
-                          </svg>
-                        
+                        <p style="color:#00a650; font-size: 14px; font-weight: 400;">{{ productos.envio }}</p>
+                        &nbsp;
+                        <svg class="icono" viewBox="0 0 41 26" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="nonzero" fill="#00A650"
+                            d="M2.628 0h5.255L5.255 4.643h4.38L2.628 13l1.751-5.571H0L2.628 0zm11.589 9.533h-1.959l1.674-7.515H19.5l-.376 1.69h-3.61l-.25 1.172h3.519l-.376 1.69h-3.53l-.66 2.963zm9.468.136c-2.334 0-3.484-1.105-3.484-2.682 0-.124.034-.383.057-.496l1.002-4.473h1.992l-.99 4.428c-.012.057-.034.18-.034.316.011.62.49 1.217 1.457 1.217 1.048 0 1.583-.654 1.776-1.533l.991-4.428h1.981l-.99 4.462c-.41 1.825-1.412 3.189-3.758 3.189zm10.118-.136h-5.01l1.673-7.515h1.959l-1.287 5.825h3.04l-.375 1.69zm6.678 0h-5.01l1.674-7.515h1.959l-1.287 5.825h3.04l-.376 1.69z">
+                          </path>
+                        </svg>
+
                       </div>
                       <div style="text-align: right;">
                         <span style="color: #3483fa; text-align: right; font-size: 12px;">Promocionado</span>
                       </div>
                     </div>
                   </div>
-                  
-                  <div class="card" style="width: 15rem;">
-                    <img style="height: 40%;"  :src=prod2 class="card-img-top" alt="...">
-                    <div class="card-body pt-5">
-                      <h2 class="card-title"
-                        style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
-                          producto2.nombre }}</h2>
-                      <p class="card-text"
-                        style="color: #666; text-align: left; margin-top: 1rem; font-size: 12px; font-weight: 300; line-height: 1;">
-                        {{
-                          producto2.vendedor }}</p>
-
-                      <span class="card-text" style="color: #999; display: flex; text-align: left; font-size: 12px;">${{
-                        producto2.descuento }}</span>
-                      <span class="card-text"
-                        style="color: #333; display: flex; font-size: 24px; font-weight: 400; line-height: 1;">${{
-                          producto2.precio }}&nbsp; <p
-                          style="color: #00a650; font-size: 14px; font-weight: 400; line-height: 1;"> {{ producto2.desc }}
-                          % OFF</p></span>
-                      <span class="card-text" style="color: #000; display: flex; font-size: 14px;">en &nbsp;<p
-                          style="color: #00a650;">{{ producto2.meses }}x $ {{ producto2.mensu }} {{ producto2.interes }}
-                        </p>
-                      </span>
-
-                      <div class="d-flex">
-                        <p style="color:#00a650; font-size: 14px; font-weight: 400;">{{producto2.envio}}</p>
-                          &nbsp;
-                          <svg class="icono" viewBox="0 0 41 26"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="nonzero" fill="#00A650"
-                              d="M2.628 0h5.255L5.255 4.643h4.38L2.628 13l1.751-5.571H0L2.628 0zm11.589 9.533h-1.959l1.674-7.515H19.5l-.376 1.69h-3.61l-.25 1.172h3.519l-.376 1.69h-3.53l-.66 2.963zm9.468.136c-2.334 0-3.484-1.105-3.484-2.682 0-.124.034-.383.057-.496l1.002-4.473h1.992l-.99 4.428c-.012.057-.034.18-.034.316.011.62.49 1.217 1.457 1.217 1.048 0 1.583-.654 1.776-1.533l.991-4.428h1.981l-.99 4.462c-.41 1.825-1.412 3.189-3.758 3.189zm10.118-.136h-5.01l1.673-7.515h1.959l-1.287 5.825h3.04l-.375 1.69zm6.678 0h-5.01l1.674-7.515h1.959l-1.287 5.825h3.04l-.376 1.69z">
-                            </path>
-                          </svg>
-                        
-                      </div>
-                      <div style="text-align: right;">
-                        <span style="color: #3483fa; text-align: right; font-size: 12px;">Promocionado</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card" style="width: 15rem;">
-                    <img style="height: 40%;" :src=prod3 class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h2 class="card-title"
-                        style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
-                          producto3.nombre }}</h2>
-                      <p class="card-text"
-                        style="color: #666; text-align: left; margin-top: 1rem; font-size: 12px; font-weight: 300; line-height: 1;">
-                        {{
-                          producto3.vendedor }}</p>
-
-                      <span class="card-text" style="color: #999; display: flex; text-align: left; font-size: 12px;">${{
-                        producto3.descuento }}</span>
-                      <span class="card-text"
-                        style="color: #333; display: flex; font-size: 24px; font-weight: 400; line-height: 1;">${{
-                          producto3.precio }}&nbsp; <p
-                          style="color: #00a650; font-size: 14px; font-weight: 400; line-height: 1;"> {{ producto3.desc }}
-                          % OFF</p></span>
-                      <span class="card-text" style="color: #000; display: flex; font-size: 14px;">en &nbsp;<p
-                          style="color: #00a650;">{{ producto3.meses }}x $ {{ producto3.mensu }} {{ producto3.interes }}
-                        </p>
-                      </span>
-
-                      <div class="d-flex">
-                        <p style="color:#00a650; font-size: 14px; font-weight: 400;">{{producto3.envio}}</p>
-                          &nbsp;
-                          <svg class="icono" viewBox="0 0 41 26"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="nonzero" fill="#00A650"
-                              d="M2.628 0h5.255L5.255 4.643h4.38L2.628 13l1.751-5.571H0L2.628 0zm11.589 9.533h-1.959l1.674-7.515H19.5l-.376 1.69h-3.61l-.25 1.172h3.519l-.376 1.69h-3.53l-.66 2.963zm9.468.136c-2.334 0-3.484-1.105-3.484-2.682 0-.124.034-.383.057-.496l1.002-4.473h1.992l-.99 4.428c-.012.057-.034.18-.034.316.011.62.49 1.217 1.457 1.217 1.048 0 1.583-.654 1.776-1.533l.991-4.428h1.981l-.99 4.462c-.41 1.825-1.412 3.189-3.758 3.189zm10.118-.136h-5.01l1.673-7.515h1.959l-1.287 5.825h3.04l-.375 1.69zm6.678 0h-5.01l1.674-7.515h1.959l-1.287 5.825h3.04l-.376 1.69z">
-                            </path>
-                          </svg>
-                        
-                      </div>
-                      <div style="text-align: right;">
-                        <span style="color: #3483fa; text-align: right; font-size: 12px;">Promocionado</span>
-                      </div>
-                    </div>
-                  </div>
-                
-                  
-                  <div class="card" style="width: 15rem;">
-                    <img style="height: 40%;" :src=prod4 class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h2 class="card-title"
-                        style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
-                          producto4.nombre }}</h2>
-                      <p class="card-text"
-                        style="color: #666; text-align: left; margin-top: 1rem; font-size: 12px; font-weight: 300; line-height: 1;">
-                        {{
-                          producto4.vendedor }}</p>
-
-                      <span class="card-text" style="color: #999; display: flex; text-align: left; font-size: 12px;">${{
-                        producto4.descuento }}</span>
-                      <span class="card-text"
-                        style="color: #333; display: flex; font-size: 24px; font-weight: 400; line-height: 1;">${{
-                          producto4.precio }}&nbsp; <p
-                          style="color: #00a650; font-size: 14px; font-weight: 400; line-height: 1;"> {{ producto4.desc }}
-                          % OFF</p></span>
-                      <span class="card-text" style="color: #000; display: flex; font-size: 14px;">en &nbsp;<p
-                          style="color: #00a650;">{{ producto4.meses }}x $ {{ producto4.mensu }} {{ producto4.interes }}
-                        </p>
-                      </span>
-
-                      <div class="d-flex">
-                        <p style="color:#00a650; font-size: 14px; font-weight: 400;">{{producto4.envio}}</p>
-                          &nbsp;
-                          <svg class="icono" viewBox="0 0 41 26"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="nonzero" fill="#00A650"
-                              d="M2.628 0h5.255L5.255 4.643h4.38L2.628 13l1.751-5.571H0L2.628 0zm11.589 9.533h-1.959l1.674-7.515H19.5l-.376 1.69h-3.61l-.25 1.172h3.519l-.376 1.69h-3.53l-.66 2.963zm9.468.136c-2.334 0-3.484-1.105-3.484-2.682 0-.124.034-.383.057-.496l1.002-4.473h1.992l-.99 4.428c-.012.057-.034.18-.034.316.011.62.49 1.217 1.457 1.217 1.048 0 1.583-.654 1.776-1.533l.991-4.428h1.981l-.99 4.462c-.41 1.825-1.412 3.189-3.758 3.189zm10.118-.136h-5.01l1.673-7.515h1.959l-1.287 5.825h3.04l-.375 1.69zm6.678 0h-5.01l1.674-7.515h1.959l-1.287 5.825h3.04l-.376 1.69z">
-                            </path>
-                          </svg>
-                        
-                      </div>
-                      <div style="text-align: right;">
-                        <span style="color: #3483fa; text-align: right; font-size: 12px;">Promocionado</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  
-                  <div class="card" style="width: 15rem;">
-                    <img style="height: 40%;" :src=prod5 class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h2 class="card-title"
-                        style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
-                          producto5.nombre }}</h2>
-                      <p class="card-text"
-                        style="color: #666; text-align: left; margin-top: 1rem; font-size: 12px; font-weight: 300; line-height: 1;">
-                        {{
-                          producto5.vendedor }}</p>
-
-                      <span class="card-text" style="color: #999; display: flex; text-align: left; font-size: 12px;">${{
-                        producto5.descuento }}</span>
-                      <span class="card-text"
-                        style="color: #333; display: flex; font-size: 24px; font-weight: 400; line-height: 1;">${{
-                          producto5.precio }}&nbsp; <p
-                          style="color: #00a650; font-size: 14px; font-weight: 400; line-height: 1;"> {{ producto5.desc }}
-                          % OFF</p></span>
-                      <span class="card-text" style="color: #000; display: flex; font-size: 14px;">en &nbsp;<p
-                          style="color: #00a650;">{{ producto5.meses }}x $ {{ producto5.mensu }} {{ producto5.interes }}
-                        </p>
-                      </span>
-
-                      <div class="d-flex">
-                        <p style="color:#00a650; font-size: 14px; font-weight: 400;">{{producto5.envio}}</p>
-                          &nbsp;
-                          <svg class="icono" viewBox="0 0 41 26"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="nonzero" fill="#00A650"
-                              d="M2.628 0h5.255L5.255 4.643h4.38L2.628 13l1.751-5.571H0L2.628 0zm11.589 9.533h-1.959l1.674-7.515H19.5l-.376 1.69h-3.61l-.25 1.172h3.519l-.376 1.69h-3.53l-.66 2.963zm9.468.136c-2.334 0-3.484-1.105-3.484-2.682 0-.124.034-.383.057-.496l1.002-4.473h1.992l-.99 4.428c-.012.057-.034.18-.034.316.011.62.49 1.217 1.457 1.217 1.048 0 1.583-.654 1.776-1.533l.991-4.428h1.981l-.99 4.462c-.41 1.825-1.412 3.189-3.758 3.189zm10.118-.136h-5.01l1.673-7.515h1.959l-1.287 5.825h3.04l-.375 1.69zm6.678 0h-5.01l1.674-7.515h1.959l-1.287 5.825h3.04l-.376 1.69z">
-                            </path>
-                          </svg>
-                        
-                      </div>
-                      <div style="text-align: right;">
-                        <span style="color: #3483fa; text-align: right; font-size: 12px;">Promocionado</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card" style="width: 15rem;">
-                    <img style="height: 40%;" :src=prod6 class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h2 class="card-title"
-                        style="color: #333; font-size: 14px; text-align: left; font-weight:  400; max-height: 36px;">{{
-                          producto6.nombre }}</h2>
-                      <p class="card-text"
-                        style="color: #666; text-align: left; margin-top: 1rem; font-size: 12px; font-weight: 300; line-height: 1;">
-                        {{
-                          producto6.vendedor }}</p>
-
-                      <span class="card-text" style="color: #999; display: flex; text-align: left; font-size: 12px;">${{
-                        producto6.descuento }}</span>
-                      <span class="card-text"
-                        style="color: #333; display: flex; font-size: 24px; font-weight: 400; line-height: 1;">${{
-                          producto6.precio }}&nbsp; <p
-                          style="color: #00a650; font-size: 14px; font-weight: 400; line-height: 1;"> {{ producto6.desc }}
-                          % OFF</p></span>
-                      <span class="card-text" style="color: #000; display: flex; font-size: 14px;">en &nbsp;<p
-                          style="color: #00a650;">{{ producto6.meses }}x $ {{ producto6.mensu }} {{ producto6.interes }}
-                        </p>
-                      </span>
-
-                      <div class="d-flex">
-                        <p style="color:#00a650; font-size: 14px; font-weight: 400;">{{producto6.envio}}</p>
-                          &nbsp;
-                          <svg class="icono" viewBox="0 0 41 26"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="nonzero" fill="#00A650"
-                              d="M2.628 0h5.255L5.255 4.643h4.38L2.628 13l1.751-5.571H0L2.628 0zm11.589 9.533h-1.959l1.674-7.515H19.5l-.376 1.69h-3.61l-.25 1.172h3.519l-.376 1.69h-3.53l-.66 2.963zm9.468.136c-2.334 0-3.484-1.105-3.484-2.682 0-.124.034-.383.057-.496l1.002-4.473h1.992l-.99 4.428c-.012.057-.034.18-.034.316.011.62.49 1.217 1.457 1.217 1.048 0 1.583-.654 1.776-1.533l.991-4.428h1.981l-.99 4.462c-.41 1.825-1.412 3.189-3.758 3.189zm10.118-.136h-5.01l1.673-7.515h1.959l-1.287 5.825h3.04l-.375 1.69zm6.678 0h-5.01l1.674-7.515h1.959l-1.287 5.825h3.04l-.376 1.69z">
-                            </path>
-                          </svg>
-                        
-                      </div>
-                      <div style="text-align: right;">
-                        <span style="color: #3483fa; text-align: right; font-size: 12px;">Promocionado</span>
-                      </div>
-                    </div>
-                  
-                  
-                  </div>
+                  <!--CARD-->
                 </div>
               </div>
-            </form>
-          </div>
+          </form>
         </div>
-      </main>
-
-
-
-      <!-- body -->
-
     </div>
+    </main>
+
+
+
+    <!-- body -->
+
+  </div>
   </div>
   <!-- footer -->
-  <footer>
-    <div>
-      <div>
-        <ul class="navbar-nav footer">
-          <li class="nav-item foot"><a href="#" class="nav-link">Trabaja con nosotros</a></li>
-          <li class="nav-item foot"><a href="#" class="nav-link">Términos y condiciones</a></li>
-          <li class="nav-item foot"><a href="#" class="nav-link">Cómo cuidamos tu privacidad</a></li>
-          <li class="nav-item foot"><a href="#" class="nav-link">Accesibilidad</a></li>
-          <li class="nav-item foot"><a href="#" class="nav-link">Ayuda</a></li>
-        </ul>
-      </div>
-      <div class="fout" style="text-align: left;">
-        <p class="pt-1">Copyright ©&nbsp;1999-2023 El presente canal de instrucción o ambiente, es operado por
-          DeRemate.Com de México, S. de R.L. de C.V. identificada bajo la marca comercial "Mercado Libre".</p>
-        <p style="margin-top: -.5rem;">Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito
-          Juarez, 03940 Ciudad de México, CDMX, Mexico</p>
-      </div>
-    </div>
-  </footer>
+  <FooterComponent />
   <!-- footer -->
 </template>
   
@@ -541,16 +233,23 @@
 
 import axios from 'axios';
 import info from './ResultadosView.json';
+import FooterComponent from '../components/FooterComponent';
+import HeaderComponent from '@/components/HeaderComponent.vue';
 const inicio = 'http://127.0.0.1/'
 
 export default {
+  components: {
+    FooterComponent,
+    HeaderComponent
+  },
   data: function () {
     return {
       usuario: info.usuario,
+      cp: info.cp,
       producto: info.producto,
       cantidadpro: info.cantidadpro,
       preciodesde: info.preciodesde,
-      cp: info.cp,
+      
       tiendas1: info.tiendas1,
       toficial: info.toficial,
       /*Categorias1: info.Categorias1,
@@ -584,12 +283,14 @@ export default {
       ctiempoentre1: info.ctiempoentre1,
       ctiempoentre2: info.ctiempoentre2,
       ordenar: info.ordenar,
-      producto1: info.producto1,
-      producto2: info.producto2,
-      producto3: info.producto3,
-      producto4: info.producto4,
-      producto5: info.producto5,
-      producto6: info.producto6,
+      data: info.productos,
+
+
+
+
+
+
+
       imagen: info.imagen,
       prod1: inicio + "prod1.jpg",
       prod2: inicio + "prod2.jpg",
@@ -597,7 +298,7 @@ export default {
       prod4: inicio + "prod4.jpg",
       prod5: inicio + "prod5.jpg",
       prod6: inicio + "prod6.jpg",
-      
+
 
       caruselActivo: "carousel-item active",
       caruselInactivo: "carousel-item",
@@ -675,28 +376,6 @@ h1 {
   width: max-content;
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-}
-
-.foot {
-  padding-left: 2rem;
-  padding-top: 1rem;
-  font-size: 13px;
-  color: #333;
-}
-
-.fout {
-  font-size: 12px;
-  padding-left: 2rem;
-  color: #999;
-  vertical-align: initial;
-  width: auto;
-  line-height: initial;
-  margin: 0;
-  padding-bottom: 2px;
-}
 
 .forma2 {
   width: 100%;
@@ -860,10 +539,12 @@ h1 {
 a {
   text-decoration: none;
 }
-.icono{
+
+.icono {
   width: 25%;
 }
-.grid{
+
+.grid {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: auto;

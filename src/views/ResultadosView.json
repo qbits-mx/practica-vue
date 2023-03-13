@@ -36,73 +36,81 @@
         "orden2": "Más barato",
         "orden3": "Mejor calificación"
     },
-    "producto1": {
-        "nombre": "Bocina Select Sound Hero BT1008 portátil con bluetooth negra",
-        "vendedor": "por Select Sound",
-        "descuento": 609,
-        "precio": 469,
-        "desc": 22,
-        "meses": 3,
-        "mensu": 156,
-        "interes": "sin interés",
-        "envio": "Envío gratis"
-    },
-    "producto2": {
-        "nombre": "Bocina Select Sound Bazooka BT228 con bluetooth azul ",
-        "vendedor": "por IMPORTADORA MIZCO",
-        "descuento": 609,
-        "precio": 399,
-        "desc": 42,
-        "meses": 3,
-        "mensu": 133,
-        "interes": "sin interés",
-        "envio": "Envío gratis"
-    },
-    "producto3": {
-        "nombre": "Bocina Bluetooth Portátil Tronsmart Groove 2 Ipx7 Luces Led Color Negro",
-        "vendedor": "Vendido por Tronsmart",
-        "descuento": 0,
-        "precio": 479,
-        "desc": 0,
-        "meses": 3,
-        "mensu": 159,
-        "interes": "sin interés",
-        "envio": "Envío gratis"
-    },
-    "producto4": {
-        "nombre": "Subwoofer Inalámbrico Bocinas Bluetooth Portátil 5.0 Estéreo",
-        "vendedor": "por Matuzari",
-        "descuento": 609,
-        "precio": 399,
-        "desc": 42,
-        "meses": 3,
-        "mensu": 133,
-        "interes": "sin interés",
-        "envio": "Envío gratis"
-    },
-    "producto5": {
-        "nombre": "Bocina Select Sound Hero BT1008 portátil con bluetooth negra",
-        "vendedor": "por Select Sound",
-        "descuento": 609,
-        "precio": 469,
-        "desc": 22,
-        "meses": 3,
-        "mensu": 156,
-        "interes": "sin interés",
-        "envio": "Envío gratis"
-    },
-    "producto6": {
-        "nombre": "1hora Mini Bocina Portátil Bluetooth Inalámbrica Altavoz Sd",
-        "vendedor": "por 1HORA",
-        "descuento": 359,
-        "precio": 199,
-        "desc": 44,
-        "meses": 12,
-        "mensu": 20,
-        "interes": "sin interés",
-        "envio": "Envío gratis"
-    },
-    "imagen":{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Bocina Select Sound Hero BT1008 portátil con bluetooth negra",
+            "vendedor": "por Select Sound",
+            "descuento": 609,
+            "precio": 469,
+            "desc": 22,
+            "meses": 3,
+            "mensu": 156,
+            "interes": "sin interés",
+            "envio": "Envío gratis"
+        },
+        {
+            "id": 2,
+            "nombre": "Bocina Select Sound Bazooka BT228 con bluetooth azul ",
+            "vendedor": "por IMPORTADORA MIZCO",
+            "descuento": 609,
+            "precio": 399,
+            "desc": 42,
+            "meses": 3,
+            "mensu": 133,
+            "interes": "sin interés",
+            "envio": "Envío gratis"
+        },
+        {
+            "id": 3,
+            "nombre": "Bocina Bluetooth Portátil Tronsmart Groove 2 Ipx7 Luces Led Color Negro",
+            "vendedor": "Vendido por Tronsmart",
+            "descuento": 0,
+            "precio": 479,
+            "desc": 0,
+            "meses": 3,
+            "mensu": 159,
+            "interes": "sin interés",
+            "envio": "Envío gratis"
+        },
+        {
+            "id": 4,
+            "nombre": "Subwoofer Inalámbrico Bocinas Bluetooth Portátil 5.0 Estéreo",
+            "vendedor": "por Matuzari",
+            "descuento": 609,
+            "precio": 399,
+            "desc": 42,
+            "meses": 3,
+            "mensu": 133,
+            "interes": "sin interés",
+            "envio": "Envío gratis"
+        },
+        {
+            "id": 5,
+            "nombre": "Bocina Select Sound Hero BT1008 portátil con bluetooth negra",
+            "vendedor": "por Select Sound",
+            "descuento": 609,
+            "precio": 469,
+            "desc": 22,
+            "meses": 3,
+            "mensu": 156,
+            "interes": "sin interés",
+            "envio": "Envío gratis"
+        },
+        {
+            "id": 6,
+            "nombre": "1hora Mini Bocina Portátil Bluetooth Inalámbrica Altavoz Sd",
+            "vendedor": "por 1HORA",
+            "descuento": 359,
+            "precio": 199,
+            "desc": 44,
+            "meses": 12,
+            "mensu": 20,
+            "interes": "sin interés",
+            "envio": "Envío gratis"
+        }
+    ],
+    "imagen": {
         "img1": "",
         "img2": "",
         "img3": "",

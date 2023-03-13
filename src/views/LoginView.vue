@@ -1,78 +1,8 @@
 <template>
   <div>
     <!--  navbar  -->
-    <nav class="navbar bg-body-tertiary navegador">
-      <div class="container-fluid">
-        <a href="#"><img src="../assets/mercado-libre-logo.png" class="d-block logo" height="35" alt=""></a>
-        <form class="d-flex w-50 p-0" role="search">
-          <input class="form-control buscador" type="search" placeholder="Buscar productos, marcas y más..."
-            aria-label="Search">
-          <button class="form" type="submit">Search</button>
-        </form>
-        <a href="#"><img src="../assets/disney.png" class="d-block" height="35" alt=""></a>
-      </div>
-    </nav>
-
-    <div class="nav-menu navegador w-100">
-      <ul class="nav-menu-list">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <div class="d-flex p-0" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Categorias
-                  </a>
-                  <ul class="dropdown-menu bg-dark despliega">
-                    <li><a class="dropdown-item text-white fonter" href="#">Vehículos</a></li>
-                    <li><a class="dropdown-item text-white fonter" href="#">Supermercado</a></li>
-                    <li><a class="dropdown-item text-white fonter" href="#">Tecnología</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Ofertas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Historial</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Supermercado</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Moda</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Vender</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Ayuda</a>
-                </li>
-              </ul>
-            </div>
-
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Crea tu cuenta</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ingresa</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Mis compras</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
-                    <path
-                      d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
-                  </svg></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </ul>
-    </div>
+<HeaderComponent :usuario=usuario :cp=cp />
+    <!--  navbar  -->
     <!--  body  -->
     <div class="container-fluid fondo">
       <div class="box">
@@ -90,49 +20,10 @@
           <a class="nav-link p-2 letra2" href="#"> {{ referencia3 }} > </a>
         </div>
       </div>
-
       <div class="container fon2">
         <div class="d-flex flex-row">
-          <div>
-            <!-- Carousel wrapper -->
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade img-thumbnail ancho"
-              data-bs-ride="carousel">
-              <!-- Slides -->
-              <div class="carousel-inner mb-5 shadow-1-strong rounded-3 ">
-                <div :class=selecciona(index) v-for="(elemento, index) in imgs" v-bind:key="index">
-                  <img :src=elemento class="d-block w-100" alt="..." />
-                </div>
-              </div>
-              <!-- Slides -->
-
-              <!-- Controls -->
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <!-- Controls -->
-
-              <!-- Thumbnails -->
-              <div class="carousel-indicators " style="margin-bottom: -20px;">
-                <span class="ajusta" v-for="(miniatura, index) in imgs" v-bind:key="index">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" :data-bs-slide-to=index class="active"
-                    aria-current="true" style="width: 70px;">
-                    <img :src=imgs[index] class="d-block w-100 shadow-1-strong img-fluid" />
-                  </button>
-                </span>
-              </div>
-              <!-- Thumbnails -->
-            </div>
-            <div>
-              <hr style="color: black;">
-            </div>
-          </div>
+          <!-- Carousel wrapper -->
+          <CarouselComponent :imgs=imagenes />
           <!-- Carousel wrapper -->
           <!-- lado B -->
           <div class="lado2">
@@ -189,7 +80,7 @@
                         d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
                     </svg>Devolución gratis</span>
                   <br>
-                  <span>Tienes {{dia}} {{periodo}} desde que lo recibes.</span>
+                  <span>Tienes {{ dia }} {{ periodo }} desde que lo recibes.</span>
                   <a class="nav-link letra2" style="font-size: 14px;" href="#"> Conocer más </a>
                 </div>
               </div>
@@ -267,7 +158,7 @@
         </div>-->
       </div>
     </div>
-
+    <FooterComponent />
     <!--    
     <h1>Login View XYZ</h1>
     <h2 @mouseover="cambia">Gustavo</h2>
@@ -311,9 +202,17 @@
 
 import axios from 'axios';
 import info from './LoginView.json';
+import FooterComponent from '@/components/FooterComponent.vue';
+import CarouselComponent from '@/components/CarouselComponent.vue';
+import HeaderComponent from '@/components/HeaderComponent.vue';
 const inicio = 'http://127.0.0.1/'
 
 export default {
+  components: {
+    FooterComponent,
+    CarouselComponent,
+    HeaderComponent
+  },
   data: function () {
     return {
       caracteristicas: info.caracteristicas,
@@ -340,12 +239,12 @@ export default {
       interes1: info.interes1,
       disponibles1: info.disponibles1,
       puntos1: info.puntos1,
+      usuario: "juan carlos",
+      cp: 12345,
 
-      caruselActivo: "carousel-item active",
-      caruselInactivo: "carousel-item",
 
 
-      imgs: [inicio + 'proteus1.jpg', inicio + 'proteus2.jpg', inicio + 'proteus3.jpg'],
+      imagenes: [inicio + 'proteus1.jpg', inicio + 'proteus2.jpg', inicio + 'proteus3.jpg'],
       /*imags: [inicio + 'proteus4.jpg',inicio + 'proteus5.jpg',inicio + 'proteus6.jpg'],*/
       /*img1: inicio + 'proteus1.jpg',
       img2: inicio + 'proteus2.jpg',
@@ -368,15 +267,13 @@ export default {
     cambia: function () {
       this.mensaje3 = 'hola mundo'
     },
-    calculaRedondeoStart: function(){
+    calculaRedondeoStart: function () {
       //toma el valor de CalificacionStars y me redondea en 3 niveles
       //lo que està abajo de n
       return this.calculaRedondeoStart
     },
 
-    selecciona: function (index) {
-      return (index == 0) ? this.caruselActivo : this.caruselInactivo
-    }
+    
 
   } // aqui concluyen los métodos
 }
@@ -385,38 +282,6 @@ export default {
 
 
 <style scoped>
-h2 {
-  color: red;
-}
-
-.navegador {
-  background-color: #fff159;
-}
-
-.buscador {
-  border-radius: 5px 0 0 5px;
-}
-
-.fonter:hover {
-  background-color: #3483fa;
-}
-
-.logo {
-  margin-left: 3rem;
-}
-
-.despliega {
-  width: 15rem;
-}
-
-li {
-  font-size: 14px;
-}
-
-.segundo {
-  margin-left: 25%;
-}
-
 /*body*/
 .fondo {
   background-color: rgb(238, 235, 235);
@@ -521,4 +386,5 @@ span {
 
 .ajusta {
   overflow: auto;
-}</style>
+}
+</style>
