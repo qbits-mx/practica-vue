@@ -1,3 +1,3 @@
 <template>
-    <h1>Forgot Pass View</h1>
+    <h1>Forgot Pass</h1>
 </template>

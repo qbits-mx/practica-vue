@@ -368,6 +368,11 @@ export default {
     cambia: function () {
       this.mensaje3 = 'hola mundo'
     },
+    calculaRedondeoStart: function(){
+      //toma el valor de CalificacionStars y me redondea en 3 niveles
+      //lo que està abajo de n
+      return this.calculaRedondeoStart
+    },
 
     selecciona: function (index) {
       return (index == 0) ? this.caruselActivo : this.caruselInactivo
