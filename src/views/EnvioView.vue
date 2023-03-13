@@ -1,11 +1,10 @@
 <template>
-  
-  <nav class="navbar navbar-expand-lg  hell d-flex justify-content-around">
+<nav class="navbar navbar-expand-lg  hell d-flex justify-content-around">
           <div class="d-flex">
             <a class="navbar-brand" href="#"><img :src=inicio2+img1  class="pic"></a>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item tes">
                   <p> Ayuda </p>
                 </li>
                 <li class="nav-item">
@@ -13,110 +12,77 @@
               </ul>
             </div>
           </div>
-        </nav>
+   </nav>
 
-<br>
-<br>
-<div class="ll">
-    <h2> Elije dónde recibir tu compra</h2>
-</div>
-<br>
-<br>
-<body>
-  <div class="margin1">
-
-          <div class="col texts1 mt-2 border p-5 rounded">
-   
-<div class="text-center">
+<div class="container">
   <div class="row">
-    <div class="col-5 col-lg-8"><div class="card w-50">
-  <div class="card-body">
-    <div class="ll"> <input type="checkbox" id="btn-menu">
-    <h5 class="card-title">Enviar a tu domicilio</h5>
-    <p class="card-text">Av. San Jerónimo, San Jerónimo Lídice, Mexico City, CDMX</p>
-    <p> <snap> ${{ envio }}</snap> </p>
-
-    <div class="linea"></div>
-    <a href="#" class="btn btn-link">Editar o elegir otro punto</a>
-  </div>
-</div></div>
-<div class="card w-50" style="width: 300px">
-  <div class="card-body">
-    <div class="ll"> <input type="checkbox" id="btn-menu">
-    <h5 class="card-title">Retirar en un punto de entrega</h5>
-    <p class="card-text"> Agencia Mercado libre-INTERNET GUS| BECAL 3444 a 10km de tu ubicacion</p>
-    <p> <snap> ${{ envio }}</snap> </p>
-    <small>De lunes a viernes de 111:00 a 19:00</small>
+    <div class="col">
+      <div class="too">
+      <h2> Elige dónde recibir tu compra</h2>
+    </div>
     <br>
-    <div class="linea"></div>
-    <a href="#" class="btn btn-link">Ver punto en el mapa o elegir otro</a>
-  </div>
+    <ul class="list-group tamaño2">
+  <li class="list-group-item">
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+             <h5 class="card-title alin">Enviar a tu domicilio </h5> 
+            <h5><snap class="al"> ${{ envio }}</snap> </h5> 
+             <p class="card-text alin">Av. San Jerónimo, San Jerónimo Lídice, Mexico City, CDMX</p>   
+  </label>
 </div>
-</div></div>
-    <div class="col-5 col-lg-8 ">        
-       <div class="gal">   
-              <div class="card text">
-    <div class="card-body">
+  </li>
+  <li class="list-group-item"><a href="#" class="btn btn-link">Editar o elegir otro punto</a></li>
+    </ul>
+  <ul class="list-group tamaño2 ajuste">
+    <li class="list-group-item">
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    <h5 class="card-title">Retirar en un punto de entrega</h5>
+    <h5><snap class="al"> ${{ envio }}</snap> </h5> 
+    <p class="card-text"> Agencia Mercado libre-INTERNET GUS| BECAL 3444 a 10km de tu ubicacion</p>
+      
+  </label>
+</div>
+  </li>
+  <li class="list-group-item"><a href="#" class="btn btn-link">Editar o elegir otro punto</a></li>
+    </ul>
+    <button type="button " class="btn btn-primary ger">Continuar</button>
+  </div>
+
+    <div class="col">
+      <div style="width: 18rem;">
+  <div class="card-body tamaño">
+    <br>
+
     <h5 class="card-title">resumen de compra <span> </span></h5>
     <br>
     <br>
+    <div class="linea"></div>
     <br>
     <br>
-  <ul class="list-group card text-white bg-secondary mb-3">
-    <li class="list-group-item"><span> productos ({{ ptotal }}) <br> Envío </span></li>
+    <span> productos ({{ ptotal }}) <br> Envío </span>
+    <br>
+    <br>
+    <div class="linea"></div>
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>   <br>
-    <br>
-    <br>   <br>
-    <br>
-    <br>
-    <li class="list-group-item">Pagas <snap> ${{ total }}</snap></li>
-  </ul>
+     <snap>Pagas  ${{ total }}</snap>
   <div class="card-body">
     <button type="button" class="btn btn-info">Pagar</button>
+
+
   </div>
   </div>
   </div>
-</div>  
-</div>  
 </div>
-</div>
-  </div>
-  </div>
-      
-    </body>
-<footer class="page-footer">
-  <small>Copyright © 1999-2023 El presente canal de instrucción o ambiente, es operado por DeRemate.Com de México, S. de R.L. de C.V. identificada bajo la marca comercial "Mercado Libre".
-Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito Juarez, 03940 Ciudad de México, CDMX, Mexico 
-  </small>
-</footer>
-<!------------------------------------------->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">{{go}}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">{{ feat }}</a>
-      <a class="nav-item nav-link" href="#">{{ princ }}</a>
-      <a class="nav-item nav-link " href="#">{{ dic }}</a>
-      <a class="nav-item nav-link " href="#">{{ mer }}</a>
-      <a class="nav-item nav-link " href="#">{{ mod }}</a>
-      <a class="nav-item nav-link " href="#">{{ Ven }}</a>
-      <a class="nav-item nav-link " href="#">{{ help }}</a>
     </div>
   </div>
 
-</nav>
-
 
 </template>
-
 <script>
 import info from './EnvioView.json'
 import axios from 'axios';
@@ -125,24 +91,7 @@ export default {
   data: function () {
       return {
           inicio2: inicio  ,
-          nombre: info.nombre,
-          estrellas: info.estrellas,
-          vendidas: info.vendidas,
-          precio: info.precio,
-          mensualidad: info.mensualidad,
-          minutos: info.minutos,
-          direccion: info.direccion,
-          totalProd: info.totalProd,
-          Existencia: info.Existencia,
-          tienda: info.tienda,
-          totalVentas: info.totalVentas,
-          meses: info.meses,
-          especDia: info.especDia,
           img1: info.img1 ,
-          img2: info.img2,
-          img3: info.img3,
-          img4: info.img4,
-          img5: info.img5,
           go: info.go,
           feat: info.feat,
           princ: info.princ,
@@ -175,18 +124,27 @@ export default {
   }
 }
 </script>
-
-
 <style>
+.tamaño{
+  width: 500px;
+  height: 800px;
+  background: #F3F0EF;
+
+}
+.tamaño2{
+  width: 500px;
+  height: 300px;
+}
+.ajuste{
+  margin-top: -125px;
+}
 .ll{
   text-align: left;
 }
 .giga{
   align-items: left;
 }
-.card{
-  align-items: right;
-}
+
 .linea {
   border-top: 1px solid gray;
   height: 1px;
@@ -203,21 +161,38 @@ export default {
     margin:auto;
     overflow:visible;
 }
-.col-10{
-  align-content: center;
-  width: 90%;
-}
-
-.col-2{
-  width: 10%;
-}
 .hell{
   background-color: #fff159;
 }
-.margin1{
-margin-left: 0%;
-}
 .pic{
-  height: 40px;
+  height: 50px;
+  margin-right: 700px;
+  
+}
+.tes{
+  margin-left: 300px;
+}
+.ger{
+  width: 100px;
+  height: 50px;
+  margin-top: -200px;
+  margin-right: -350px;
+}
+.too{
+  margin-top: 50px;
+}
+.alin{
+  text-align: left;
+}
+.al{
+  margin-left: 400px;
+  margin-top: -100px;
+}
+.linea {
+  border-top: 1px solid gray;
+  height: 1px;
+  width: 400px;
+  padding: 0;
+  margin: 10px auto 10 auto;
 }
 </style>

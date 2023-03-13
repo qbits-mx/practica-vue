@@ -9,6 +9,7 @@ import PageNotFoundView from '@/views/PageNotFoundView'
 import HomeView from '@/views/HomeView'
 import LoginView from '@/views/LoginView'
 import ForgotPassView from '@/views/ForgotPassView'
+import ComprasView from '@/views/ComprasView'
 import RegisterView from '@/views/RegisterView'
 
 const routes = [
@@ -51,6 +52,11 @@ const routes = [
     path: '/ui/envio',
     name: 'envio',
     component: EnvioView
+  }, 
+  {
+    path: '/ui/compras',
+    name: 'compras',
+    component: ComprasView
   },   
 ]
 
