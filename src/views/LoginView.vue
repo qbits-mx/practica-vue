@@ -57,9 +57,15 @@
                 <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
                 <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
                 <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
-                <i class="bi bi-star-fill mx-1" style="color: cornflowerblue;"></i>
+
                 <i class="bi bi-star-half mx-1" style="color: cornflowerblue;"></i>
-                <span class="linksurl">({{ votosTotales }})</span>
+                
+                <i class="bi bi-star mx-1" style="color: cornflowerblue;"></i>
+                <i class="bi bi-star mx-1" style="color: cornflowerblue;"></i>
+
+                <span class="linksurl">({{ totalStars }})</span>
+                <p>Votantes: {{ votosTotales }}</p>
+
               </div>
               <div class="my-2 d-flex align-items-center">
                 <div class="my-auto">
@@ -142,9 +148,9 @@ export default {
     data: function () {
         return {
             inicio2: inicio,
+            totalStars: info.totalStars,
             caracteristicas: info.caracteristicas,
             nombre: info.nombre,
-            totalStars: info.totalStars,
             vendidas: info.vendidas,
             precio: info.precio,
             mensualidad: info.mensualidad,
@@ -157,8 +163,6 @@ export default {
             totalVentas: info.totalVentas,
             meses: info.meses,
             especDia: info.especDia,
-            caruselActivo: "carousel-item active",
-            caruselInactivo: "carousel-item",
             dimg: info.dimg,
             votosTotales: info.votosTotales,
 
@@ -166,6 +170,11 @@ export default {
             img2: "merca02.png",
             img3: "merca03.png",
             img4: "05.png",
+            caruselActivo: "carousel-item active",
+            caruselInactivo: "carousel-item",
+            estrellasNegras:3,
+            estrellasMedias:1,
+            estrellasBlanceas:2
         }
     },
     methods: {
@@ -179,7 +188,15 @@ export default {
         cambia: function() {
             this.mensaje3 = 'hola mundo'
         },
-
+        calculaRedondeoStart: function() {
+          // toma el valor de calificacionStars y me redondea en 3 niveles:
+          // lo que está abajo de n.3 lo deja en n
+          // lo que está entre n.3 y n.7 lo deja en n.5
+          // lo que está arriba de n.7 lo deja en n+1  
+          this.estrellasNegras = 2;
+          this.estrellasMedias = 1;
+          this.estrellasBlanceas = 3;
+        },
         selecciona: function(index) {
           return (index==0)?this.caruselActivo:this.caruselInactivo
         }
