@@ -238,3 +238,188 @@ export default {
   </div>
 </div>
 <!-- Carousel wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>¿como quieres pagar?</p>
+          <div>
+            <span>Con Mercado Pago</span>
+            <img :src="m - pago" alt="" />
+          </div>
+          <!--component-->
+          <div
+            class="d-flex justify-content-start align-items-center p-4 b mb-1"
+          >
+            <i class="fa-regular fa-circle fs-4 mx-3"></i>
+            <img
+              src="https://picsum.photos/75/75"
+              alt=""
+              class="rounded-circle mx-3"
+            />
+            <div class="w text-start mx-3 align-middle">
+              <p>{{ nombreBanco[0] }} {{ tipoTarjeta[1] }}</p>
+              <p class="text-secondary">
+                Hasta {{ meses }} mensualidades sin usar tarjeta
+              </p>
+            </div>
+          </div>
+          <!--component-->
+          <!------------------------------------------------->
+          <!--component-->
+          <div
+            class="d-flex justify-content-start align-items-center p-4 b mb-1"
+          >
+            <i class="fa-regular fa-circle fs-4 mx-3"></i>
+            <img
+              src="https://picsum.photos/75/75"
+              alt=""
+              class="rounded-circle mx-3"
+            />
+            <div class="w text-start mx-3 align-middle">
+              <p>{{ nombreBanco[0] }} {{ tipoTarjeta[1] }}</p>
+              <p class="text-secondary">
+                Hasta {{ meses }} mensualidades sin usar tarjeta
+              </p>
+            </div>
+          </div>
+          <!--component-->
+          <!------------------------------------------------->
+          <!--component-->
+          <div
+            class="d-flex justify-content-start align-items-center p-4 b mb-1"
+          >
+            <i class="fa-regular fa-circle fs-4 mx-3"></i>
+            <img
+              src="https://picsum.photos/75/75"
+              alt=""
+              class="rounded-circle mx-3"
+            />
+            <div class="w text-start mx-3 align-middle">
+              <p>{{ nombreBanco[0] }} {{ tipoTarjeta[1] }}</p>
+              <p class="text-secondary">
+                Hasta {{ meses }} mensualidades sin usar tarjeta
+              </p>
+            </div>
+          </div>
+          <!--component-->
+          <!------------------------------------------------->
+          <!--component-->
+          <div
+            class="d-flex justify-content-start align-items-center p-4 b mb-1"
+          >
+            <i class="fa-regular fa-circle fs-4 mx-3"></i>
+            <img
+              src="https://picsum.photos/75/75"
+              alt=""
+              class="rounded-circle mx-3"
+            />
+            <div class="w text-start mx-3 align-middle">
+              <p>{{ nombreBanco[0] }} {{ tipoTarjeta[1] }}</p>
+              <p class="text-secondary">
+                Hasta {{ meses }} mensualidades sin usar tarjeta
+              </p>
+            </div>
+          </div>
+          <!--component-->
+          <!------------------------------------------------->
+          <!--component-->
+          <div
+            class="d-flex justify-content-start align-items-center p-4 b mb-1"
+          >
+            <i class="fa-regular fa-circle fs-4 mx-3"></i>
+            <img
+              src="https://picsum.photos/75/75"
+              alt=""
+              class="rounded-circle mx-3"
+            />
+            <div class="w text-start mx-3 align-middle">
+              <p>{{ nombreBanco[0] }} {{ tipoTarjeta[1] }}</p>
+              <p class="text-secondary">
+                Hasta {{ meses }} mensualidades sin usar tarjeta
+              </p>
+            </div>
+          </div>
+          <!--component-->
+          <!------------------------------------------------->
+          <!--component-->
+          <div
+            class="d-flex justify-content-start align-items-center p-4 b mb-1"
+          >
+            <i class="fa-regular fa-circle fs-4 mx-3"></i>
+            <img
+              src="https://picsum.photos/75/75"
+              alt=""
+              class="rounded-circle mx-3"
+            />
+            <div class="w text-start mx-3 align-middle">
+              <p>{{ nombreBanco[0] }} {{ tipoTarjeta[1] }}</p>
+              <p class="text-secondary">
+                Hasta {{ meses }} mensualidades sin usar tarjeta
+              </p>
+            </div>
+          </div>
+          <!--component-->
+          <!------------------------------------------------->
+          <h3>Con otras formas de pago</h3>
+          <!--component-->
+          <div
+            class="d-flex justify-content-start align-items-center p-4 b mb-1"
+          >
+            <i class="fa-regular fa-circle fs-4 mx-3"></i>
+            <img
+              src="https://picsum.photos/75/75"
+              alt=""
+              class="rounded-circle mx-3"
+            />
+            <div class="w text-start mx-3 align-middle">
+              <p>{{ nombreBanco[0] }} {{ tipoTarjeta[1] }}</p>
+              <p class="text-secondary">
+                Hasta {{ meses }} mensualidades sin usar tarjeta
+              </p>
+            </div>
+          </div>
+          <!--component-->
+          <!------------------------------------------------->
+          <!--component-->
+          <div
+            class="d-flex justify-content-start align-items-center p-4 b mb-1"
+          >
+            <i class="fa-regular fa-circle fs-4 mx-3"></i>
+            <img
+              src="https://picsum.photos/75/75"
+              alt=""
+              class="rounded-circle mx-3"
+            />
+            <div class="w text-start mx-3 align-middle">
+              <p>{{ nombreBanco[0] }} {{ tipoTarjeta[1] }}</p>
+              <p class="text-secondary">
+                Hasta {{ meses }} mensualidades sin usar tarjeta
+              </p>
+            </div>
+          </div>
+          <!--component-->
+          <!------------------------------------------------->
+
+
+
+
+          

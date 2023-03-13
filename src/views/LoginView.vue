@@ -217,7 +217,7 @@
 
 <script>
 import axios from "axios";
-import info from "./LoginView.json";
+import info from "../json/LoginView.json";
 const inicio = "http://localhost/";
 
 export default {

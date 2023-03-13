@@ -1,0 +1,58 @@
+{
+  "nombreBanco": ["Mercado", "Si Vale", "Citibanamex", "Visa"],
+  "meses": 12,
+  "tipoTarjeta": ["Debito", "Credito"],
+  "nuevaTarjeta": ["Nueva tarjeta de Credito", "Nueva tarjeta de Debito"],
+  "intereses": [3, 6],
+  "formaPago": ["Transferencia electronica", "Efectivo en puntos de pago"],
+  "TiendasParticipantes": "Santander, HSBC, 7-Eleven, Soriana, Circle K y otros",
+  "cantidadProducto": 2,
+  "totalProductos": 424,
+  "costoEnvio": 192,
+  "totalPago": 616,
+  "cupon": "Ingresar cupon de descuento",
+  "renglones": [
+    {
+      "id":1,
+      "icono": "http://localhost/ico1.png",
+      "tipoPago": "Mercado credito",
+      "numeroTarjeta": "",
+      "leyenda": "hasta 12 mensualidades sin usar tarjeta"
+    },
+    {
+      "id":2,
+      "icono": "http://localhost/ico2.png",
+      "tipoPago": "Si Vale debito",
+      "numeroTarjeta": "****8208",
+      "leyenda": ""
+    },
+    {
+      "id":3,
+      "icono": "http://localhost/ico3.png",
+      "tipoPago": "Citibanamex",
+      "numeroTarjeta": "****4493",
+      "leyenda": "Hasta 3 meses sin intereses"
+    },
+    {
+      "id":4,
+      "icono": "http://localhost/ico4.png",
+      "tipoPago": "Visa",
+      "numeroTarjeta": "****8015",
+      "leyenda": "Hasta 6 meses sin intereses"
+    },
+    {
+      "id":5,
+      "icono": "http://localhost/ico5.png",
+      "tipoPago": "Nueva tarjeta de crédito", 
+      "numeroTarjeta": "",
+      "leyenda": "Hasta 12 meses sin intereses"
+    },
+    {
+      "id":6,
+      "icono": "http://localhost/ico6.png",
+      "tipoPago": "Nueva tarjeta de debito",
+      "numeroTarjeta": "",
+      "leyenda": ""
+    }
+  ]
+}

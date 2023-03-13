@@ -6,41 +6,44 @@ import ForbiddenView from '@/views/ForbiddenView'
 import PageNotFoundView from '@/views/PageNotFoundView'
 import HomeView from '@/views/HomeView'
 import LoginView from '@/views/LoginView'
+import MetodosPagoView from '@/views/MetodosPagoView'
 import ForgotPassView from '@/views/ForgotPassView'
 import RegisterView from '@/views/RegisterView'
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
+    path: "/",
+    name: "home",
     component: HomeView,
-    meta: { allowedRoles: ['admin','regular'] }
+    meta: { allowedRoles: ["admin", "regular"] },
   },
   {
-    path: '/ui/login',
-    name: 'login',
-    component: LoginView
+    path: "/ui/login",
+    name: "login",
+    component: LoginView,
   },
   {
-    path: '/ui/forbidden',
-    name: 'forbidden',
-    component: ForbiddenView
+    path: "/ui/pago",
+    name: "pago",
+    component: MetodosPagoView,
   },
   {
-    path: '/ui/forgotpass',
-    name: 'forgotpass',
-    component: ForgotPassView
-  },  
-  {
-    path: '/ui/register-page',
-    name: 'register-page',
-    component: RegisterView
-  },  
-  { path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: PageNotFoundView
+    path: "/ui/forbidden",
+    name: "forbidden",
+    component: ForbiddenView,
   },
-]
+  {
+    path: "/ui/forgotpass",
+    name: "forgotpass",
+    component: ForgotPassView,
+  },
+  {
+    path: "/ui/register-page",
+    name: "register-page",
+    component: RegisterView,
+  },
+  { path: "/:pathMatch(.*)*", name: "NotFound", component: PageNotFoundView },
+];
 
 const router = createRouter({
   history: createWebHistory(),
