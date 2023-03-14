@@ -26,64 +26,9 @@
 <div class="row">
   <div class="col">
 <!-- Carousel wrapper -->
-<div id="carouselExampleIndicators" class="carousel slide carousel-fade ancho" data-bs-ride="carousel">
-<!-- Slides -->
-<div class="carousel-inner mb-5">
-  <div class="carousel-item active">
-    <img :src=inicio2+img1 class="d-block w-100 alto" alt="..." />
-  </div>
-  <div class="carousel-item">
-    <img :src=inicio2+img2 class="d-block w-100 alto" alt="..." />
-  </div>
-  <div class="carousel-item">
-    <img :src=inicio2+img3 class="d-block w-100 alto" alt="..." />
-  </div>
-  <div class="carousel-item">
-    <img :src=inicio2+img4 class="d-block w-100 alto" alt="..." />
-  </div>
-  <div class="carousel-item">
-    <img :src=inicio2+img5 class="d-block w-100 alto" alt="..." />
-  </div>
-</div>
-<!-- Slides -->
+<CarouselComponent :imgs=imagenes />
+<CaruselComponent/>
 
-<!-- Controls -->
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-  data-bs-slide="prev">
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-  data-bs-slide="next">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  <span class="visually-hidden">Next</span>
-</button>
-<!-- Controls -->
-
-<!-- Thumbnails -->
-<div class="carousel-indicators" style="margin-bottom: -20px;">
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-    aria-current="true" aria-label="Slide 1" style="width: 100px;">
-    <img class="d-block w-100 img-fluid" :src=inicio2+img1 />
-  </button>
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-    aria-label="Slide 2" style="width: 100px;">
-    <img class="d-block w-100 img-fluid" :src=inicio2+img2  />
-  </button>
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-    aria-label="Slide 3" style="width: 100px;">
-    <img class="d-block w-100 img-fluid" :src=inicio2+img3 />
-  </button>
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-    aria-label="Slide 3" style="width: 100px;">
-    <img class="d-block w-100 img-fluid" :src=inicio2+img4 />
-  </button>
-  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-    aria-label="Slide 3" style="width: 100px;">
-    <img class="d-block w-100 img-fluid" :src=inicio2+img5 />
-  </button>
-</div>
-</div>
 <!-- Carousel wrapper -->     
 
   </div>
@@ -155,61 +100,70 @@
           </div>
         </div>
       </div>
+
+      <FooterComponent/>
+
     </body>
+  
+
     </template>
 
 
 <script>
-import info from './LoginView.json'
+import info from './Login2View.json'
 import axios from 'axios';
+import FooterComponent from '@/components/FooterComponent.vue';
+import CaruselComponent from '@/components/CaruselComponent.vue';
 const  inicio =  'http://localhost/';
 export default {
-  data: function () {
-      return {
-          inicio2: inicio  ,
-          nombre: info.nombre,
-          estrellas: info.estrellas,
-          vendidas: info.vendidas,
-          precio: info.precio,
-          mensualidad: info.mensualidad,
-          minutos: info.minutos,
-          direccion: info.direccion,
-          totalProd: info.totalProd,
-          Existencia: info.Existencia,
-          tienda: info.tienda,
-          totalVentas: info.totalVentas,
-          meses: info.meses,
-          especDia: info.especDia,
-          img1: info.img1 ,
-          img2: info.img2,
-          img3: info.img3,
-          img4: info.img4,
-          img5: info.img5,
-          go: info.go,
-          feat: info.feat,
-          princ: info.princ,
-          caracteristicas: info.caracteristicas,
-          dic: info.dic,
-          mer: info.mer,
-          mod: info.mod,
-          Ven: info.Ven,
-          help: info.help,
-      
-
-      }
-  },
-  methods: {
-      carga: function() {
-          axios.get('http://localhost:8080/pro/muebles', {
-            }).then(response => {
-              console.log(response.data)
-                this.mensaje4 = response.data; 
-            })
-      },
-      cambia: function() {
-          this.mensaje3 = 'hola mundo'
-      },
-  }
+    components: [
+        FooterComponent,
+        CaruselComponent
+    ],
+    data: function () {
+        return {
+            inicio2: inicio,
+            nombre: info.nombre,
+            estrellas: info.estrellas,
+            vendidas: info.vendidas,
+            precio: info.precio,
+            mensualidad: info.mensualidad,
+            minutos: info.minutos,
+            direccion: info.direccion,
+            totalProd: info.totalProd,
+            Existencia: info.Existencia,
+            tienda: info.tienda,
+            totalVentas: info.totalVentas,
+            meses: info.meses,
+            especDia: info.especDia,
+            img1: info.img1,
+            img2: info.img2,
+            img3: info.img3,
+            img4: info.img4,
+            img5: info.img5,
+            go: info.go,
+            feat: info.feat,
+            princ: info.princ,
+            caracteristicas: info.caracteristicas,
+            dic: info.dic,
+            mer: info.mer,
+            mod: info.mod,
+            Ven: info.Ven,
+            help: info.help,
+        };
+    },
+    methods: {
+        carga: function () {
+            axios.get("http://localhost:8080/pro/muebles", {}).then(response => {
+                console.log(response.data);
+                this.mensaje4 = response.data;
+            });
+        },
+        cambia: function () {
+            this.mensaje3 = "hola mundo";
+        },
+    },
+    components: { FooterComponent, CaruselComponent }
 }
 </script>
 

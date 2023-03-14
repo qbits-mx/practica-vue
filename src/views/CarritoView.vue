@@ -21,17 +21,19 @@
    <br>
    <br>
 
-<div class="card bg-light mb-3">
-  <div class="col texts1 mt-2 border p-5 rounded">
+<div class="card bg-light mb-3 yum">
+  <div class="col texts1 mt-2 border p-5 rounded ">
     <div class="container text-center">
   <div class="row">
 
         <div class="container">
             
-            </div> <nav class="menu">
-                    <h2><a href="#"> Carrito <span style="font-weight: 600;">({{ carrit }})</span></a>
-                    <a href="#">Guardados <span style="font-weight: 600;">({{ guar }})</span></a></h2>
-                    <div class="linea"></div>
+        </div> <nav class="menu">
+          <div class="teco">
+            <h2><a href="#"> Carrito <span style="font-weight: 600;">({{ carrit }})</span></a>
+            <a href="#">Guardados <span style="font-weight: 600;">({{ guar }})</span></a></h2>
+            </div>
+            <div class="linea1"></div>
             </nav>
 
     <div class="w-100"></div>
@@ -52,7 +54,7 @@
     <div class="prime">
         <div class="input-group mb-3">
       <span class="input-group-text">Cantidad:</span>
-      <input type="number" class="form-control" aria-label="Cantidad" min="1" :max= dis value= disponibles>
+      <input type="number" class="form-control" aria-label="Cantidad nuu" min="1" :max= dis value= disponibles>
       <a > <span class="input-group-text">Disponibles({{ dis }})</span></a>
 
     </div>
@@ -179,7 +181,14 @@ export default {
   border-top: 1px solid gray;
   height: 1px;
   padding: 0;
-  margin: 20px auto 0 auto;
+  margin: 10px auto 0 auto;
+}
+.linea1 {
+  border-top: 1px solid gray;
+  height: 1px;
+  padding: 0;
+  width: 800px;
+  margin: 10px auto 0 auto;
 }
 
       .container{
@@ -235,5 +244,16 @@ export default {
 }
 .hell{
   background-color: #fff159;
+}
+.teco{
+  margin-left: -90px;
+}
+.yum{
+  margin-right: 100px;
+ margin-left: 100px;
+}
+.nuu{
+margin-left: 10px;
+margin-right: 10;
 }
 </style>

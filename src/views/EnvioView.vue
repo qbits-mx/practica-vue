@@ -13,7 +13,7 @@
             </div>
           </div>
    </nav>
-
+<body>
 <div class="container">
   <div class="row">
     <div class="col">
@@ -28,25 +28,29 @@
   <label class="form-check-label" for="exampleRadios1">
              <h5 class="card-title alin">Enviar a tu domicilio </h5> 
             <h5><snap class="al"> ${{ envio }}</snap> </h5> 
+            <br>
              <p class="card-text alin">Av. San Jerónimo, San Jerónimo Lídice, Mexico City, CDMX</p>   
   </label>
 </div>
   </li>
-  <li class="list-group-item"><a href="#" class="btn btn-link">Editar o elegir otro punto</a></li>
+  <li class="list-group-item"><a href="#" class="btn btn-link">Editar o elegir otro domicilio</a></li>
     </ul>
   <ul class="list-group tamaño2 ajuste">
     <li class="list-group-item">
     <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
-    <h5 class="card-title">Retirar en un punto de entrega</h5>
+    <h5 class="card-title alin">Retirar en un punto de entrega</h5>
     <h5><snap class="al"> ${{ envio }}</snap> </h5> 
-    <p class="card-text"> Agencia Mercado libre-INTERNET GUS| BECAL 3444 a 10km de tu ubicacion</p>
-      
+    <br>
+    <p class="card-text alin"> Agencia Mercado libre-INTERNET GUS| BECAL 3444 a 10km de tu ubicacion</p>
+    <footer>
+      <small> Lunes a viernes 11 a 20</small>
+     </footer>  
   </label>
 </div>
   </li>
-  <li class="list-group-item"><a href="#" class="btn btn-link">Editar o elegir otro punto</a></li>
+  <li class="list-group-item"><a href="#" class="btn btn-link">Ver punto en el mapa o elegir otro</a></li>
     </ul>
     <button type="button " class="btn btn-primary ger">Continuar</button>
   </div>
@@ -70,11 +74,6 @@
     <br>
     <br>
      <snap>Pagas  ${{ total }}</snap>
-  <div class="card-body">
-    <button type="button" class="btn btn-info">Pagar</button>
-
-
-  </div>
   </div>
   </div>
 </div>
@@ -82,12 +81,21 @@
   </div>
 
 
+
+<FooterComponent />
+</body>
 </template>
 <script>
 import info from './EnvioView.json'
+import FooterComponent from '../components/FooterComponent.vue'
+import CaruselComponent from '@/components/CaruselComponent.vue';
 import axios from 'axios';
 const  inicio =  'http://localhost/';
 export default {
+  components:{
+    FooterComponent,
+     CaruselComponent
+  },
   data: function () {
       return {
           inicio2: inicio  ,
@@ -117,10 +125,8 @@ export default {
               console.log(response.data)
                 this.mensaje4 = response.data; 
             })
-      },
-      cambia: function() {
-          this.mensaje3 = 'hola mundo'
-      },
+      }
+
   }
 }
 </script>
@@ -136,7 +142,7 @@ export default {
   height: 300px;
 }
 .ajuste{
-  margin-top: -125px;
+  margin-top: -105px;
 }
 .ll{
   text-align: left;
@@ -175,7 +181,7 @@ export default {
 .ger{
   width: 100px;
   height: 50px;
-  margin-top: -200px;
+  margin-top: -50px;
   margin-right: -350px;
 }
 .too{
@@ -194,5 +200,8 @@ export default {
   width: 400px;
   padding: 0;
   margin: 10px auto 10 auto;
+}
+.why{
+  background: white;
 }
 </style>
