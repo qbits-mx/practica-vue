@@ -1,63 +1,93 @@
 {
-    
-    
-    
-    
-    
-    
-    "producto1": "Art Toy Proteus Edition Juguete De Diseñador",
-    "importa1": "proteus",
-    "importa2": "colección",
-    "importa3": "juguete de autor",
-    "importa4": "intervención artistica",
-    "referencia1": "Juegos y Juguetes",
-    "referencia2": "Muñecos y Colecciones",
-    "referencia3": "Figuras de acción y Juguetes",
-    "precio1": "$ 900.00",
-    "meses1": 3,
-    "promo1": "$300.00",
-    "interes1": "sin intereses",
-    "dia": "30",
-    "periodo": "dias",
-    "disponibles1": "¡Última disponible!",
-    "puntos1": 60,
-    "estado1": "Nuevo",
+    "producto": [
+        {
+            "estado": "Nuevo",
+            "nombre": "Art Toy Proteus Edition Juguete De Diseñador",
+            "precio": "$ 900.00",
+            "meses": 3,
+            "mensualidad": "$300.00",
+            "interes": "sin intereses",
+            "dia": "30",
+            "periodo": "dias",
+            "disponibles": "¡Última disponible!",
+            "puntos": 60
+        }
+    ],
+    "interes": [
+        {
+            "id": 1,
+            "importa": "proteus"
+        },
+        {
+            "id": 2,
+            "importa": "colección"
+        },
+        {
+            "id": 3,
+            "importa": "juguete de autor"
+        },
+        {
+            "id": 4,
+            "importa": "intervención artistica"
+        }
+    ],
+    "referencias": [
+        {
+            "id": 1,
+            "referencia": "Juegos y Juguetes"
+        },
+        {
+            "id": 2,
+            "referencia": "Muñecos y Colecciones"
+        },
+        {
+            "id": 3,
+            "referencia": "Figuras de acción y Juguetes"
+        }
+    ],
     "ordinal": 1,
     "cabecera": {
         "desc": "Edad",
         "longdesc": "Selecciona el rango de tu edad"
     },
-    
-    "caracteristicas": [
+    "caracteristica": [
         "Escultura artesanal",
         "Realizada a mano",
         "Pintada a mano",
         "Pieza única",
         "Pieza original firmada"
     ],
-    "nombre1": "Bat-Frog",
-    "caracteristicas1": [
-        "$ 1,200.00",
-        "Envío gratis",
-        "Pintada a mano",
-        "Pieza única",
-        "Pieza original firmada"
-    ],
-    "nombre2": "Cutli-God",
-    "caracteristicas2": [
-        "$ 2,600.00",
-        "Envío gratis",
-        "Pintada a mano",
-        "Pieza única",
-        "Pieza original firmada"
-    ],
-    "nombre3": "Rakkiwan",
-    "caracteristicas3": [
-        "$ 900.00",
-        "Envìo gratis",
-        "Pintada a mano",
-        "Pieza única",
-        "Pieza original firmada"
+    "caracteristicas": [
+        {
+            "id": 1,
+            "img": "proteus4.jpg",
+            "nombre": "Bat-Frog",
+            "precio": "$ 1,200.00",
+            "envio": "Envío gratis",
+            "pintura": "Pintada a mano",
+            "pieza": "Pieza única",
+            "firma": "Pieza original firmada"
+        },
+        {
+            "id": 2,
+            "img": "proteus5.jpg",
+            "nombre": "Cutli-God",
+            "precio": "$ 2,600.00",
+            "envio": "Envío gratis",
+            "pintura": "Pintada a mano",
+            "pieza": "Pieza única",
+            "firma": "Pieza original firmada"
+        },
+        {
+            "id": 3,
+            "img": "proteus6.jpg",
+            "nombre": "Rakkiwan",
+            "precio": "$ 900.00",
+            "envio": "Envìo gratis",
+            "pintura": "Pintada a mano",
+            "pieza": "Pieza única",
+            "firma": "Pieza original firmada"
+        }
     ],
     "imags": [
         "proteus4.jpg",

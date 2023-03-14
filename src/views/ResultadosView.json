@@ -1,44 +1,82 @@
 {
+    "Categorias": [
+        {
+            "id":1,
+            "categoria": "Audio",
+            "cantidad": "65,185"
+        },
+        {
+            "id":2,
+            "categoria": "Audio para Vehículos",
+            "cantidad": "31,120"
+        },
+        {
+            "id":3,
+            "categoria": "Computación",
+            "cantidad": "21,547"
+        },
+        {
+            "id":4,
+            "categoria": "Celulares y Telefonía",
+            "cantidad": "15,643"
+        },
+        {
+            "id":5,
+            "categoria": "Refacciones Autos y Camionetas",
+            "cantidad": "12,907"
+        },
+        {
+            "id":6,
+            "categoria": "Repuestos para TV",
+            "cantidad": "6,498"
+        },
+        {
+            "id":7,
+            "categoria": "Deportes y Fitnes",
+            "cantidad": "5,022"
+        },
+        {
+            "id":8,
+            "categoria": "Hogar, Muebles y Jardín",
+            "cantidad": "3,240"
+        },
+        {
+            "id":9,
+            "categoria": "Acc. para Motos y Cuatrimotos",
+            "cantidad": "1,890"
+        }
+    ],
+    "categoria10": "Mostrar más",
+
     "usuario": "Gustavo ...",
     "cp": 14100,
+    
     "producto": "Bocinas",
     "cantidadpro": "175,568",
     "preciodesde": 299,
+    
     "tiendas1": "Solo tiendas oficiales",
     "toficial": "(8,717)",
-    "Categorias1": "Audio",
-    "Categorias2": "Audio para Vehículos",
-    "Categorias3": "Computación",
-    "Categorias4": "Celulares y Telefonía",
-    "Categorias5": "Refacciones Autos y Camionetas",
-    "Categorias6": "Repuestos para TV",
-    "Categorias7": "Deportes y Fitnes",
-    "Categorias8": "Hogar, Muebles y Jardín",
-    "Categorias9": "Acc. para Motos y Cuatrimotos",
-    "Categorias10": "Mostrar más",
-    "ccategorias1": "65,185",
-    "ccategorias2": "31,120",
-    "ccategorias3": "21,547",
-    "ccategorias4": "15,643",
-    "ccategorias5": "12,907",
-    "ccategorias6": "6,498",
-    "ccategorias7": "5,022",
-    "ccategorias8": "3,240",
-    "ccategorias9": "1,890",
+    
+    
     "costoenv": "Gratis",
     "totalcostoenv": "130,041",
+    
     "tiempoentre1": "Llegan hoy",
     "tiempoentre2": "Llegan en menos de 24 hs",
     "ctiempoentre1": "3,409",
     "ctiempoentre2": "12,744",
+    
     "ordenar": {
         "orden1": "Más relevante",
         "orden2": "Más barato",
         "orden3": "Mejor calificación"
     },
+
     "productos": [
         {
             "id": 1,
+            "img": "prod1.jpg",
             "nombre": "Bocina Select Sound Hero BT1008 portátil con bluetooth negra",
             "vendedor": "por Select Sound",
             "descuento": 609,
@@ -51,6 +89,7 @@
         },
         {
             "id": 2,
+            "img": "prod2.jpg",
             "nombre": "Bocina Select Sound Bazooka BT228 con bluetooth azul ",
             "vendedor": "por IMPORTADORA MIZCO",
             "descuento": 609,
@@ -63,6 +102,7 @@
         },
         {
             "id": 3,
+            "img": "prod3.jpg",
             "nombre": "Bocina Bluetooth Portátil Tronsmart Groove 2 Ipx7 Luces Led Color Negro",
             "vendedor": "Vendido por Tronsmart",
             "descuento": 0,
@@ -75,6 +115,7 @@
         },
         {
             "id": 4,
+            "img": "prod4.jpg",
             "nombre": "Subwoofer Inalámbrico Bocinas Bluetooth Portátil 5.0 Estéreo",
             "vendedor": "por Matuzari",
             "descuento": 609,
@@ -87,6 +128,7 @@
         },
         {
             "id": 5,
+            "img": "prod5.jpg",
             "nombre": "Bocina Select Sound Hero BT1008 portátil con bluetooth negra",
             "vendedor": "por Select Sound",
             "descuento": 609,
@@ -99,6 +141,7 @@
         },
         {
             "id": 6,
+            "img": "prod6.jpg",
             "nombre": "1hora Mini Bocina Portátil Bluetooth Inalámbrica Altavoz Sd",
             "vendedor": "por 1HORA",
             "descuento": 359,
@@ -109,13 +152,6 @@
             "interes": "sin interés",
             "envio": "Envío gratis"
         }
-    ],
-    "imagen": {
-        "img1": "",
-        "img2": "",
-        "img3": "",
-        "img4": "",
-        "img5": "",
-        "img6": ""
-    }
+    ]
+    
 }

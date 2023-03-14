@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="width: 70%;">
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade img-thumbnail ancho"
             data-bs-ride="carousel">
             <!-- Slides -->
@@ -24,7 +24,7 @@
             <!-- Controls -->
 
             <!-- Thumbnails -->
-            <div class="carousel-indicators " style="margin-bottom: -20px;">
+            <div class="carousel-indicators " style="margin-bottom: -35px;">
                 <span class="ajusta" v-for="(miniatura, index) in imgs" v-bind:key="index">
                     <button type="button" data-bs-target="#carouselExampleIndicators" :data-bs-slide-to=index class="active"
                         aria-current="true" style="width: 70px;">
@@ -33,8 +33,8 @@
                 </span>
             </div>
             <!-- Thumbnails -->
-        </div>
-        <div>
+        </div><br>
+        <div style="padding-top: 30%;">
             <hr style="color: black;">
         </div>
     </div>

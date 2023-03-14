@@ -1,199 +1,46 @@
 <template>
   <div>
     <!--  navbar  -->
-<HeaderComponent :usuario=usuario :cp=cp />
+    <HeaderComponent :usuario=usuario :cp=cp />
     <!--  navbar  -->
     <!--  body  -->
     <div class="container-fluid fondo">
       <div class="box">
         <div class="d-flex flex-row mb-3">
           <p class="nav-link letra p-2">También puede interesarte:</p>
-          <a class="nav-link p-2 letras" href="#"> {{ importa1 }} - </a>
-          <a class="nav-link p-2 letras" href="#"> {{ importa2 }} - </a>
-          <a class="nav-link p-2 letras" href="#"> {{ importa3 }} - </a>
-          <a class="nav-link p-2 letras" href="#"> {{ importa4 }}</a>
+          <div v-for="interes in data3" v-bind:key="interes.id">
+            <a class="nav-link p-2 letras" href="#"> {{ interes.importa }} &nbsp; - </a>
+          </div>
         </div>
-        <div class="d-flex flex-row abajo">
+        <div class="d-flex flex-row abajo pt-4">
           <p class="nav-link p-2 continuar letra">Volver al listado |</p>
-          <a class="nav-link p-2 letra2" href="#"> {{ referencia1 }} > </a>
-          <a class="nav-link p-2 letra2" href="#"> {{ referencia2 }} > </a>
-          <a class="nav-link p-2 letra2" href="#"> {{ referencia3 }} > </a>
+          <div v-for="referencias in data4" v-bind:key="referencias.id">
+            <a class="nav-link p-2 letra2" href="#"> {{ referencias.referencia }} &nbsp; > </a>
+          </div>
         </div>
       </div>
       <div class="container fon2">
-        <div class="d-flex flex-row">
+        <div class="d-flex flex-row gap-5">
           <!-- Carousel wrapper -->
           <CarouselComponent :imgs=imagenes />
           <!-- Carousel wrapper -->
-          <!-- lado B -->
-          <div class="lado2">
-            <div style="text-align: left;">
-              <span>{{ estado1 }}</span>
-            </div>
-            <div>
-              <h1 style="text-align: left; margin-left: 1px; margin-top: 6px;" class="h3">{{ producto1 }}</h1>
-            </div>
-            <div>
-              <div>
-                <div style="text-align: left;">
-                  <span class="precio">{{ precio1 }}</span>
-                </div>
-              </div>
-              <div style="text-align: left;">
-                <p style="color: black; font-size: 20px; margin-bottom: 0;">en {{ meses1 }} x
-                  <span class="promo">{{ promo1 }}</span>
-                  <span class="promo">
-                    <nbsp> </nbsp> {{ interes1 }}
-                  </span>
-                </p>
-                <p style="color: gray; margin-top: 0; font-size: 20px;">IVA Incluido</p>
-              </div>
-            </div>
-            <div>
-              <div style="text-align: left;">
-                <a class="nav-link letra2" style="font-size: 17px;" href="#"> ver formas de pago </a>
-              </div>
-            </div>
-            <br>
-            <div>
-              <div>
-                <div style="text-align: left;">
-                  <span class="promo" style="font-size: 17px;"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                      height="20" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
-                      <path
-                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                    </svg> Envio gratis a todo el país</span>
-                  <br>
-                  <span> Conoce los tiempos y las formas de envío.</span>
-                  <a class="nav-link letra2" style="font-size: 14px;" href="#"> Calcula cuando llega </a>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div>
-              <div>
-                <div style="text-align: left;">
-                  <span class="promo" style="font-size: 17px;"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                      height="20" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-                      <path
-                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
-                    </svg>Devolución gratis</span>
-                  <br>
-                  <span>Tienes {{ dia }} {{ periodo }} desde que lo recibes.</span>
-                  <a class="nav-link letra2" style="font-size: 14px;" href="#"> Conocer más </a>
-                </div>
-              </div>
-            </div>
-            <br>
-            <br>
-            <div>
-              <div style="text-align: left;">
-                <p style="color: black; font-weight: 600; font-size: 20px;">{{ disponibles1 }}</p>
-              </div>
-            </div>
-            <div class="d-grid gap-3 col-12 mx-auto">
-              <button class="btn btn-primary text-white" type="button">Comprar Ahorita</button>
-              <button class="btn carrito text-primary" type="button">Agregar al Carrito</button>
-            </div>
-            <br>
-            <br>
-            <div>
-              <div>
-                <div style="text-align: left;">
-                  <a class="nav-link letra2" style="font-size: 14px;" href="#"> Compra Protegida, </a>
-                  <span>Recibe el producto que esperabas o te devolvemos tu dinero.</span>
-                  <br>
-                  <a class="nav-link letra2" style="font-size: 14px;" href="#"> Mercado Puntos. </a>
-                  <span> Este producto te da: {{ puntos1 }} pts</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div>
-            <h2 class="vendedor" style="text-align: left;">Publicaciones del vendedor</h2>
-            <div class="card-group tarjetas ">
-              <div class="card">
-                <img :src=img4 class="card-img-top " alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{ nombre1 }}</h5>
-                  <ul v-for="(carac1, index) in caracteristicas1" v-bind:key="index"
-                    style="text-align: left; list-style: none; line-height: 50%;">
-                    <li>{{ carac1 }}</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card">
-                <img :src=img5 class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{ nombre2 }}</h5>
-                  <ul v-for="(carac2, index) in caracteristicas2" v-bind:key="index"
-                    style="text-align: left; list-style: none; line-height: 50%;">
-                    <li>{{ carac2 }}</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card">
-                <img :src=img6 class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{ nombre3 }}</h5>
-                  <ul v-for="(carac3, index) in caracteristicas3" v-bind:key="index"
-                    style="text-align: left; list-style: none; line-height: 50%;">
-                    <li>{{ carac3 }}</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
 
+          <!-- lado B -->
+
+          <div class="lado2" v-for="producto in data2" v-bind:key="producto.id">
+            <LadobComponent :producto=producto />
           </div>
+          <!-- lado B -->
         </div>
-        <!--<div style="color: black;">
-          <ul v-for="(carac, index) in caracteristicas" v-bind:key="index">
-            <li>{{ carac }}</li>
-          </ul>
-        </div>-->
+
+        <div>
+          <AbajoComponent />
+      </div>
       </div>
     </div>
+    <!--  Footer  -->
     <FooterComponent />
-    <!--    
-    <h1>Login View XYZ</h1>
-    <h2 @mouseover="cambia">Gustavo</h2>
-    <button class="btn btn-danger" @click="carga">Hola</button>
-
-    <h2>{{ mensaje3 }}</h2>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-          <th scope="col">Otra</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="experimento in mensaje4" v-bind:key="experimento.id">
-          <td>{{ experimento.id }}</td>
-          <td>{{ experimento.nombre }}</td>
-          <td>{{ experimento.color }}</td>
-          <td>{{ experimento.precio }}</td>
-          <td>{{ experimento.agotado }}</td>
-        </tr>
-      </tbody>
-    </table>
-
-
-
-
--->
-
-
-
+    <!--  Footer  -->
   </div>
 </template>
 
@@ -205,55 +52,33 @@ import info from './LoginView.json';
 import FooterComponent from '@/components/FooterComponent.vue';
 import CarouselComponent from '@/components/CarouselComponent.vue';
 import HeaderComponent from '@/components/HeaderComponent.vue';
+import LadobComponent from '@/components/LadobComponent.vue';
+import AbajoComponent from '@/components/AbajoComponent.vue';
 const inicio = 'http://127.0.0.1/'
 
 export default {
   components: {
     FooterComponent,
     CarouselComponent,
-    HeaderComponent
+    HeaderComponent,
+    LadobComponent,
+    AbajoComponent,
   },
   data: function () {
     return {
-      caracteristicas: info.caracteristicas,
-      caracteristicas1: info.caracteristicas1,
-      caracteristicas2: info.caracteristicas2,
-      caracteristicas3: info.caracteristicas3,
-      nombre1: info.nombre1,
-      nombre2: info.nombre2,
-      nombre3: info.nombre3,
-      producto1: info.producto1,
-      importa1: info.importa1,
-      importa2: info.importa2,
-      importa3: info.importa3,
-      importa4: info.importa3,
-      estado1: info.estado1,
-      referencia1: info.referencia1,
-      referencia2: info.referencia1,
-      referencia3: info.referencia1,
-      precio1: info.precio,
-      meses1: info.meses1,
-      promo1: info.promo,
-      dia: info.dia,
-      periodo: info.periodo,
-      interes1: info.interes1,
-      disponibles1: info.disponibles1,
-      puntos1: info.puntos1,
+      inicio2: inicio,
+      interes: info.interes,
+      referencias: info.referencias,
+
       usuario: "juan carlos",
       cp: 12345,
-
+      data4: info.referencias,
+      data3: info.interes,
+      data2: info.producto,
+      data: info.caracteristicas,
 
 
       imagenes: [inicio + 'proteus1.jpg', inicio + 'proteus2.jpg', inicio + 'proteus3.jpg'],
-      /*imags: [inicio + 'proteus4.jpg',inicio + 'proteus5.jpg',inicio + 'proteus6.jpg'],*/
-      /*img1: inicio + 'proteus1.jpg',
-      img2: inicio + 'proteus2.jpg',
-      img3: inicio + 'proteus3.jpg',*/
-      img4: inicio + 'proteus4.jpg',
-      img5: inicio + 'proteus5.jpg',
-      img6: inicio + 'proteus6.jpg',
-
-
     }
   },
   methods: {
@@ -272,8 +97,6 @@ export default {
       //lo que està abajo de n
       return this.calculaRedondeoStart
     },
-
-    
 
   } // aqui concluyen los métodos
 }
@@ -326,13 +149,6 @@ export default {
   margin-top: -2rem;
 }
 
-.ancho {
-  width: 75%;
-  margin-right: 5rem;
-  margin-bottom: 65px;
-  height: 80%;
-}
-
 .lado2 {
   border: 1px solid rgb(0, 0, 0, .1);
   border-radius: 8px;
@@ -341,50 +157,5 @@ export default {
   width: 75%;
 }
 
-span {
-  color: rgb(0, 0, 0, .55);
-}
-
-.precio {
-  font-size: 36px;
-  color: black;
-}
-
-.promo {
-  color: green;
-  font-size: 25px;
-}
-
-.h3 {
-  color: black;
-  font-size: 22px;
-}
-
-.carrito {
-  background-color: rgba(65, 137, 230, .15);
-}
-
 /* Vendedor */
-.vendedor {
-  font-size: 24px;
-  color: rgba(0, 0, 0, .9);
-  font-weight: 400;
-  margin: 0;
-}
-
-.tarjetas {
-  width: 60%;
-  text-align: center;
-
-}
-
-.card {
-  margin-top: 2rem;
-  color: black;
-  border: 1px solid gray;
-}
-
-.ajusta {
-  overflow: auto;
-}
 </style>
