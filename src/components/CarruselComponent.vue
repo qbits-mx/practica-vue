@@ -7,11 +7,11 @@
   >
     <!-- Slides -->
     <div class="carousel-inner mb-5">
-      <div
+      <div style="height:400px;"
         :class="selecciona(index)"
         v-for="(arr,index) in arregloDeImagenes"
         v-bind:key="index">
-        <img :src="une(arr)" class="d-block w-100 alto" alt="..." />
+        <img :src="une(arr)" class="d-block  alto" alt="..." style="height: 100%; width: 100%;"/>
       </div>
     </div>
     <!-- Slides -->
