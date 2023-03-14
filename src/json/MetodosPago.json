@@ -14,45 +14,58 @@
   "renglones": [
     {
       "id":1,
-      "icono": "http://localhost/ico1.png",
+      "icono": "http://localhost/ico1.svg",
       "tipoPago": "Mercado credito",
       "numeroTarjeta": "",
       "leyenda": "hasta 12 mensualidades sin usar tarjeta"
     },
     {
       "id":2,
-      "icono": "http://localhost/ico2.png",
+      "icono": "http://localhost/ico2.svg",
       "tipoPago": "Si Vale debito",
       "numeroTarjeta": "****8208",
       "leyenda": ""
     },
     {
       "id":3,
-      "icono": "http://localhost/ico3.png",
+      "icono": "http://localhost/ico3.svg",
       "tipoPago": "Citibanamex",
       "numeroTarjeta": "****4493",
       "leyenda": "Hasta 3 meses sin intereses"
     },
     {
       "id":4,
-      "icono": "http://localhost/ico4.png",
+      "icono": "http://localhost/ico4.svg",
       "tipoPago": "Visa",
       "numeroTarjeta": "****8015",
-      "leyenda": "Hasta 6 meses sin intereses"
+      "leyenda": "Hasta 3 meses sin intereses"
     },
     {
       "id":5,
-      "icono": "http://localhost/ico5.png",
+      "icono": "http://localhost/ico5.svg",
       "tipoPago": "Nueva tarjeta de crédito", 
       "numeroTarjeta": "",
-      "leyenda": "Hasta 12 meses sin intereses"
+      "leyenda": "Hasta 6 meses sin intereses"
     },
     {
       "id":6,
-      "icono": "http://localhost/ico6.png",
+      "icono": "http://localhost/ico6.svg",
       "tipoPago": "Nueva tarjeta de debito",
       "numeroTarjeta": "",
       "leyenda": ""
     }
-  ]
+  ],
+  "otrasFormas":[
+    {
+      "id":7,
+      "icono": "http://localhost/ico7.svg",
+      "tipoPago": "Transferencia electronica",
+      "leyenda": ""
+    },
+    {
+    "id":8,
+      "icono": "http://localhost/ico8.svg",
+      "tipoPago": "Efectivo en puntos de pago",
+      "leyenda": "Santander, HSBC, 7-Eleven, Soriana, Circle K y otros"
+    }]
 }

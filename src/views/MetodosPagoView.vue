@@ -3,7 +3,7 @@
     <!--navbar-->
     <nav class="nav d-flex justify-content-around align-content-center">
       <div>
-        <img :src="libre" alt="" class="logo mp" />
+        <img :src="libre" alt="" class="logo" />
       </div>
       <span class="ayuda">Ayuda</span>
     </nav>
@@ -19,24 +19,27 @@
                 <img :src="pago" alt="" class="mp mx-3" />
               </div>
             </div>
-
-            <div v-for="pago in data" v-bind:key="pago.id">
+              <TarjetaComponent/>
+            <h6 class="text-start my-5">Con otras formas de pago</h6>
+            <!--component--->
+            <div v-for="pago in otras" v-bind:key="pago.id" >
               <div
                 class="d-flex justify-content-start align-items-center p-4 b mb-1"
               >
                 <input type="radio" name="seleccion" class="fs-3" />
-                <div class="div-img">
-                  <img :src="pago.icono" alt="" class="mp mx-3 align-middle" />
+                <div class="div-img mx-3">
+                  <img :src="pago.icono" alt="" class="icono" />
                 </div>
                 <div class="text-start mx-3 align-middle">
                   <div class="d-flex">
                     <p>{{ pago.nombreBanco }} {{ pago.tipoPago }}</p>
                     <p>{{ pago.numeroTarjeta }}</p>
                   </div>
-                  <p>{{ pago.leyenda }}</p>
+                  <p class="text-secondary">{{ pago.leyenda }}</p>
                 </div>
               </div>
             </div>
+            <!--component ends--->
           </div>
           <!--col 1 ends-->
           <div class="col-4 px-4 bordeAbajo mb-3">
@@ -82,32 +85,24 @@
         </div>
       </div>
     </div>
-    <footer class="p-5">
-      <div class="d-flex justify-content-center">
-        <span class="px-3">Trabaja con nosotros</span>
-        <span class="px-3">Términos y condiciones</span>
-        <span class="px-3">Cómo cuidamos tu privacidad</span
-        ><span class="px-3">Accesibilidad Ayuda</span>
-      </div>
-      <p class="text-secondary">
-        Copyright © 1999-2023 El presente canal de instrucción o ambiente, es
-        operado por DeRemate.Com de México, S. de R.L. de C.V. identificada bajo
-        la marca comercial "Mercado Libre".
-      </p>
-      <p class="text-secondary">
-        Insurgentes Sur 1602 Piso 9 Suite 900, Crédito Constructor Benito
-        Juarez, 03940 Ciudad de México, CDMX, Mexico
-      </p>
-    </footer>
+    <!--footer-->
+    <FooterComponent/>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import info from "../json/MetodosPago.json";
+import FooterComponent from "../components/FooterComponent.vue"
+import TarjetaComponent from "@/components/TarjetaComponent.vue";
 const inicio = "http://localhost/";
 
 export default {
+  components: {
+    FooterComponent,
+    TarjetaComponent
+},
+
   data: function () {
     return {
       //images
@@ -131,8 +126,8 @@ export default {
       costoEnvio: info.costoEnvio,
       totalPago: info.totalPago,
       cupon: info.cupon,
-
       data: info.renglones,
+      otras:info.otrasFormas,
     };
   },
   methods: {
@@ -209,5 +204,16 @@ export default {
 
 .verde {
   color: darkgreen;
+}
+
+.icono {
+  width: 100%;
+}
+
+.div-img {
+  background-color: #eeeeee;
+  border-radius: 50%;
+  width: 50px;
+  box-sizing: border-box;
 }
 </style>

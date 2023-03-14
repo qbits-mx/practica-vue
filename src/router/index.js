@@ -5,7 +5,7 @@ import axios from 'axios';
 import ForbiddenView from '@/views/ForbiddenView'
 import PageNotFoundView from '@/views/PageNotFoundView'
 import HomeView from '@/views/HomeView'
-import LoginView from '@/views/LoginView'
+import ProductoView from '@/views/ProductoView'
 import MetodosPagoView from '@/views/MetodosPagoView'
 import ForgotPassView from '@/views/ForgotPassView'
 import RegisterView from '@/views/RegisterView'
@@ -18,9 +18,9 @@ const routes = [
     meta: { allowedRoles: ["admin", "regular"] },
   },
   {
-    path: "/ui/login",
-    name: "login",
-    component: LoginView,
+    path: "/ui/producto",
+    name: "producto",
+    component: ProductoView,
   },
   {
     path: "/ui/pago",

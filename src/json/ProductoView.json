@@ -1,8 +1,5 @@
 {
-  "img1": "caja.webp",
-  "img2": "xbox1.webp",
-  "img3": "xbox2.webp",
-  "libre": "m-libre.png",
+  "imagenes":["caja.webp","xbox1.webp","xbox2.webp"],
   "nuevo": "Nuevo",
   "vendidos": 500,
   "reseñas": 38,
@@ -17,8 +14,8 @@
     "Cuenta con: 1 cable hdmi, 1 halo infinite controller",
     "la duracion de las baterias depende del uso del producto"
   ],
-  "productos1": 23,
-  "productos2": 15,
+  "productosNuevos": 23,
+  "productosUsados": 15,
   "oferta": "26,991",
   "entrega": "Envio gratis a todo el pais",
   "full": "FULL",
@@ -29,6 +26,5 @@
   "garantiaDias": 75 ,
   "garantiaTiempo":" meses",
   "años": 1,
-  "puntos": 1500,
-  "imgs": ["caja.webp", "xbox1.webp", "xbox2.webp"]
+  "puntos": 1500
 }
