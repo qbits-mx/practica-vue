@@ -5,7 +5,7 @@
             <!-- Slides -->
             <div class="carousel-inner mb-5 shadow-1-strong rounded-3 ">
                 <div :class=selecciona(index) v-for="(elemento, index) in imgs" v-bind:key="index">
-                    <img :src=elemento class="d-block w-100" alt="..." />
+                    <img :src=ruta+elemento class="d-block w-100" alt="..." />
                 </div>
             </div>
             <!-- Slides -->
@@ -28,7 +28,7 @@
                 <span class="ajusta" v-for="(miniatura, index) in imgs" v-bind:key="index">
                     <button type="button" data-bs-target="#carouselExampleIndicators" :data-bs-slide-to=index class="active"
                         aria-current="true" style="width: 70px;">
-                        <img :src=imgs[index] class="d-block w-100 shadow-1-strong img-fluid" />
+                        <img :src=ruta+miniatura class="d-block w-100 shadow-1-strong img-fluid" />
                     </button>
                 </span>
             </div>
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-    props: ['imgs'],
+    props: ['imgs','ruta'],
     methods: {
         selecciona: function (index) {
             return (index == 0) ? this.caruselActivo : this.caruselInactivo

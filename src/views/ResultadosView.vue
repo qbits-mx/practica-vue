@@ -50,6 +50,7 @@
 
 import axios from 'axios';
 import info from './ResultadosView.json';
+import datosCliente from './DatosCliente.json';
 import FooterComponent from '../components/FooterComponent';
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import CabbodComponent from '@/components/CabbodComponent.vue';
@@ -70,8 +71,8 @@ export default {
   data: function () {
     return {
       inicio2: inicio,
-      persona: info.usuario,
-      cp: info.cp,
+      persona: datosCliente.usuario,
+      cp: datosCliente.cp,
       producto: info.producto,
       cantidadpro: info.cantidadpro,
       preciodesde: info.preciodesde,

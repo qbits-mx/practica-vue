@@ -1,0 +1,16 @@
+{
+    "producto":
+        {
+            "estado": "Nuevo",
+            "nombre": "Art Toy Proteus Edition Juguete De Diseñador",
+            "precio": "$ 900.00",
+            "meses": 3,
+            "mensualidad": "$300.00",
+            "interes": "sin intereses",
+            "dia": "30",
+            "periodo": "dias",
+            "disponibles": "¡Última disponible!",
+            "puntos": 60,
+            "imagenes":["proteus1.jpg","proteus2.jpg","proteus3.jpg"]
+        }
+}

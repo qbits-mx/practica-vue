@@ -10,7 +10,8 @@
             "dia": "30",
             "periodo": "dias",
             "disponibles": "¡Última disponible!",
-            "puntos": 60
+            "puntos": 60,
+            "imagenes":["proteus1.jpg","proteus2.jpg","proteus3.jpg"]
         }
     ],
     "interes": [
@@ -45,11 +46,6 @@
             "referencia": "Figuras de acción y Juguetes"
         }
     ],
-    "ordinal": 1,
-    "cabecera": {
-        "desc": "Edad",
-        "longdesc": "Selecciona el rango de tu edad"
-    },
     "caracteristica": [
         "Escultura artesanal",
         "Realizada a mano",

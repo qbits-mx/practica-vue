@@ -22,7 +22,7 @@
       <div class="container fon2">
         <div class="d-flex flex-row gap-5">
           <!-- Carousel wrapper -->
-          <CarouselComponent :imgs=imagenes />
+          <CarouselComponent :imgs=imagenes :ruta=inicio2 />
           <!-- Carousel wrapper -->
 
           <!-- lado B -->
@@ -49,6 +49,7 @@
 
 import axios from 'axios';
 import info from './LoginView.json';
+import contenido from './UnProductoSolo.json';
 import FooterComponent from '@/components/FooterComponent.vue';
 import CarouselComponent from '@/components/CarouselComponent.vue';
 import HeaderComponent from '@/components/HeaderComponent.vue';
@@ -79,7 +80,7 @@ export default {
       usuario: "juan carlos",
       cp: 12345,
 
-            imagenes: [inicio + 'proteus1.jpg', inicio + 'proteus2.jpg', inicio + 'proteus3.jpg'],
+      imagenes: contenido.producto.imagenes,
     }
   },
   methods: {
