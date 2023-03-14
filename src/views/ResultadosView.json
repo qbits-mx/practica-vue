@@ -1,78 +1,81 @@
 {
     "Categorias": [
         {
-            "id":1,
+            "id": 1,
             "categoria": "Audio",
             "cantidad": "65,185"
         },
         {
-            "id":2,
+            "id": 2,
             "categoria": "Audio para Vehículos",
             "cantidad": "31,120"
         },
         {
-            "id":3,
+            "id": 3,
             "categoria": "Computación",
             "cantidad": "21,547"
         },
         {
-            "id":4,
+            "id": 4,
             "categoria": "Celulares y Telefonía",
             "cantidad": "15,643"
         },
         {
-            "id":5,
+            "id": 5,
             "categoria": "Refacciones Autos y Camionetas",
             "cantidad": "12,907"
         },
         {
-            "id":6,
+            "id": 6,
             "categoria": "Repuestos para TV",
             "cantidad": "6,498"
         },
         {
-            "id":7,
+            "id": 7,
             "categoria": "Deportes y Fitnes",
             "cantidad": "5,022"
         },
         {
-            "id":8,
+            "id": 8,
             "categoria": "Hogar, Muebles y Jardín",
             "cantidad": "3,240"
         },
         {
-            "id":9,
+            "id": 9,
             "categoria": "Acc. para Motos y Cuatrimotos",
             "cantidad": "1,890"
         }
     ],
     "categoria10": "Mostrar más",
-
-    "usuario": "Gustavo ...",
-    "cp": 14100,
-    
-    "producto": "Bocinas",
-    "cantidadpro": "175,568",
-    "preciodesde": 299,
-    
-    "tiendas1": "Solo tiendas oficiales",
-    "toficial": "(8,717)",
-    
-    
-    "costoenv": "Gratis",
-    "totalcostoenv": "130,041",
-    
-    "tiempoentre1": "Llegan hoy",
-    "tiempoentre2": "Llegan en menos de 24 hs",
-    "ctiempoentre1": "3,409",
-    "ctiempoentre2": "12,744",
-    
+    "tiendas": [
+        {
+            "tienda": "Solo tiendas oficiales",
+            "oficial": "(8,717)"
+        }
+    ],
+    "entregas": [
+        {
+            "id": 1,
+            "tiempo": "Llegan hoy",
+            "cantidad": "3,409"
+        },
+        {
+            "id": 2,
+            "tiempo": "Llegan en menos de 24 hs",
+            "cantidad": "12,744"
+        }
+    ],
+    "costos": [
+        {
+            "costo": "Gratis",
+            "cantidad": "130,041"
+        }
+    ],
     "ordenar": {
         "orden1": "Más relevante",
         "orden2": "Más barato",
         "orden3": "Mejor calificación"
     },
-
     "productos": [
         {
             "id": 1,
@@ -152,6 +155,10 @@
             "interes": "sin interés",
             "envio": "Envío gratis"
         }
-    ]
-    
+    ],
+    "usuario": "Gustavo ...",
+    "cp": 14100,
+    "producto": "Bocinas",
+    "cantidadpro": "175,568",
+    "preciodesde": 299
 }

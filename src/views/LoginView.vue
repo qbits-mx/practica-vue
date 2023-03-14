@@ -4,7 +4,7 @@
     <HeaderComponent :usuario=usuario :cp=cp />
     <!--  navbar  -->
     <!--  body  -->
-    <div class="container-fluid fondo">
+    <div class="container-fluid fondo pb-5" >
       <div class="box">
         <div class="d-flex flex-row mb-3">
           <p class="nav-link letra p-2">También puede interesarte:</p>
@@ -33,8 +33,8 @@
           <!-- lado B -->
         </div>
 
-        <div>
-          <AbajoComponent />
+        <div class="pb-5">
+          <AbajoComponent :data=data :inicio2=inicio2 />
       </div>
       </div>
     </div>
@@ -67,18 +67,19 @@ export default {
   data: function () {
     return {
       inicio2: inicio,
+      data: info.caracteristicas,
+      data2: info.producto,
+      data3: info.interes,
+      data4: info.referencias,
+      data5: info.imagenes,
+
       interes: info.interes,
       referencias: info.referencias,
 
       usuario: "juan carlos",
       cp: 12345,
-      data4: info.referencias,
-      data3: info.interes,
-      data2: info.producto,
-      data: info.caracteristicas,
 
-
-      imagenes: [inicio + 'proteus1.jpg', inicio + 'proteus2.jpg', inicio + 'proteus3.jpg'],
+            imagenes: [inicio + 'proteus1.jpg', inicio + 'proteus2.jpg', inicio + 'proteus3.jpg'],
     }
   },
   methods: {

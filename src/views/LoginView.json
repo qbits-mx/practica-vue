@@ -89,9 +89,10 @@
             "firma": "Pieza original firmada"
         }
     ],
-    "imags": [
-        "proteus4.jpg",
-        "proteus5.jpg",
-        "proteus6.jpg"
-    ]
+    "inicio":[
+        "proteus1.jpg",
+        "proteus2.jpg",
+        "proteus3.jpg"
+    ],
+    "imagenes":["proteus1.jpg","proteus2.jpg","proteus3.jpg"]
 }
