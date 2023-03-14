@@ -4,15 +4,8 @@ import { computed } from 'vue'
 export let collapsed = ref(true)
 console.log(collapsed.value)
 export const toggleSidebar = () => (collapsed.value = !collapsed.value)
-/*export const openSidebar = () => (
-    collapsed.value(false)
-    
-)*/
-/*export function openSidebar(){
-    collapsed = ref(false)
-    sidebarWidth()
-}*/
-//collapsed.value = true
+export const abre = () => (collapsed.value = false)
+export const cierra = () => (collapsed.value = true)
 export const SIDEBAR_WIDTH = 190
 export const SIDEBAR_WIDTH_COLLAPSED = 55
 export let sidebarWidth = computed(

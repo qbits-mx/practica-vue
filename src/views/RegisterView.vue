@@ -7,7 +7,7 @@
 
 <script>
     import CarouselComponent from '@/components/CarouselComponent'
-    import info from './LoginView.json';
+    import info from './ProductoView.json';
 
     export default {
         components: {

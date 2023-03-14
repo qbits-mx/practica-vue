@@ -134,7 +134,7 @@
 
 <script>
 import axios from 'axios';
-import info from './LoginView.json';
+import info from './ProductoView.json';
 import FooterComponent from '../components/FooterComponent'
 import SideBarComponent from "@/components/sidebar/SideBarComponent.vue";
 import HeaderComponent from '@/components/HeaderComponent.vue';

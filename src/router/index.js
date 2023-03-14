@@ -6,7 +6,7 @@ import ForbiddenView from '@/views/ForbiddenView'
 import ComprasView from '@/views/ComprasView'
 import PageNotFoundView from '@/views/PageNotFoundView'
 import HomeView from '@/views/HomeView'
-import LoginView from '@/views/LoginView'
+import ProductoView from '@/views/ProductoView'
 import ForgotPassView from '@/views/ForgotPassView'
 import RegisterView from '@/views/RegisterView'
 import SideBarP from '@/views/SideBarP'
@@ -21,7 +21,7 @@ const routes = [
   {
     path: '/ui/login',
     name: 'login',
-    component: LoginView
+    component: ProductoView
   },
   {
     path: '/ui/forbidden',

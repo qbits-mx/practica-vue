@@ -1,7 +1,7 @@
 <template>
-    <div class="sidebar d-flex flex-column flex-shrink-0" @mouseover="collapsed2" :style="{ width: sidebarWidth }">
+    <div class="sidebar d-flex flex-column flex-shrink-0" @mouseenter="abre" @mouseleave="cierra" :style="{ width: sidebarWidth }">
         <div class="m-auto">
-          <SidebarLinks to="/ui/login" icon="bi bi-list" class="mb-5">Login</SidebarLinks>
+          <SidebarLinks to="/ui/login" icon="bi bi-list" class="mb-5" >Login</SidebarLinks>
           <SidebarLinks to="/ui/compras" icon="bi bi-handbag">Compras</SidebarLinks>
           <SidebarLinks to="#" icon="bi bi-ticket-perforated">Ofertas</SidebarLinks>
           <SidebarLinks to="#" icon="bi bi-shop-window">Mi tienda</SidebarLinks>
@@ -22,14 +22,14 @@
 </template>
 
 <script>
-import { collapsed, toggleSidebar, sidebarWidth } from './state';
+import { collapsed, toggleSidebar, sidebarWidth, abre, cierra } from './state';
 import SidebarLinks from './SidebarLinks.vue';
 
 export default{
   props: {},
   components: { SidebarLinks },
   setup(){
-    return { collapsed, toggleSidebar, sidebarWidth }
+    return { collapsed, toggleSidebar, sidebarWidth, abre, cierra }
   },
   data() {
     return {
