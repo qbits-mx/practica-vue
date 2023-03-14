@@ -15,6 +15,7 @@
         <div class="container ">
           <div class="row ">
             <div class="col d-md-flex align-items-center">
+              <CarouselComponent :img=dimg :baseUrl=inicio2 />
               <!-- Carousel wrapper -->
               <div id="carouselMDExample" class="carousel slide carousel-fade" data-bs-interval="false">
                 <!-- Slides -->
@@ -137,16 +138,20 @@ import info from './LoginView.json';
 import FooterComponent from '../components/FooterComponent'
 import SideBarComponent from "@/components/sidebar/SideBarComponent.vue";
 import HeaderComponent from '@/components/HeaderComponent.vue';
+import CarouselComponent from '@/components/CarouselComponent.vue';
 const  inicio =  'http://127.0.0.1/';
 
 export default {
     components: {
       FooterComponent,
       HeaderComponent,
-      SideBarComponent
+      SideBarComponent,
+      CarouselComponent
     },
+
     data: function () {
         return {
+            datos: info,
             inicio2: inicio,
             totalStars: info.totalStars,
             caracteristicas: info.caracteristicas,
@@ -165,18 +170,14 @@ export default {
             especDia: info.especDia,
             dimg: info.dimg,
             votosTotales: info.votosTotales,
-
-            img1: "merca04.png",
-            img2: "merca02.png",
-            img3: "merca03.png",
-            img4: "05.png",
             caruselActivo: "carousel-item active",
             caruselInactivo: "carousel-item",
             estrellasNegras:3,
             estrellasMedias:1,
-            estrellasBlanceas:2
+            imgestrellasBlancas:2
         }
     },
+    
     methods: {
         carga: function() {
             axios.get('http://localhost:8080/pro/muebles', {
@@ -195,7 +196,7 @@ export default {
           // lo que está arriba de n.7 lo deja en n+1  
           this.estrellasNegras = 2;
           this.estrellasMedias = 1;
-          this.estrellasBlanceas = 3;
+          this.imgestrellasBlancas = 3;
         },
         selecciona: function(index) {
           return (index==0)?this.caruselActivo:this.caruselInactivo
@@ -205,8 +206,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 .precios {
   font-size: 2.5rem;
 }
@@ -218,11 +217,6 @@ export default {
 .verde{
   color: rgb(40, 202, 40);
 }
-.ancho{
-  margin: auto;
-  text-align: center;
-  width: 400px;
-}
 
 .naranja{
   background-color: orange;
@@ -230,17 +224,6 @@ export default {
   border-radius: 5px;
   color: white;
   font-weight: 600;
-}
-.amarella{
-  background-color: #fff159;
-}
-
-.logo1{
-  height: 40px;
-}
-
-.largo1{
-  width: 500px;
 }
 
 .body1{
@@ -272,17 +255,5 @@ h5{
 
 .ajusta{
   overflow: auto;
-}
-
-.scroll{
-  min-width:388px;
-  position: relative;
-  margin-top: 0%;
-  border-radius: 8px;
-  display: flex;
-  height: 92px;
-  z-index: 1;
-  margin-left: 2%;
-  object-fit: cover;
 }
 </style>

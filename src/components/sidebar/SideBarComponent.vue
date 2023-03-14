@@ -1,23 +1,23 @@
 <template>
-  <div class="sidebar d-flex flex-column flex-shrink-0" :style="{ width: sidebarWidth }">
-      <div class="m-auto">
-        <SidebarLinks to="/ui/login" icon="bi bi-list" class="mb-5">Login</SidebarLinks>
-        <SidebarLinks to="/ui/compras" icon="bi bi-handbag">Compras</SidebarLinks>
-        <SidebarLinks to="#" icon="bi bi-ticket-perforated">Ofertas</SidebarLinks>
-        <SidebarLinks to="#" icon="bi bi-shop-window">Mi tienda</SidebarLinks>
-        <SidebarLinks to="#" icon="bi bi-coin">Mercado pago</SidebarLinks>
-        <SidebarLinks to="#" icon="bi bi-music-note-list">Música</SidebarLinks>
-        <SidebarLinks to="#" icon="bi bi-card-list">Cuentas</SidebarLinks>
-        <SidebarLinks to="#" icon="bi bi-person-circle">Perfil</SidebarLinks>
-        <SidebarLinks to="#" icon="bi bi-gear">Configuración</SidebarLinks>
-        <span
-          class="collapse-icon"
-          :class="{ 'rotate-180' : collapsed }"
-          @click="toggleSidebar" 
-        >
-        <i class="bi bi-caret-left-fill"></i>
-        </span>
-      </div>
+    <div class="sidebar d-flex flex-column flex-shrink-0" @mouseover="collapsed2" :style="{ width: sidebarWidth }">
+        <div class="m-auto">
+          <SidebarLinks to="/ui/login" icon="bi bi-list" class="mb-5">Login</SidebarLinks>
+          <SidebarLinks to="/ui/compras" icon="bi bi-handbag">Compras</SidebarLinks>
+          <SidebarLinks to="#" icon="bi bi-ticket-perforated">Ofertas</SidebarLinks>
+          <SidebarLinks to="#" icon="bi bi-shop-window">Mi tienda</SidebarLinks>
+          <SidebarLinks to="#" icon="bi bi-coin">Mercado pago</SidebarLinks>
+          <SidebarLinks to="#" icon="bi bi-music-note-list">Música</SidebarLinks>
+          <SidebarLinks to="#" icon="bi bi-card-list">Cuentas</SidebarLinks>
+          <SidebarLinks to="#" icon="bi bi-person-circle">Perfil</SidebarLinks>
+          <SidebarLinks to="#" icon="bi bi-gear">Configuración</SidebarLinks>
+          <span
+            class="collapse-icon"
+            :class="{ 'rotate-180' : collapsed }"
+            @click="toggleSidebar" 
+          >
+          <i class="bi bi-caret-left-fill"></i>
+          </span>
+    </div>
   </div>
 </template>
 
@@ -30,7 +30,17 @@ export default{
   components: { SidebarLinks },
   setup(){
     return { collapsed, toggleSidebar, sidebarWidth }
-  }
+  },
+  data() {
+    return {
+      sidebarWidth2: "210px"
+    }
+  },
+  methods: {
+    collapsed2: function() {
+      return collapsed.value?this.sidebarWidth2="55px":this.sidebarWidth2
+    }
+  },
 }
 </script>
 
@@ -43,6 +53,7 @@ export default{
 </style>
 
 <style scoped>
+
 .sidebar{
   color: grey;
   background-color: var(--sidebar-bg-color);
