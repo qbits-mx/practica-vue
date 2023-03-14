@@ -1,6 +1,6 @@
 <template>
   <!-- 2 column starts -->
-  <div>
+  <div >
     <div class="d-flex mt-2 justify-content-between">
       <p>Nuevo | +{{ vendidos }} vendidos</p>
       <i class="fa-regular fa-heart blue fs-4"></i>
@@ -81,8 +81,8 @@ export default {
       meses: info.meses,
       abono: info.abono,
       caracteristicas: info.caracteristicas,
-      productos1: info.productos1,
-      productos2: info.productos2,
+      productosNuevos: info.productosNuevos,
+      productosUsados: info.productosUsados,
       oferta: info.oferta,
       entrega: info.entrega,
       full: info.full,
