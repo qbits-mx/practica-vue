@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  props: ['imgs'],
+  props: ['imgs', 'inicio2'],
   methods: {
       selecciona: function (index) {
           return (index == 0) ? this.caruselActivo : this.caruselInactivo
@@ -56,6 +56,3 @@ export default {
   }
 }
 </script>
-
-
-<style></style>

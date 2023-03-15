@@ -8,7 +8,7 @@ import CarritoView from '@/views/CarritoView'
 import PageNotFoundView from '@/views/PageNotFoundView'
 import HomeView from '@/views/HomeView'
 import LoginView from '@/views/LoginView'
-import Login2View from '@/views/Login2View'
+import ProductoView from '@/views/ProductoView'
 import ForgotPassView from '@/views/ForgotPassView'
 import ComprasView from '@/views/ComprasView'
 import RegisterView from '@/views/RegisterView'
@@ -26,9 +26,10 @@ const routes = [
     component: LoginView
   },
   {
-    path: '/ui/login2',
-    name: 'login2',
-    component: Login2View
+
+    path: '/ui/producto',
+    name: 'producto',
+    component: ProductoView
   },
   {
     path: '/ui/forbidden',

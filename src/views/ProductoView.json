@@ -12,23 +12,7 @@
           "meses": 4,
           "especDia": "Martes",
           
-          "img1": "05-01.jpg",
-          "img2": "05-02.jpg", 
-          "img3": "05-03.jpg",
-          "img4": "05-04.jpg",
-          "img5": "05-05.jpg",
-
-          "go": " 📍 Codigo postal",
-          "feat":"Categorias",
-          "princ":"Ofertas",
-          "dic": "Historial",
-          "mer": "Supermercado",
-          "mod": "Moda",
-          "Ven": "Vender",
-          "help": "Ayuda",
-          "ini": "http://localhost/",
-
-          
+      
 
 
     "caracteristicas": ["-Función de control inteligente de dispositivos del hogar.", 
@@ -38,5 +22,14 @@
     "-Funciona en español y en inglés.",
     "-Compatible con: Android 6.0, iOS 11.0, Fire OS 5.3.3.",
     "-Su asistente virtual te ayudará a realizar diversas tareas como reproducir música, contestar llamadas y conocer el pronóstico del tiempo.",
-    "-Recibe y realiza llamadas."]
+    "-Recibe y realiza llamadas."],
+
+    "imgs": [
+        "http://localhost/05-01.jpg",
+        "http://localhost/05-02.jpg",
+        "http://localhost/05-03.jpg",
+        "http://localhost/05-04.jpg" 
+        
+ 
+      ]
 }

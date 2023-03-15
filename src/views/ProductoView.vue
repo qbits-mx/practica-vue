@@ -1,23 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">{{go}}</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">{{ feat }}</a>
-      <a class="nav-item nav-link" href="#">{{ princ }}</a>
-      <a class="nav-item nav-link " href="#">{{ dic }}</a>
-      <a class="nav-item nav-link " href="#">{{ mer }}</a>
-      <a class="nav-item nav-link " href="#">{{ mod }}</a>
-      <a class="nav-item nav-link " href="#">{{ Ven }}</a>
-      <a class="nav-item nav-link " href="#">{{ help }}</a>
-    </div>
-  </div>
 
-</nav>
-  
+<NavComponents/>
+
     <body>
       <div class="display-10 mt-3 body1 mx-auto">
         <p class="texts">Volver al listado: <span class="linksurl">| Electrónica, Audio y Video > Audio > Asistentes Virtuales </span></p>
@@ -26,7 +10,7 @@
 <div class="row">
   <div class="col">
 <!-- Carousel wrapper -->
-<CaruselComponent :imgs=imgs />
+<CaruselComponent :imgs=imgs :inicio2=inicio2 />
 
 <!-- Carousel wrapper -->     
 
@@ -109,15 +93,18 @@
 
 
 <script>
-import info from './Login2View.json'
+import info from '../views/ProductoView.json'
 import FooterComponent from '../components/FooterComponent.vue'
 import CaruselComponent from '../components/CaruselComponent.vue'
+import NavComponents from '../components/NavComponents.vue'
 import axios from 'axios';
 const  inicio =  'http://localhost/';
 export default {
     components:{
       FooterComponent,
-        CaruselComponent
+        CaruselComponent,
+        NavComponents,
+
     },
     data: function () {
         return {
@@ -144,16 +131,12 @@ export default {
             feat: info.feat,
             princ: info.princ,
             caracteristicas: info.caracteristicas,
+            imgs: info.imgs,
             dic: info.dic,
             mer: info.mer,
             mod: info.mod,
             Ven: info.Ven,
             help: info.help,
-            "imgs": [
-            this.inicio2 + this.img1,
-            this.inicio2 + this.img2, 
-            this.inicio2 + this.img3
-          ],
         };
     },
 

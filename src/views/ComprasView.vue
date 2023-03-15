@@ -22,7 +22,7 @@
             </nav>
             <nav class="navbar navbar-expand-lg amarella d-flex justify-content-around p-0">
                 <div class="d-flex p-0">
-                    <a class="navbar-brand d-flex align-items-center" href="#"><img :src=inicio2+img4 alt="hola"></a>
+                    <a class="navbar-brand d-flex align-items-center" href="#"><img :src=img4 alt="hola"></a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav d-flex align-items-center justify-content-around">
                             <li class="nav-item">
@@ -193,7 +193,7 @@
 </template>
 <script>
 import info from "./ComprasView.json";
-const  inicio =  'http://127.0.0.1/';
+const  inicio =  'http://localhost/';
 
 export default {
     data: function () {
@@ -202,9 +202,10 @@ export default {
             img1: "merca04.png",
             img2: "merca02.png",
             img3: "merca03.png",
-            img4: "05.png",
+            img4: "http://localhost/05.png"
+,
 
-            data: info,
+         data: info,
             
         }
     }

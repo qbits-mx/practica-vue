@@ -12,6 +12,7 @@
               </ul>
             </div>
           </div>
+
    </nav>
 <body>
 <div class="container">
@@ -41,7 +42,7 @@
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
   <label class="form-check-label" for="exampleRadios1">
     <h5 class="card-title alin">Retirar en un punto de entrega</h5>
-    <h5><snap class="al"> ${{ envio }}</snap> </h5> 
+    <h5><snap> ${{ envio }}</snap> </h5> 
     <br>
     <p class="card-text alin"> Agencia Mercado libre-INTERNET GUS| BECAL 3444 a 10km de tu ubicacion</p>
     <footer>
@@ -60,20 +61,20 @@
   <div class="card-body tamaño">
     <br>
 
-    <h5 class="card-title">resumen de compra <span> </span></h5>
+    <h5 class="card-title ">resumen de compra <span> </span></h5>
     <br>
     <br>
     <div class="linea"></div>
     <br>
     <br>
-    <span> productos ({{ ptotal }}) <br> Envío </span>
+    <span > productos ({{ ptotal }}) <br> Envío </span>
     <br>
     <br>
     <div class="linea"></div>
     <br>
     <br>
     <br>
-     <snap>Pagas  ${{ total }}</snap>
+     <snap >Pagas  ${{ total }}</snap>
   </div>
   </div>
 </div>
@@ -97,7 +98,6 @@ export default {
   data: function () {
       return {
           inicio2: inicio  ,
-          img1: info.img1 ,
           go: info.go,
           feat: info.feat,
           princ: info.princ,
@@ -112,6 +112,8 @@ export default {
           productos:info.productos,
           envio:info.envio,
           total: info.productos+info.envio,
+          img1: "ml.png",
+
 
       
 
@@ -132,7 +134,7 @@ export default {
 <style>
 .tamaño{
   width: 500px;
-  height: 800px;
+  height: 900px;
   background: #F3F0EF;
 
 }
@@ -202,5 +204,8 @@ export default {
 }
 .why{
   background: white;
+}
+.al{
+  text-align: justify;
 }
 </style>
